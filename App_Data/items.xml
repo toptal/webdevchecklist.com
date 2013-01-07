@@ -29,6 +29,13 @@
     </rule>
   </category>
 
+  <category name="Security">
+    <rule name="Implement best practices">
+      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
+      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+    </rule>
+  </category>
+
   <category name="Accessibility">
     <rule name="Accessibility validation">
       <link url="http://achecker.ca/checker/index.php">Online validator</link>
@@ -124,4 +131,5 @@
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
     </rule>    
   </category>
+ 
 </checklist>

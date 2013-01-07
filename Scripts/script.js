@@ -47,6 +47,12 @@
 
     function openDetails(e) {
 
+        for (var i = 0; i < details.length; i++) {
+            
+            var d = (details[i].nextElementSibling || details[i].nextSibling)
+            d.style.maxHeight = "0";
+        }
+
         if (!e) e = window.event
         var detail = (e.target || e.srcElement);
         var ul = (detail.nextElementSibling || detail.nextSibling);
