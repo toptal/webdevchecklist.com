@@ -1,0 +1,171 @@
+﻿body {
+    font: 1.1em/1.2 arial;
+    padding: 0;
+}
+
+    body > header {
+        text-align: center;
+    }
+
+        body > header h1 {
+            font-size: 2.5em;
+        }
+
+a {
+    color: gray;
+}
+
+#main {
+    -moz-column-width: 350px;
+    -webkit-column-width: 350px;
+    column-width: 350px;
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+    column-gap: 2em;
+    margin: 1em auto;
+    font: inherit;
+    padding: 0 1em 3em 1em;
+}
+
+section {
+    -webkit-column-break-inside: avoid;
+    overflow: hidden;
+    margin: 0 auto 1em auto;
+    width: 370px;
+    column-fill: auto;
+}
+
+    section h2 {
+        margin: 0;
+    }
+
+ul {
+    list-style: none;
+    padding-left: 1em;
+}
+
+    ul a {
+        font-size: .8em;
+    }
+
+    ul :not(.optional) + .optional:before {
+        content: 'Optional:';
+        margin: 1em 0 .3em 0;
+        font-weight: bold;
+        display: block;
+    }
+
+    ul li ul {
+        max-height: 0;
+        overflow: hidden;
+        padding-left: 2em;
+        -moz-transition: max-height .5s ease;
+        -o-transition: max-height .5s ease;
+        -webkit-transition: max-height .5s ease;
+        transition: max-height .5s ease;
+    }
+
+    ul li ul li:last-child{
+        margin-bottom: 1em;
+    }
+
+.info {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    text-decoration: none;
+    border-radius: 12px;
+    background: #369aca;
+    color: white;
+    text-align: center;
+    font-size: .7em;
+    font-weight: bold;
+    font-style: normal;
+    -moz-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+    margin-left: .6em;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+    input[type="checkbox"]:checked + label {
+        color: green;
+        text-decoration: line-through;
+    }
+
+/*#region Footer */
+
+footer {
+}
+
+    footer a {
+        display: inline-block;
+        position: fixed;
+        bottom: 1.5em;
+        right: 1em;
+        background: white;
+    }
+
+#bonus {
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    margin: 0;
+    z-index: 1;
+}
+
+    #bonus mark {
+        background: none;
+    }
+
+footer progress {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.2em;
+    color: #369aca;
+    background: #eaeaea;
+    border: none;
+}
+
+    footer progress span {
+        display: block;
+        background: #369aca;
+    }
+
+progress::-webkit-progress-bar {
+    background: #eaeaea;
+}
+
+progress::-webkit-progress-value {
+    background: #369aca;
+}
+
+footer progress::-moz-progress-bar {
+    background-color: #369aca;
+}
+
+
+/*#endregion */
+
+@media only screen and (max-width : 768px) {
+
+    @-ms-viewport{
+        width: 400px;
+    }
+
+    body {
+        width: 410px;
+    }
+
+        body > header h1 {
+            font-size: 1.7em;
+        }
+}

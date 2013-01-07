@@ -1,0 +1,46 @@
+﻿@using System.Xml
+@{
+    string path = Server.MapPath("~/app_data/items.xml");
+    XmlDocument doc = new XmlDocument();
+    doc.Load(path);
+
+    Page.BonusPoints = doc.SelectNodes("//rule[@optional]").Count;
+}
+
+@foreach (XmlNode node in doc.SelectNodes("//category"))
+{
+    <section>
+        <h2>@node.Attributes["name"].InnerText</h2>
+
+        <ul>
+            @foreach (XmlNode item in node.SelectNodes("rule"))
+            {
+                HtmlString className = new HtmlString(item.Attributes["optional"] != null ? " class=\"optional\"" : null);
+                string name = item.Attributes["name"].InnerText;
+                string id = name.Replace(" ", string.Empty).ToLowerInvariant();
+                
+                <li@className>
+                    <input type="checkbox" id="@id" />
+                    <label for="@id">@name</label>
+
+                    @{XmlNodeList links = item.SelectNodes("link");}
+
+                    @if (links.Count > 0)
+                    {
+                        <em class="info">i</em>
+                        <ul>
+                            @foreach (XmlNode link in links)
+                            {   
+                                <li>
+                                    <a href="@link.Attributes["url"].InnerText">@link.InnerText</a>
+                                </li>                     
+                            }
+                        </ul>
+                    }
+                </li>  
+            }
+        </ul>
+    </section>
+}
+
+<p id="bonus">Optional: <mark>0</mark>/@Page.BonusPoints</p>

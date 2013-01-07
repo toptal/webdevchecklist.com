@@ -1,0 +1,42 @@
+﻿@{
+        //Response.Cache.SetValidUntilExpires(true);
+        //Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+        //Response.Cache.SetCacheability(HttpCacheability.Public);
+
+        //string file = Server.MapPath(Request.CurrentExecutionFilePath);
+        //Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
+        //Response.AddFileDependency(file);
+}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Web Developer Checklist</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile" />
+    <meta name="description" content="The ultimate checklist for all serious web developers" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />    
+    <script src="/Scripts/modernizr-2.6.2.js"></script>    
+</head>
+<body>
+
+    <header>
+        <h1>Web Developer Checklist</h1>
+    </header>
+
+    <div id="main">
+        @RenderPage("~/views/_data.cshtml", null)
+    </div>
+
+    <footer>
+        <a href="#" id="clearall">Clear all</a>
+        <progress value="1" max="100">
+            <span id="fallback">&nbsp;</span>
+        </progress>
+    </footer>
+
+    <script src="@Fingerprint.Tag("/scripts/script.min.js")" async="async"></script>
+</body>
+</html>
