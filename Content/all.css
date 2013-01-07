@@ -545,6 +545,12 @@ footer progress::-moz-progress-bar {
 
     body {
         width: 410px;
+        line-height: 1.3;
+    }
+
+    body > header{
+        text-align: left;
+        text-indent: .5em;
     }
 
         body > header h1 {

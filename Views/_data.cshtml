@@ -20,7 +20,7 @@
                 string id = name.Replace(" ", string.Empty).ToLowerInvariant();
                 
                 <li@className>
-                    <input type="checkbox" id="@id" />
+                    <input type="checkbox" id="@id" tabindex="1" />
                     <label for="@id">@name</label>
 
                     @{XmlNodeList links = item.SelectNodes("link");}

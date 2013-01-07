@@ -32,7 +32,7 @@
             var checkbox = checkboxes[i];
             var value = localStorage.getItem(checkbox.id) === "true";
             checkbox.checked = value;
-            checkbox.onclick = calculateProgress;
+            checkbox.onchange = calculateProgress;
 
             if (checkbox.parentNode.className !== "optional")
                 max++;
@@ -56,13 +56,13 @@
         else
             ul.style.maxHeight = '0';
 
-        for (var i = 0; i < details.length; i++) {
+        //for (var i = 0; i < details.length; i++) {
 
-            if (details[i] !== detail) {
-                var d = (details[i].nextElementSibling || details[i].nextSibling);
-                d.style.maxHeight = "0";
-            }
-        }
+        //    if (details[i] !== detail) {
+        //        var d = (details[i].nextElementSibling || details[i].nextSibling);
+        //        d.style.maxHeight = "0";
+        //    }
+        //}
     }
 
     function calculateProgress() {

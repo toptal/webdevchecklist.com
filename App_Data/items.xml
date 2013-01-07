@@ -14,7 +14,7 @@
     </rule>
     <rule name="HTML5 compatibility check">
       <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
-    </rule>    
+    </rule>
   </category>
 
   <category name="Mobile">
@@ -22,7 +22,7 @@
       <link url="http://validator.w3.org/mobile/">W3C mobile checker</link>
     </rule>
     <rule name="Use 'viewport' meta-tag">
-      <link url="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Quick Tip: Don’t Forget the Viewport Meta Tag</link>
+      <link url="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Don’t Forget the Viewport Meta Tag</link>
     </rule>
     <rule name="Manual check using emulators">
       <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
@@ -90,6 +90,7 @@
     </rule>
     <rule name="Yahoo YSlow score of 85+">
       <link url="http://yslow.org/">Yahoo's YSlow</link>
+      <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
     </rule>
     <rule name="Web Page Test score of 90+">
       <link url="http://www.webpagetest.org/">WebPageTest.Org</link>
@@ -100,7 +101,9 @@
     <rule name="Optimize images">
       <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
       <link url="http://punypng.com/">PunyPNG.com</link>
-    </rule>    
+      <link url="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/">Image Optimizer for Visual Studio</link>
+      <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
+    </rule>
   </category>
 
   <category name="Security">
@@ -136,11 +139,12 @@
 
   <category name="Semantics">
     <rule name="Add meaning with Microdata">
+      <link url="http://schema.org/">Schema.org reference</link>
       <link url="http://schema-creator.org/">Schema-Creator.org</link>
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
-    </rule>    
+    </rule>
   </category>
- 
+
 </checklist>
