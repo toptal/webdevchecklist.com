@@ -29,10 +29,14 @@
     </rule>
   </category>
 
-  <category name="Security">
-    <rule name="Implement best practices">
-      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
-      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+  <category name="Analytics">
+    <rule name="Uptime monitoring">
+      <link url="http://www.uptimerobot.com/">Uptime robot</link>
+    </rule>
+    <rule name="Traffic analysis">
+      <link url="http://www.google.com/analytics">Google Analytics</link>
+      <link url="http://statcounter.com/">StatCounter</link>
+      <link url="http://clicky.com/">Clicky</link>
     </rule>
   </category>
 
@@ -97,6 +101,13 @@
       <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
       <link url="http://punypng.com/">PunyPNG.com</link>
     </rule>    
+  </category>
+
+  <category name="Security">
+    <rule name="Implement best practices">
+      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
+      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+    </rule>
   </category>
 
   <category name="Code quality">

@@ -62,8 +62,7 @@ local.properties
 *.vspscc
 .builds
 *.dotCover
-
-App_Data/PublishProfiles/
+*.pubxml
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/

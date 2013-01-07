@@ -25,12 +25,18 @@ public class WhitespaceModule : IHttpModule
     void IHttpModule.Init(HttpApplication context)
     {
         context.PreRequestHandlerExecute += new EventHandler(context_BeginRequest);
+        context.PreSendRequestHeaders += context_PreSendRequestHeaders;
         WebPageHttpHandler.DisableWebPagesResponseHeader = true;
     }
 
     #endregion
 
-    void context_BeginRequest(object sender, EventArgs e)
+    private void context_PreSendRequestHeaders(object sender, EventArgs e)
+    {
+        HttpContext.Current.Response.Headers.Remove("ETag");
+    }
+
+    private void context_BeginRequest(object sender, EventArgs e)
     {
         HttpApplication app = sender as HttpApplication;
         if (app.Request.CurrentExecutionFilePath.EndsWith("/") || app.Request.CurrentExecutionFilePath.EndsWith(".cshtml"))

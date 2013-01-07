@@ -1,9 +1,9 @@
 ﻿
 (function () {
 
-    var checkboxes = [];
-    var details = [];
-    var progress, bonus, fallback;
+    var checkboxes = [],
+        details = [],
+        progress, bonus, fallback;
 
     function findCheckboxes() {
 
@@ -38,8 +38,8 @@
                 max++;
         }
 
-        for (var i = 0; i < details.length; i++) {
-            details[i].onclick = openDetails;
+        for (var d = 0; d < details.length; d++) {
+            details[d].onclick = openDetails;
         }
 
         progress.max = max;
@@ -47,7 +47,7 @@
 
     function openDetails(e) {
 
-        if (!e) e = window.event
+        if (!e) e = window.event;
         var detail = (e.target || e.srcElement);                
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
@@ -59,7 +59,7 @@
         for (var i = 0; i < details.length; i++) {
 
             if (details[i] !== detail) {
-                var d = (details[i].nextElementSibling || details[i].nextSibling)
+                var d = (details[i].nextElementSibling || details[i].nextSibling);
                 d.style.maxHeight = "0";
             }
         }
@@ -98,18 +98,7 @@
         var max = parseInt(progress.max, 10);
         fallback.style.width = (value * 100 / max) + "%";
     }
-
-    function removeLinks() {
-        var links = document.getElementsByTagName('a');
-
-        for (var i = 0; i < links.length; i++) {
-
-            if (links[i].className === 'info') {
-                links[i].onclick = function () { return false; };
-            }
-        }
-    }
-
+    
     function clearAll() {
 
         document.getElementById("clearall").onclick = function () {
@@ -129,7 +118,6 @@
 
         findCheckboxes();
         initialize();
-        removeLinks();
         calculateProgress();
         clearAll();
     }

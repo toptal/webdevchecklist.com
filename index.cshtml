@@ -3,12 +3,14 @@
     Response.Cache.SetExpires(DateTime.Now.AddDays(1));
     Response.Cache.SetCacheability(HttpCacheability.Public);
 
+
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
     string css = Server.MapPath("~/content/all.min.css");
     string js = Server.MapPath("~/scripts/script.min.js");
     string data = Server.MapPath("~/app_data/items.xml");
     Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
-    Response.AddFileDependencies(new[] { file, css, js });
+    Response.AddFileDependencies(new[] { file, css, js, data });
+
 }
 
 <!DOCTYPE html>
@@ -20,8 +22,8 @@
     <meta name="description" content="The ultimate checklist for all serious web developers" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />    
+    <script src="/Scripts/modernizr-2.6.2.js"></script>    
 </head>
 <body>
 

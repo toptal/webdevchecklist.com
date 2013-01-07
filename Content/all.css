@@ -423,7 +423,7 @@ ul {
 }
 
     ul a {
-        font-size: .8em;
+        font-size: .9em;
     }
 
     ul :not(.optional) + .optional:before {
@@ -466,6 +466,10 @@ ul {
     transform: translate(0, -2px);
     margin-left: .6em;
     cursor: pointer;
+}
+
+.info + ul li:first-child{
+    margin-top: .5em;
 }
 
 input[type="checkbox"] {
