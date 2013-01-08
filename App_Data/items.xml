@@ -165,7 +165,7 @@
       <link url="http://msdn.microsoft.com/en-us/library/330a99hc(v=vs.100).aspx">ASP.NET security overview</link>
     </rule>
     <rule name="Cross-site scripting">
-      <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet>">XSS cheat sheet</link>
+      <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
       <link url="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">DOM based XSS cheat sheet</link>
       <link url="http://www.acunetix.com/cross-site-scripting/scanner/">Free XSS scanner</link>
     </rule>
