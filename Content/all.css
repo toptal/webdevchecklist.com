@@ -443,9 +443,9 @@ ul {
         transition: max-height .5s ease;
     }
 
-    ul li ul li:last-child{
-        margin-bottom: 1em;
-    }
+        ul li ul li:last-child {
+            margin-bottom: 1em;
+        }
 
 .info {
     display: inline-block;
@@ -468,9 +468,9 @@ ul {
     cursor: pointer;
 }
 
-.info + ul li:first-child{
-    margin-top: .5em;
-}
+    .info + ul li:first-child {
+        margin-top: .5em;
+    }
 
 input[type="checkbox"] {
     margin-right: 5px;
@@ -539,7 +539,7 @@ footer progress::-moz-progress-bar {
 
 @media only screen and (max-width : 768px) {
 
-    @-ms-viewport{
+    @-ms-viewport {
         width: 400px;
     }
 
@@ -548,12 +548,13 @@ footer progress::-moz-progress-bar {
         line-height: 1.3;
     }
 
-    body > header{
-        text-align: left;
-        text-indent: .5em;
-    }
-
-        body > header h1 {
-            font-size: 1.7em;
+        body > header {
+            text-align: left;
+            text-indent: .6em;
         }
+
+            body > header h1 {
+                font-size: 1.7em;
+            }
 }
+
