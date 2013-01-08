@@ -49,7 +49,8 @@
 
   <category name="Accessibility">
     <rule name="Accessibility validation">
-      <link url="http://achecker.ca/checker/index.php">Online validator</link>
+      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
+      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
       <link url="http://wave.webaim.org/">WAVE accessibility checker</link>
     </rule>
     <rule name="Color contrast">
@@ -84,6 +85,9 @@
       <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
       <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
       <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
+    </rule>
+    <rule name="Add search feature" optional="true">
+      <link url="http://www.google.com/cse/">Google Custom Search</link>
     </rule>
   </category>
 
@@ -167,7 +171,7 @@
     <rule name="Implement best practices">
       <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
       <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
-      <link url="http://msdn.microsoft.com/en-us/library/330a99hc(v=vs.100).aspx">ASP.NET security overview</link>
+      <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
     </rule>
     <rule name="Cross-site scripting">
       <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>

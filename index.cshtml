@@ -28,10 +28,18 @@
 
     <header itemscope itemtype="http://schema.org/WebApplication">
         <h1 itemprop="name">Web Developer Checklist</h1>
+        @if (Request.RawUrl.Length > 1) { 
+            <h2>@Request.RawUrl</h2>
+        }
     </header>
-    <aside><a href="https://github.com/ligershark/webdevchecklist.com"><span class="ghFork"></span></a></aside>
 
-    <div id="main">
+    <aside role="complementary">
+        <a href="https://github.com/ligershark/webdevchecklist.com">
+            <span class="ghFork"></span>
+        </a>
+    </aside>
+
+    <div id="main" role="main">
         @RenderPage("~/views/_data.cshtml", null)
     </div>
 

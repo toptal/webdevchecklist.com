@@ -29,6 +29,7 @@ public class WhitespaceModule : IHttpModule
     private void context_PreSendRequestHeaders(object sender, EventArgs e)
     {
         HttpContext.Current.Response.Headers.Remove("ETag");
+        HttpContext.Current.Response.Headers.Remove("Server");
     }
 
     private void context_BeginRequest(object sender, EventArgs e)

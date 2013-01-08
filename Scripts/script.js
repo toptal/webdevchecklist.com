@@ -1,9 +1,10 @@
-﻿
+﻿/// <reference path="modernizr-2.6.2.js" />
+
 (function () {
 
     var checkboxes = [],
         details = [],
-        progress, bonus, fallback;
+        progress, bonus, fallback, prefix;
 
     function findCheckboxes() {
 
@@ -24,15 +25,19 @@
         bonus = document.getElementsByTagName("mark")[0];
         progress = document.getElementsByTagName("progress")[0];
         fallback = (progress.firstElementChild || progress.firstChild);
+        prefix = location.pathname.substr(1);
 
         var max = 0;
 
         for (var i = 0; i < checkboxes.length; i++) {
 
             var checkbox = checkboxes[i];
-            var value = localStorage.getItem(checkbox.id) === "true";
-            checkbox.checked = value;
             checkbox.onchange = calculateProgress;
+
+            if (Modernizr.localstorage) {
+                var value = localStorage.getItem(prefix + checkbox.id) === "true";
+                checkbox.checked = value;
+            }            
 
             if (checkbox.parentNode.className !== "optional")
                 max++;
@@ -48,7 +53,7 @@
     function openDetails(e) {
 
         if (!e) e = window.event;
-        var detail = (e.target || e.srcElement);                
+        var detail = (e.target || e.srcElement);
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
         if (ul.style.maxHeight !== '100px')
@@ -73,7 +78,7 @@
         for (var i = 0; i < checkboxes.length; i++) {
 
             var checkbox = checkboxes[i];
-            localStorage.setItem(checkbox.id, checkbox.checked);
+            localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
 
             if (checkbox.parentNode.className !== "optional") {
 
@@ -98,7 +103,7 @@
         var max = parseInt(progress.max, 10);
         fallback.style.width = (value * 100 / max) + "%";
     }
-    
+
     function clearAll() {
 
         document.getElementById("clearall").onclick = function () {
@@ -107,19 +112,18 @@
                 checkboxes[i].checked = false;
             }
 
-            localStorage.clear();
+            localStorage && localStorage.clear();
             calculateProgress();
 
             return false;
         };
     }
 
-    if (localStorage) {
-
+    window.onload = function () {
         findCheckboxes();
         initialize();
         calculateProgress();
         clearAll();
-    }
+    };
 
 })();

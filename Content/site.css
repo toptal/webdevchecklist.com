@@ -11,6 +11,12 @@
             font-size: 2.5em;
         }
 
+        body > header h2 {
+            font-size: 2em;
+            margin-top: -.7em;
+            height: 1.2em;
+        }
+
 .ghFork {
     height:125px;
     width:125px;
@@ -189,6 +195,10 @@ footer progress::-moz-progress-bar {
                 font-size: 1.7em;
             }
 
+            body > header h2 {
+                font-size: 1.4em;
+            }
+
     .ghFork {
         height:0;
         width:0;
@@ -206,10 +216,6 @@ footer progress::-moz-progress-bar {
         overflow-x: hidden;
         font-size: 1em;
     }
-
-    body > header h1 {
-                font-size: 1.6em;
-            }
 
     h2{
         font-size: 1.2em;
