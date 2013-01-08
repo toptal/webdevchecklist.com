@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Hosting;
-using System.Web.WebPages.Html;
 
-/// <summary>
-/// Summary description for Fingerprint
-/// </summary>
 public class Fingerprint
 {
     public static string Tag(string rootRelativePath)

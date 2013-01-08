@@ -1,13 +1,8 @@
-﻿#region Using
-
-using System;
+﻿using System;
 using System.IO;
-using System.Web;
-using System.IO.Compression;
 using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.WebPages;
-
-#endregion
 
 /// <summary>
 /// Removes whitespace from the webpage.
