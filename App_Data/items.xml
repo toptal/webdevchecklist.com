@@ -192,5 +192,11 @@
     </rule>
   </category>
 
+  <category name="Social">
+    <rule name="Humans.txt" optional="true">
+      <link url="http://humanstxt.org/">Humans.txt</link>
+    </rule>
+  </category>
+
 
 </checklist>
