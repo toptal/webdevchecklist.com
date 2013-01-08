@@ -10,14 +10,10 @@
       <link url="http://browsershots.org/">BrowserShots.org</link>
       <link url="https://browserling.com/">Browserling.com</link>
     </rule>
-    <rule name="Enforce or remove 'www' subdomain">
+    <rule name="Remove 'www' subdomain">
       <link url="http://no-www.org/verify.php">no-www.org</link>
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove "www" in web.config</link>
-    </rule>
-    <rule name="HTML5 compatibility check">
-      <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
-      <link url="http://modernizr.com/">Modernizr JS library</link>
-    </rule>
+    </rule>    
   </category>
 
   <category name="Mobile">
@@ -62,6 +58,10 @@
   </category>
 
   <category name="Usability">
+    <rule name="HTML5 compatibility check">
+      <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
+      <link url="http://modernizr.com/">Modernizr JS library</link>
+    </rule>
     <rule name="Custom 404 page">
       <link url="http://www.alistapart.com/articles/amoreuseful404/">A more useful 404</link>
       <link url="http://www.stokia.com/support/misc/web-config-custom-httperrors.aspx">Custom error pages in ASP.NET</link>

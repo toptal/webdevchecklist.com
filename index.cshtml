@@ -3,7 +3,6 @@
     Response.Cache.SetExpires(DateTime.Now.AddDays(1));
     Response.Cache.SetCacheability(HttpCacheability.Public);
 
-
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
     string css = Server.MapPath("~/content/all.min.css");
     string js = Server.MapPath("~/scripts/script.min.js");
@@ -18,8 +17,8 @@
 <head>
     <title>Web Developer Checklist</title>
     <meta charset="utf-8" />
-    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile" />
-    <meta name="description" content="The ultimate checklist for all serious web developers" />
+    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website" />
+    <meta name="description" content="The ultimate checklist for all serious web developers building modern websites" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -27,8 +26,8 @@
 </head>
 <body>
 
-    <header>
-        <h1>Web Developer Checklist</h1>
+    <header itemscope itemtype="http://schema.org/WebApplication">
+        <h1 itemprop="name">Web Developer Checklist</h1>
     </header>
 
     <div id="main">
@@ -42,13 +41,6 @@
         </progress>
     </footer>
 
-    <script>
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-37471476-1']);
-        _gaq.push(['_trackPageview']);
-    </script>
-
-    <script src="/ga.js" async="async" defer="defer"></script>
     <script src="@Fingerprint.Tag("/scripts/script.min.js")" async="async"></script>
 </body>
 </html>
