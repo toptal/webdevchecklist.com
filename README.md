@@ -3,9 +3,9 @@
 Created by:
 
 **Sayed Ibrahim Hashimi**
-@sayedihashimi
 http://sedodream.com 
+@sayedihashimi
 
 **Mads Kristensen**
-@mkristensen
 http://madskristensen.net
+@mkristensen
