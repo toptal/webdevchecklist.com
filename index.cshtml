@@ -10,6 +10,7 @@
     Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
     Response.AddFileDependencies(new[] { file, css, js, data });
 
+    Response.AddHeader("P3P", "CP=\"NOI DSP COR ADMa IVDa OUR NOR\"");
 }
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@
         <h1 itemprop="name">Web Developer Checklist</h1>
     </header>
     <aside><a href="https://github.com/ligershark/webdevchecklist.com"><span class="ghFork"></span></a></aside>
-    
+
     <div id="main">
         @RenderPage("~/views/_data.cshtml", null)
     </div>

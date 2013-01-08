@@ -74,9 +74,7 @@
     <rule name="Add P3P policy" optional="true">
       <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
       <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
-    </rule>
-    <rule name="Add PICS label" optional="true">
-      <link url="http://256.com/gray/docs/pics/">How to PICS label your site</link>
+      <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
     </rule>
   </category>
 
@@ -119,14 +117,16 @@
     </rule>
   </category>
 
-  <category name="Security">
-    <rule name="Implement best practices">
-      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
-      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
-      <link url="http://msdn.microsoft.com/en-us/library/330a99hc(v=vs.100).aspx">ASP.NET security overview</link>
+  <category name="Semantics">
+    <rule name="Add meaning with Microdata">
+      <link url="http://schema.org/">Schema.org reference</link>
+      <link url="http://schema-creator.org/">Schema-Creator.org</link>
+    </rule>
+    <rule name="Check the semantics">
+      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
     </rule>
   </category>
-
+  
   <category name="Code quality">
     <rule name="HTML validation">
       <link url="http://validator.w3.org/">W3C HTML validator</link>
@@ -154,14 +154,29 @@
     </rule>
   </category>
 
-  <category name="Semantics">
-    <rule name="Add meaning with Microdata">
-      <link url="http://schema.org/">Schema.org reference</link>
-      <link url="http://schema-creator.org/">Schema-Creator.org</link>
+  <category name="Security">
+    <rule name="Implement best practices">
+      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
+      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+      <link url="http://msdn.microsoft.com/en-us/library/330a99hc(v=vs.100).aspx">ASP.NET security overview</link>
     </rule>
-    <rule name="Check the semantics">
-      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+    <rule name="Cross-site scripting">
+      <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet>">XSS cheat sheet</link>
+      <link url="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">DOM based XSS cheat sheet</link>
+      <link url="http://www.acunetix.com/cross-site-scripting/scanner/">Free XSS scanner</link>
+    </rule>
+    <rule name="Cross-site request forgery">
+      <link url="http://www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html">Explanation and walkthrough</link>
+      <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
+    </rule>
+    <rule name="Prevent tampering">
+      <link url="http://advosys.ca/papers/web/60-form-tampering.html">Prevent HTML form tampering</link>
+    </rule>
+    <rule name="Secure connection (SSL)" optional="true">
+      <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
+      <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
     </rule>
   </category>
+
 
 </checklist>
