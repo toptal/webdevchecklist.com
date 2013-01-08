@@ -14,7 +14,12 @@
     <rule name="Remove 'www' subdomain">
       <link url="http://no-www.org/verify.php">no-www.org</link>
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove "www" in web.config</link>
-    </rule>    
+    </rule>
+    <rule name="Use friendly URLs">
+      <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
+      <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
+      <link url="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">URL rewrite in Apache</link>
+    </rule>
   </category>
 
   <category name="Mobile">
