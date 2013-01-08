@@ -196,3 +196,22 @@ footer progress::-moz-progress-bar {
     }
 }
 
+/* Win8 snapped */
+@media screen and (max-width: 400px) {
+    @-ms-viewport {
+        width: 470px;
+    }
+
+    body {
+        overflow-x: hidden;
+        font-size: 1em;
+    }
+
+    body > header h1 {
+                font-size: 1.6em;
+            }
+
+    h2{
+        font-size: 1.2em;
+    }
+}
