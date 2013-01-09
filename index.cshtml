@@ -1,6 +1,6 @@
 ﻿@{
     Response.Cache.SetValidUntilExpires(true);
-    Response.Cache.SetExpires(DateTime.Now.AddDays(1));
+    Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
     Response.Cache.SetCacheability(HttpCacheability.Public);
 
     string file = Server.MapPath(Request.CurrentExecutionFilePath);
@@ -52,7 +52,7 @@
     </footer>
 
     <script src="@Fingerprint.Tag("/scripts/script.min.js")" async="async"></script>
-    <script>
+    <script type="">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-37479788-1']);
         _gaq.push(['_trackPageview']);
