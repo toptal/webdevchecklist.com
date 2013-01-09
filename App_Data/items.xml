@@ -12,7 +12,7 @@
       <link url="https://browserling.com/">Browserling.com</link>
     </rule>
     <rule name="Remove 'www' subdomain">
-      <link url="http://no-www.org/verify.php">no-www.org</link>
+      <link url="http://no-www.org/verify.php">no-www.org score of B</link>
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove "www" in web.config</link>
     </rule>    
   </category>
@@ -193,7 +193,7 @@
   </category>
 
   <category name="...and finally">
-    <rule name="Add humans.txt">
+    <rule name="Add humans.txt" optional="true">
       <link url="http://humanstxt.org/">We are humans, not machines!</link>
     </rule>
   </category>
