@@ -101,9 +101,11 @@
     <rule name="HTML validation">
       <link url="//validator.w3.org/" target="_blank">W3C HTML validator</link>
       <link url="//watson.addy.com/" target="_blank">Dr. Watson</link>
+      <link url="//simplytestable.com/" target="_blank">Simply Testable</link>
     </rule>
     <rule name="CSS validation">
       <link url="//jigsaw.w3.org/css-validator/" target="_blank">W3C CSS validator</link>
+      <link url="//simplytestable.com/" target="_blank">Simply Testable</link>
     </rule>
     <rule name="World ready">
       <link url="//validator.w3.org/i18n-checker/" target="_blank">W3C i18n checker</link>
