@@ -1,200 +1,203 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <checklist>
-  <category name="Best practicesCHEESE">
+  <category name="Best practices">
     <rule name="Fix broken links">
-      <link url="http://validator.w3.org/checklink">W3C link checker</link>
-      <link url="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</link>
+      <link url="//validator.w3.org/checklink" target="_blank">W3C link checker</link>
+      <link url="//iwebtool.com/broken_link_checker" target="_blank">iWebTool Broken Link Checker</link>
     </rule>
     <rule name="Spell-check" />
     <rule name="Check website in all browsers">
-      <link url="http://blogs.msdn.com/b/synergist/archive/2012/04/23/making-a-great-snapped-view-for-your-web-site-on-ie10-on-windows-8.aspx">Win8 snapped sites</link>
-      <link url="http://browsershots.org/">BrowserShots.org</link>
-      <link url="https://browserling.com/">Browserling.com</link>
+      <link url="//blogs.msdn.com/b/synergist/archive/2012/04/23/making-a-great-snapped-view-for-your-web-site-on-ie10-on-windows-8.aspx" target="_blank">Win8 snapped sites</link>
+      <link url="//browsershots.org/" target="_blank">BrowserShots.org</link>
+      <link url="//browserling.com/" target="_blank">Browserling.com</link>
+      <link url="//spoon.net/browsers" target="_blank">Spoon.net</link>
     </rule>
     <rule name="Remove 'www' subdomain">
-      <link url="http://no-www.org/verify.php">no-www.org score of B</link>
-      <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove "www" in web.config</link>
+      <link url="//no-www.org/verify.php" target="_blank">no-www.org score of B</link>
+      <link url="//keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0" target="_blank">Remove "www" in web.config</link>
     </rule>    
   </category>
 
   <category name="Mobile">
-    <rule name="MobileOK score of 75+">
-      <link url="http://validator.w3.org/mobile/">W3C mobile checker</link>
+    <rule name="MobileOK score of 75+" target="_blank">
+      <link url="//validator.w3.org/mobile/" target="_blank">W3C mobile checker</link>
     </rule>
     <rule name="Use 'viewport' meta-tag">
-      <link url="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Don’t Forget the Viewport Meta Tag</link>
-      <link url="http://www.hanselman.com/blog/MakeYourWebsiteMobileAndIPhoneFriendlyAddHomeScreenIPhoneIconsAndAdjustTheViewPort.aspx">Make your website mobile friendly</link>
+      <link url="//webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/" target="_blank">Don’t Forget the Viewport Meta Tag</link>
+      <link url="//www.hanselman.com/blog/MakeYourWebsiteMobileAndIPhoneFriendlyAddHomeScreenIPhoneIconsAndAdjustTheViewPort.aspx" target="_blank">Make your website mobile friendly</link>
     </rule>
     <rule name="Use correct input types">
-      <link url="http://html5tutorial.info/html5-contact.php">Input type: Email, Url, Phone</link>
-      <link url="http://diveintohtml5.info/forms.html">Diving in to HTML5 forms</link>      
+      <link url="//html5tutorial.info/html5-contact.php" target="_blank">Input type: Email, Url, Phone</link>
+      <link url="//diveintohtml5.info/forms.html" target="_blank">Diving in to HTML5 forms</link>      
     </rule>
     <rule name="Manual check using emulators">
-      <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
-      <link url="http://www.opera.com/developer/tools/mobile/">Opera Mobile Emulator</link>
+      <link url="//www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/" target="_blank">6 free mobile emulators</link>
+      <link url="//www.opera.com/developer/tools/mobile/" target="_blank">Opera Mobile Emulator</link>
     </rule>
   </category>
 
   <category name="Analytics">
     <rule name="Uptime monitoring">
-      <link url="http://www.uptimerobot.com/">Uptime robot</link>
-      <link url="http://www.gotsitemonitor.com/">GotSiteMonitor.com</link>
+      <link url="//www.uptimerobot.com/" target="_blank">Uptime robot</link>
+      <link url="//www.gotsitemonitor.com/" target="_blank">GotSiteMonitor.com</link>
     </rule>
     <rule name="Traffic analysis">
-      <link url="http://www.google.com/analytics">Google Analytics</link>
-      <link url="http://statcounter.com/">StatCounter</link>
-      <link url="http://clicky.com/">Clicky</link>
+      <link url="//www.google.com/analytics" target="_blank">Google Analytics</link>
+      <link url="//statcounter.com/" target="_blank">StatCounter</link>
+      <link url="//clicky.com/" target="_blank">Clicky</link>
     </rule>
   </category>
 
   <category name="Accessibility">
     <rule name="Accessibility validation">
-      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
-      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
-      <link url="http://wave.webaim.org/">WAVE accessibility checker</link>
+      <link url="//accessibility.oit.ncsu.edu/accessibleu/problems.html" target="_blank">Common problems and solutions</link>
+      <link url="//achecker.ca/checker/index.php" target="_blank">IDI Web Accessibility Checker</link>
+      <link url="//wave.webaim.org/" target="_blank">WAVE accessibility checker</link>
     </rule>
     <rule name="Color contrast">
-      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
+      <link url="//www.checkmycolours.com/" target="_blank">Check color contrast online</link>
     </rule>
     <rule name="Implement WAI-ARIA" optional="true">
-      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
-      <link url="http://www.w3.org/WAI/presentations/2012/WWW2012.html">Getting started with accessibility</link>
-      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
+      <link url="//www.alistapart.com/articles/the-accessibility-of-wai-aria/" target="_blank">Guide to WAI-ARIA</link>
+      <link url="//www.w3.org/WAI/presentations/2012/WWW2012.html" target="_blank">Getting started with accessibility</link>
+      <link url="//www.punkchip.com/2010/11/aria-basic-findings/" target="_blank">Practical examples</link>
     </rule>
   </category>
 
   <category name="Usability">
     <rule name="HTML5 compatibility check">
-      <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
-      <link url="http://modernizr.com/">Modernizr JS library</link>
+      <link url="//ie.microsoft.com/testdrive/HTML5/CompatInspector/" target="_blank">Compat Inspector</link>
+      <link url="//modernizr.com/" target="_blank">Modernizr JS library</link>
     </rule>
     <rule name="Custom 404 page">
-      <link url="http://www.alistapart.com/articles/amoreuseful404/">A more useful 404</link>
-      <link url="http://www.stokia.com/support/misc/web-config-custom-httperrors.aspx">Custom error pages in ASP.NET</link>
+      <link url="//www.alistapart.com/articles/amoreuseful404/" target="_blank">A more useful 404</link>
+      <link url="//www.stokia.com/support/misc/web-config-custom-httperrors.aspx" target="_blank">Custom error pages in ASP.NET</link>
     </rule>
     <rule name="Favicon">
-      <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
-      <link url="http://stackoverflow.com/questions/3728392/whats-the-optimal-html-link-syntax-to-use-for-site-icons-favions">How to properly link a favicon</link>
+      <link url="//tools.dynamicdrive.com/favicon/" target="_blank">Online generator</link>
+      <link url="//stackoverflow.com/questions/3728392/whats-the-optimal-html-link-syntax-to-use-for-site-icons-favions" target="_blank">How to properly link a favicon</link>
     </rule>
     <rule name="Use friendly URLs">
-      <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
-      <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
-      <link url="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">URL rewrite in Apache</link>
+      <link url="//www.seomoz.org/blog/11-best-practices-for-urls" target="_blank">11 best practices for URLs</link>
+      <link url="//www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference" target="_blank">URL rewriting in IIS</link>
+      <link url="//httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">URL rewrite in Apache</link>
     </rule>
     <rule name="Add P3P policy" optional="true">
-      <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
-      <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
-      <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
+      <link url="//msdn.microsoft.com/en-us/library/ms537341.aspx" target="_blank">How to deply P3P</link>
+      <link url="//support.microsoft.com/kb/324013" target="_blank">Configure IIS to use P3P</link>
+      <link url="//www.w3.org/P3P/validator.html" target="_blank">P3P validator</link>
     </rule>
     <rule name="Add search feature" optional="true">
-      <link url="http://www.google.com/cse/">Google Custom Search</link>
+      <link url="//www.google.com/cse/" target="_blank">Google Custom Search</link>
     </rule>
   </category>
 
   <category name="Code quality">
     <rule name="HTML validation">
-      <link url="http://validator.w3.org/">W3C HTML validator</link>
-      <link url="http://watson.addy.com/">Dr. Watson</link>
+      <link url="//validator.w3.org/" target="_blank">W3C HTML validator</link>
+      <link url="//watson.addy.com/" target="_blank">Dr. Watson</link>
+      <link url="//simplytestable.com/" target="_blank">Simply Testable</link>
     </rule>
     <rule name="CSS validation">
-      <link url="http://jigsaw.w3.org/css-validator/">W3C CSS validator</link>
+      <link url="//jigsaw.w3.org/css-validator/" target="_blank">W3C CSS validator</link>
+      <link url="//simplytestable.com/" target="_blank">Simply Testable</link>
     </rule>
     <rule name="World ready">
-      <link url="http://validator.w3.org/i18n-checker/">W3C i18n checker</link>
+      <link url="//validator.w3.org/i18n-checker/" target="_blank">W3C i18n checker</link>
     </rule>
     <rule name="Run CSS Lint">
-      <link url="http://csslint.net/">Run CSS Lint online</link>
-      <link url="http://visualstudiogallery.msdn.microsoft.com/a921b98e-9430-4be2-bf53-1169e12bdb50">CssCop for VS 2010</link>
-      <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
+      <link url="//csslint.net/" target="_blank">Run CSS Lint online</link>
+      <link url="//visualstudiogallery.msdn.microsoft.com/a921b98e-9430-4be2-bf53-1169e12bdb50" target="_blank">CssCop for VS 2010</link>
+      <link url="//vswebessentials.com/" target="_blank">Web Essentials for VS2012</link>
     </rule>
     <rule name="Run JSLint/JSHint">
-      <link url="http://jslint.org/">Run JSLint online</link>
-      <link url="http://jshint.com/">Run JSHint online</link>
-      <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
+      <link url="//jslint.org/" target="_blank">Run JSLint online</link>
+      <link url="//jshint.com/" target="_blank">Run JSHint online</link>
+      <link url="//vswebessentials.com/" target="_blank">Web Essentials for VS2012</link>
     </rule>
     <!--<rule name="RSS/ATOM validation" optional="true">
-      <link url="http://validator.w3.org/feed/">W3C feed validator</link>
-      <link url="http://feedvalidator.org/">feedvalidator.org</link>
+      <link url="//validator.w3.org/feed/" target="_blank">W3C feed validator</link>
+      <link url="//feedvalidator.org/" target="_blank">feedvalidator.org</link>
     </rule>-->
   </category>
 
   <category name="Performance">
     <rule name="Google Page Speed score of 90+">
-      <link url="https://developers.google.com/speed/pagespeed/">Google Page Speed</link>
+      <link url="//developers.google.com/speed/pagespeed/" target="_blank">Google Page Speed</link>
     </rule>
     <rule name="Yahoo YSlow score of 85+">
-      <link url="http://yslow.org/">Yahoo's YSlow</link>
-      <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
+      <link url="//yslow.org/" target="_blank">Yahoo's YSlow</link>
+      <link url="//mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags" target="_blank">Remove ETags in ASP.NET</link>
     </rule>
     <rule name="Web Page Test score of 90+">
-      <link url="http://www.webpagetest.org/">WebPageTest.Org</link>
+      <link url="//www.webpagetest.org/" target="_blank">WebPageTest.Org</link>
     </rule>
     <rule name="Optimize HTTP headers">
-      <link url="http://redbot.org">redbot.org</link>
+      <link url="//redbot.org" target="_blank">redbot.org</link>
     </rule>
     <rule name="Optimize images">
-      <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
-      <link url="http://punypng.com/">PunyPNG.com</link>
-      <link url="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/">Image Optimizer for Visual Studio</link>
-      <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
+      <link url="//www.smushit.com/ysmush.it/" target="_blank">SmushIt.com</link>
+      <link url="//punypng.com/" target="_blank">PunyPNG.com</link>
+      <link url="//visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/" target="_blank">Image Optimizer for Visual Studio</link>
+      <link url="//pnggauntlet.com/" target="_blank">PNGGauntlet application</link>
     </rule>
   </category>
 
   <category name="Semantics">
     <rule name="Add meaning with Microdata">
-      <link url="http://schema.org/">Schema.org reference</link>
-      <link url="http://schema-creator.org/">Schema-Creator.org</link>
+      <link url="//schema.org/" target="_blank">Schema.org reference</link>
+      <link url="//schema-creator.org/" target="_blank">Schema-Creator.org</link>
     </rule>
     <rule name="Check the semantics">
-      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+      <link url="//www.w3.org/2003/12/semantic-extractor.html" target="_blank">W3C semantic extractor</link>
     </rule>
   </category>
 
   <category name="SEO">
     <rule name="SenSEO score of 85+">
-      <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
+      <link url="//addons.mozilla.org/en-US/firefox/addon/senseo/" target="_blank">SenSEO for Firefox</link>
     </rule>
     <rule name="Google Rich Snippets">
-      <link url="http://www.google.com/webmasters/tools/richsnippets">Online tester</link>
-      <link url="http://schema.org/docs/gs.html">Getting started</link>
+      <link url="//www.google.com/webmasters/tools/richsnippets" target="_blank">Online tester</link>
+      <link url="//schema.org/docs/gs.html" target="_blank">Getting started</link>
     </rule>
     <rule name="robots.txt">
-      <link url="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=156449&amp;from=35237&amp;rd=1">robots.txt tutorial</link>
-      <link url="http://www.robotsgenerator.com/">Create robots.txt online</link>
+      <link url="//support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=156449&amp;from=35237&amp;rd=1" target="_blank">robots.txt tutorial</link>
+      <link url="//www.robotsgenerator.com/" target="_blank">Create robots.txt online</link>
     </rule>
     <rule name="XML sitemap">
-      <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
+      <link url="//www.xml-sitemaps.com/" target="_blank">Create sitemap online</link>
     </rule>
   </category>  
 
   <category name="Security">
     <rule name="Implement best practices">
-      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
-      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
-      <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
+      <link url="//www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" target="_blank">OWASP Top 10 project</link>
+      <link url="//www.owasp.org/index.php/Cheat_Sheets" target="_blank">OWASP Cheat Sheets</link>
+      <link url="//asafaweb.com/" target="_blank">ASafaaWeb security analyzer</link>
     </rule>
     <rule name="Cross-site scripting">
-      <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
-      <link url="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">DOM based XSS cheat sheet</link>
-      <link url="http://www.acunetix.com/cross-site-scripting/scanner/">Free XSS scanner</link>
+      <link url="//www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank">XSS cheat sheet</link>
+      <link url="//www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet" target="_blank">DOM based XSS cheat sheet</link>
+      <link url="//www.acunetix.com/cross-site-scripting/scanner/" target="_blank">Free XSS scanner</link>
     </rule>
     <rule name="Cross-site request forgery">
-      <link url="http://www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html">Explanation and walkthrough</link>
-      <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
+      <link url="//www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html" target="_blank">Explanation and walkthrough</link>
+      <link url="//www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet" target="_blank">CSRF cheat sheet</link>
     </rule>
     <rule name="Prevent tampering">
-      <link url="http://advosys.ca/papers/web/60-form-tampering.html">Prevent HTML form tampering</link>
+      <link url="//advosys.ca/papers/web/60-form-tampering.html" target="_blank">Prevent HTML form tampering</link>
     </rule>
     <rule name="Secure connection (SSL)" optional="true">
-      <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
-      <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
-      <link url="http://certlogik.com/ssl-checker/">Online SSL checker</link>
+      <link url="//support.microsoft.com/kb/299875" target="_blank">Setup SSL on IIS 7</link>
+      <link url="//www.digicert.com/ssl-certificate-installation-apache.htm" target="_blank">Setup SSL on Apache</link>
+      <link url="//certlogik.com/ssl-checker/" target="_blank">Online SSL checker</link>
     </rule>
   </category>
 
   <category name="...and finally">
-    <rule name="Add humans.txt" optional="true">
-      <link url="http://humanstxt.org/">We are humans, not machines!</link>
+    <rule name="Add humans.txt" optional="true" target="_blank">
+      <link url="//humanstxt.org/" target="_blank">We are humans, not machines!</link>
     </rule>
   </category>
 
