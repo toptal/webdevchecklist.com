@@ -36,15 +36,18 @@
 </head>
 <body class="@Section">
 
-    <header itemscope itemtype="http://schema.org/WebApplication">        
+    <header itemscope itemtype="http://schema.org/WebApplication">
         <h1 itemprop="name">@DataName Developer Checklist</h1>
 
         @if (Subtitle.Length > 1)
         {
             <h2>@Subtitle</h2>
-        }        
+        }
 
-        <a href="/">Back to main checklist</a>
+        @if (DataName != "Web")
+        { 
+            <a href="/">Back to main checklist</a>
+        }
     </header>
 
     <aside role="complementary">
@@ -52,12 +55,12 @@
             <span class="ghFork"></span>
         </a>
     </aside>
-    
+
     <div id="main" role="main">
-        @RenderPage("~/views/_data.cshtml", null)        
+        @RenderPage("~/views/_data.cshtml", null)
     </div>
 
-    
+
 
     <footer>
         <a href="#" id="clearall">Clear all</a>
