@@ -1,9 +1,6 @@
 ﻿@using System.Xml
 @{
-    string path = Server.MapPath("~/app_data/items.xml");
-    XmlDocument doc = new XmlDocument();
-    doc.Load(path);
-
+    XmlDocument doc = DataProvider.GetXmlDocument(Request);
     Page.BonusPoints = doc.SelectNodes("//rule[@optional]").Count;
 }
 

@@ -1,14 +1,18 @@
 ﻿@{
-    Response.Cache.SetValidUntilExpires(true);
-    Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
-    Response.Cache.SetCacheability(HttpCacheability.Public);
+    //Response.Cache.SetValidUntilExpires(true);
+    //Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
+    //Response.Cache.SetCacheability(HttpCacheability.Public);
 
-    string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    string css = Server.MapPath("~/content/all.min.css");
-    string js = Server.MapPath("~/scripts/script.min.js");
-    string data = Server.MapPath("~/app_data/items.xml");
-    Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
-    Response.AddFileDependencies(new[] { file, css, js, data });
+    //string file = Server.MapPath(Request.CurrentExecutionFilePath);
+    //string css = Server.MapPath("~/content/all.min.css");
+    //string js = Server.MapPath("~/scripts/script.min.js");
+    //string data = Server.MapPath("~/app_data/items.xml");
+    //Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
+    //Response.AddFileDependencies(new[] { file, css, js, data });
+
+    string DataName = DataProvider.PageName(Request);
+    string Subtitle = DataProvider.Subtitle(Request);
+    string Section = DataName.Replace(".", string.Empty).ToLowerInvariant();
 }
 
 <!DOCTYPE html>
@@ -19,19 +23,28 @@
     <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website" />
     <meta name="description" content="The ultimate checklist for all serious web developers building modern websites" />
     <meta name="author" content="Sayed Hashimi @@sayedihashimi, Mads Kristensen @@mkristensen" />
-    <link rel="author" href="humans.txt" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+
+    @if (DataName != "Web")
+    { 
+        <link rel="stylesheet" href="@Fingerprint.Tag("/content/themes/" + Section + ".css")" />
+    }
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
-<body>
+<body class="@Section">
 
-    <header itemscope itemtype="http://schema.org/WebApplication">
-        <h1 itemprop="name">Web Developer Checklist</h1>
-        @if (Request.RawUrl.Length > 1) { 
-            <h2>@Request.RawUrl</h2>
-        }
+    <header itemscope itemtype="http://schema.org/WebApplication">        
+        <h1 itemprop="name">@DataName Developer Checklist</h1>
+
+        @if (Subtitle.Length > 1)
+        {
+            <h2>@Subtitle</h2>
+        }        
+
+        <a href="/">Back to main checklist</a>
     </header>
 
     <aside role="complementary">
@@ -39,10 +52,12 @@
             <span class="ghFork"></span>
         </a>
     </aside>
-
+    
     <div id="main" role="main">
-        @RenderPage("~/views/_data.cshtml", null)
+        @RenderPage("~/views/_data.cshtml", null)        
     </div>
+
+    
 
     <footer>
         <a href="#" id="clearall">Clear all</a>

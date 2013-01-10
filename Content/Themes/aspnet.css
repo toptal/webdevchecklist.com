@@ -1,0 +1,28 @@
+﻿
+/* ASP.NET template */
+
+.aspnet progress {
+    background: #eaeaea;
+    color: #742894;
+}
+
+    .aspnet progress span {
+        background: #742894;
+    }
+
+    .aspnet progress::-webkit-progress-bar {
+        background: #eaeaea;
+    }
+
+    .aspnet progress::-webkit-progress-value {
+        background: #742894;
+    }
+
+    .aspnet progress::-moz-progress-bar {
+        background-color: #742894;
+    }
+
+
+.aspnet .info {
+    background: #742894;
+}
