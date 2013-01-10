@@ -14,7 +14,7 @@
     <rule name="Remove 'www' subdomain">
       <link url="http://no-www.org/verify.php">no-www.org score of B</link>
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove "www" in web.config</link>
-    </rule>    
+    </rule>
   </category>
 
   <category name="Mobile">
@@ -27,7 +27,7 @@
     </rule>
     <rule name="Use correct input types">
       <link url="http://html5tutorial.info/html5-contact.php">Input type: Email, Url, Phone</link>
-      <link url="http://diveintohtml5.info/forms.html">Diving in to HTML5 forms</link>      
+      <link url="http://diveintohtml5.info/forms.html">Diving in to HTML5 forms</link>
     </rule>
     <rule name="Manual check using emulators">
       <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
@@ -51,14 +51,14 @@
     <rule name="Accessibility validation">
       <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
       <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
-      <link url="http://wave.webaim.org/">WAVE accessibility checker</link>
+      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
     </rule>
     <rule name="Color contrast">
       <link url="http://www.checkmycolours.com/">Check color contrast online</link>
     </rule>
-    <rule name="Implement WAI-ARIA" optional="true">
+    <rule name="WAI-ARIA Landmarks">
+      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
       <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
-      <link url="http://www.w3.org/WAI/presentations/2012/WWW2012.html">Getting started with accessibility</link>
       <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
     </rule>
   </category>
@@ -88,7 +88,7 @@
     </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
-      <link url="http://www.opensearch.org/">Browser Integration with Open Search</link>
+      <link url="http://www.opensearch.org/">Consider 'Open Search'</link>
     </rule>
     <rule name="Environment Integration" optional="true">
       <link url="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Safari on iOS</link>
@@ -131,9 +131,6 @@
       <link url="http://yslow.org/">Yahoo's YSlow</link>
       <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
     </rule>
-    <rule name="Web Page Test score of 90+">
-      <link url="http://www.webpagetest.org/">WebPageTest.Org</link>
-    </rule>
     <rule name="Optimize HTTP headers">
       <link url="http://redbot.org">redbot.org</link>
     </rule>
@@ -170,13 +167,13 @@
     <rule name="XML sitemap">
       <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
     </rule>
-  </category>  
+  </category>
 
   <category name="Security">
-    <rule name="Implement best practices">
+    <rule name="Follow best practices">
+      <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
       <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
       <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
-      <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
     </rule>
     <rule name="Cross-site scripting">
       <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
@@ -187,23 +184,20 @@
       <link url="http://www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html">Explanation and walkthrough</link>
       <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
     </rule>
-    <rule name="Prevent tampering">
-      <link url="http://advosys.ca/papers/web/60-form-tampering.html">Prevent HTML form tampering</link>
-    </rule>
     <rule name="Secure connection (SSL)" optional="true">
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
       <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
       <link url="http://certlogik.com/ssl-checker/">Online SSL checker</link>
     </rule>
-    <rule name="HTTP Strict Transport Security (HSTS)" optional="true">
+    <rule name="HTTP Strict Transport Security" optional="true">
       <link url="https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security">MDN Overview</link>
       <link url="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">OWASP Overview</link>
     </rule>
-    <rule name="Content Security Policy (CSP)" optional="true">
+    <rule name="Content Security Policy" optional="true">
       <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">HTML5 Rocks Introduction</link>
     </rule>
     <rule name="crossdomain.xml" optional="true">
-      <link url="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain policy file specification</link>
+      <link url="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain policy specification</link>
     </rule>
   </category>
 
