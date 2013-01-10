@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <checklist>
-  <category name="Best practicesCHEESE">
+  <category name="Best practices">
+    <rule name="Enable Release mode" />
     <rule name="Fix broken links">
       <link url="http://validator.w3.org/checklink">W3C link checker</link>
       <link url="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</link>
@@ -18,7 +19,7 @@
   </category>
 
   <category name="Mobile">
-    <rule name="MobileOK score of 75+">
+    <rule name="Adopt ASP.NET mobile support">
       <link url="http://validator.w3.org/mobile/">W3C mobile checker</link>
     </rule>
     <rule name="Use 'viewport' meta-tag">
@@ -125,9 +126,6 @@
     <rule name="Yahoo YSlow score of 85+">
       <link url="http://yslow.org/">Yahoo's YSlow</link>
       <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
-    </rule>
-    <rule name="Web Page Test score of 90+">
-      <link url="http://www.webpagetest.org/">WebPageTest.Org</link>
     </rule>
     <rule name="Optimize HTTP headers">
       <link url="http://redbot.org">redbot.org</link>
