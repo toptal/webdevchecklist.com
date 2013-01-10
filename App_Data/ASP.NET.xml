@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <checklist>
-  <category name="Best practicesCHEESE">
+  <category name="Best practices">
     <rule name="Fix broken links">
       <link url="//validator.w3.org/checklink" target="_blank">W3C link checker</link>
       <link url="//iwebtool.com/broken_link_checker" target="_blank">iWebTool Broken Link Checker</link>
