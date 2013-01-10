@@ -88,6 +88,7 @@
     </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
+      <link url="http://www.opensearch.org/">Browser Integration with Open Search</link>
     </rule>
   </category>
 
@@ -207,7 +208,7 @@
       <link url="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain policy file specification</link>
     </rule>
   </category>
-
+  
   <category name="Social">
     <rule name="Humans.txt" optional="true">
       <link url="http://humanstxt.org/">Humans.txt</link>
