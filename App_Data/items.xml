@@ -199,6 +199,15 @@
     </rule>
   </category>
 
+  <category name="Distributed">
+    <rule name="Cross-Origin Resource Sharing (CORS)" optional="true">
+      <link url="http://enable-cors.org/">Enable CORS</link>
+    </rule>
+    <rule name="crossdomain.xml" optional="true">
+      <link url="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain policy file specification</link>
+    </rule>
+  </category>
+
   <category name="Social">
     <rule name="Humans.txt" optional="true">
       <link url="http://humanstxt.org/">Humans.txt</link>
