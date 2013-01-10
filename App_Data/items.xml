@@ -201,4 +201,10 @@
     </rule>
   </category>
 
+  <category name="...and finally">
+    <rule name="Add humans.txt" optional="true">
+      <link url="http://humanstxt.org/">We are humans, not machines!</link>
+    </rule>
+  </category>
+
 </checklist>
