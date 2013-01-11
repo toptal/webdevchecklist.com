@@ -1,17 +1,17 @@
 ﻿@{
-    //Response.Cache.SetValidUntilExpires(true);
-    //Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
-    //Response.Cache.SetCacheability(HttpCacheability.Public);
+    if (!Request.IsLocal)
+    {
+        Response.Cache.SetValidUntilExpires(true);
+        Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
+        Response.Cache.SetCacheability(HttpCacheability.Public);
 
-    //string file = Server.MapPath(Request.CurrentExecutionFilePath);
-    //string css = Server.MapPath("~/content/all.min.css");
-    //string js = Server.MapPath("~/scripts/script.min.js");
-    //string data = Server.MapPath("~/app_data/items.xml");
-    //Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
-    //Response.AddFileDependencies(new[] { file, css, js, data });
+        string file = Server.MapPath(Request.CurrentExecutionFilePath);
+        Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
+        Response.AddFileDependency(file);
+    }
 
-    string DataName = DataProvider.PageName(Request);
-    string Subtitle = DataProvider.Subtitle(Request);
+    string DataName = Checklist.PageName(Request);
+    string Subtitle = Checklist.Subtitle(Request);
     string Section = DataName.Replace(".", string.Empty).ToLowerInvariant();
 }
 
@@ -26,7 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
 
-    @if (DataName != "Web")
+    @if (DataName != Checklist.Title)
     { 
         <link rel="stylesheet" href="@Fingerprint.Tag("/content/themes/" + Section + ".css")" />
     }
@@ -37,16 +37,16 @@
 <body class="@Section">
 
     <header itemscope itemtype="http://schema.org/WebApplication">
-        <h1 itemprop="name">@DataName Developer Checklist</h1>
+        <h1 itemprop="name">@DataName Checklist</h1>
 
         @if (Subtitle.Length > 1)
         {
             <h2>@Subtitle</h2>
         }
 
-        @if (DataName != "Web")
+        @if (DataName != Checklist.Title)
         { 
-            <a href="/">Back to main checklist</a>
+            <a href="/" title="Return to the Web Developer Checklist">Back to main checklist</a>
         }
     </header>
 

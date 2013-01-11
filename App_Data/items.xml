@@ -188,16 +188,11 @@
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
       <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
       <link url="http://certlogik.com/ssl-checker/">Online SSL checker</link>
+      <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</link>
     </rule>
     <rule name="HTTP Strict Transport Security" optional="true">
       <link url="https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security">MDN Overview</link>
       <link url="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">OWASP Overview</link>
-    </rule>
-    <rule name="Content Security Policy" optional="true">
-      <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">HTML5 Rocks Introduction</link>
-    </rule>
-    <rule name="crossdomain.xml" optional="true">
-      <link url="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">Cross-domain policy specification</link>
     </rule>
   </category>
 

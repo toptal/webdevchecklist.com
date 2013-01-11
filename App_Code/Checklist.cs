@@ -10,14 +10,14 @@ using System.Xml;
 /// <summary>
 /// Summary description for DataProvider
 /// </summary>
-public static class DataProvider
+public static class Checklist
 {
     public static Dictionary<string, XmlDocument> Docs = new Dictionary<string, XmlDocument>();
-    
-    private static string folder = HostingEnvironment.MapPath("~/app_data/");
-    private const string title = "Web";
+    public const string Title = "Web Developer";
 
-    static DataProvider()
+    private static string folder = HostingEnvironment.MapPath("~/app_data/");    
+
+    static Checklist()
     {
         BuildCache(folder);
     }
@@ -66,12 +66,12 @@ public static class DataProvider
             return result.Key;
         }
                 
-        return title;
+        return Title;
     }
 
     public static string Subtitle(HttpRequestBase request)
     {        
-        if (PageName(request) != title)
+        if (PageName(request) != Title)
         {
             int index = request.RawUrl.IndexOf('/', 1);
          
@@ -79,6 +79,8 @@ public static class DataProvider
             {
                 return request.RawUrl.Substring(index);
             }
+
+            return string.Empty;
         }
 
         return request.RawUrl;

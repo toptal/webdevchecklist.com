@@ -123,7 +123,7 @@ public class WhitespaceModule : IHttpModule
             html = Regex.Replace(html, @">\s+<", "><");
             html = Regex.Replace(html, @"\s+", " ");
 
-            byte[] outdata = System.Text.Encoding.Default.GetBytes(html.Trim());
+            byte[] outdata = System.Text.Encoding.Default.GetBytes(html);
             _sink.Write(outdata, 0, outdata.GetLength(0));
         }
 

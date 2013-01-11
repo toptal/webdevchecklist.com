@@ -1,6 +1,6 @@
 ﻿@using System.Xml
 @{
-    XmlDocument doc = DataProvider.GetXmlDocument(Request);
+    XmlDocument doc = Checklist.GetXmlDocument(Request);
     Page.BonusPoints = doc.SelectNodes("//rule[@optional]").Count;
 }
 
