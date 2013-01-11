@@ -67,7 +67,6 @@ section {
     overflow: hidden;
     margin: 0 auto 1em auto;
     width: 370px;
-    column-fill: balance;
 }
 
     section h2 {
@@ -94,10 +93,10 @@ ul {
         overflow: hidden;
         padding-left: 2em;
         max-height: 0;
-        -moz-transition: max-height .5s ease;
-        -o-transition: max-height .5s ease;
-        -webkit-transition: max-height .5s ease;
-        transition: max-height .5s ease;
+        -moz-transition: max-height .4s ease;
+        -o-transition: max-height .4s ease;
+        -webkit-transition: max-height .4s ease;
+        transition: max-height .4s ease;
     }
 
         ul li ul li:last-child {
@@ -116,8 +115,8 @@ em {
     cursor: pointer;
     -moz-transition: -moz-transform .4s ease;
     -o-transition: -o-transform .4s ease;
-    -webkit-transition: transform .4s ease; /* Chrome is having issues with this transition, so it points to the standard transform property */
-    transition: transform .4s ease;
+     /* Chrome is having issues with this transition, so no -webkit-transition */
+    transition: transform .3s ease;
 }
 
     em.open {
