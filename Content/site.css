@@ -3,33 +3,38 @@
     font: 1em/1.3 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
 }
 
-*::selection,*::-moz-selection{text-shadow:none;background-color:rgba(65,131,196,0.4)}
+    body > header {
+        text-align: center;
+    }
 
+        body > header h1 {
+            font-size: 2.5em;
+        }
 
-body > header {
-    text-align: center;
+        body > header h2 {
+            margin-top: -.7em;
+            height: 1.2em;
+            font-size: 2em;
+        }
+
+        body > header a {
+            position: absolute;
+            top: 0;
+            left: 1em;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAYAAACr8emlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAwtJREFUWEe1mNtWKjEMQOf/Pw1BQQW5iwICC7kj8Dane84ptmmGGWDOw3ZpmrRpk6YZoziOPT4/P+NSqRSAXOrewn6/j7vdbjB/uVyOZ7OZUfH1vT+Wy2VgCB8fH2bYN7yXNCfZgKt3/uXn5yd+fn4OjL6+vszwr0GRvL+/B+t1Oh0z9Ktz/mU4HAbKRYU1jePxmDgk153P52b4r85ZuVKpeErVavWslIUWrre3NzOk60vk2kTSjiU/CKOrAO4uLnGvczAajYI5vr+/zdA/BxuNhjf4+vqaDGZRhHOWp6cnb55er2fExsHNZuMNQNbpcaHa7XZgR9JL3bwMBgNvrpeXFyM2Dk4mE28ASF5rqMEpSZtbT86iHdRqtYqjfr/vCd0E1fgfzlnkZSE3o1ar5QnJK2lo0Zxj0ul0mqTFtcj5yX13bsIeEWtXSD2UhtvtNm42m57evbAxuY5cg+hG1DtXOB6PA0Pt5IpAriPTDYeD6024XCNurFZO7kU7Qfmq8HcQdy3E3OqindQclJFKclDWM/lYu2h5SAR2u118Op2uRs4v7wNdVBD3Wq0WGLpoJ5lVmvJCu+XOy32IyDlX+PDwEPRkEln1gfBw26VuXmhW5ZwU76TDxSl3gNdFTiBJc5JJpW4eeHvduegPkCeDslizEPIstM+DW5xEX1YTe1kTBRlmyHOKoDnJYlnvuYs2B+8wY2cluQOtDKTBm8kNd7HtUhaHwyFIMbfdOytqXQ0lRysHRUFoZR3mYOzpgWegfTRdah7uRRZm4PRdHc9gsVgk3yLSiEa0yJPk5HBEroMs9bPTQhskDaFer5thX/cWyDktUuShdvu9PyzaJyhwulwIFpE2WbA4kZCvBZB3Wn8IgcCifWlZuPGUBm3HEhIex3BCm4uT0/7lYVGFFj79tB27sDDhp+ngXQdyiYc/j23WJlWhC52KLAVFwCbyFHNVqEGOaDfvWijg6/XaTKmvI1GFlyDsLJKWUxqPj49J6N0CnBdVmBf+XcdlorOhoHPCwAZoNunn8lykdOLoD1fKndTDhDlEAAAAAElFTkSuQmCC') no-repeat;
+            *background: url('/Images/back.png') no-repeat;
+            width: 40px;
+            height: 33px;
+            text-indent: -5000px;
+        }
+
+::-moz-selection {
+    background-color: rgba(65,131,196,0.4);
 }
 
-    body > header h1 {
-        font-size: 2.5em;
-    }
-
-    body > header h2 {
-        margin-top: -.7em;
-        height: 1.2em;
-        font-size: 2em;
-    }
-
-    body > header a {
-        position: absolute;
-        top: 0;
-        left: 1em;
-        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAYAAACr8emlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAwtJREFUWEe1mNtWKjEMQOf/Pw1BQQW5iwICC7kj8Dane84ptmmGGWDOw3ZpmrRpk6YZoziOPT4/P+NSqRSAXOrewn6/j7vdbjB/uVyOZ7OZUfH1vT+Wy2VgCB8fH2bYN7yXNCfZgKt3/uXn5yd+fn4OjL6+vszwr0GRvL+/B+t1Oh0z9Ktz/mU4HAbKRYU1jePxmDgk153P52b4r85ZuVKpeErVavWslIUWrre3NzOk60vk2kTSjiU/CKOrAO4uLnGvczAajYI5vr+/zdA/BxuNhjf4+vqaDGZRhHOWp6cnb55er2fExsHNZuMNQNbpcaHa7XZgR9JL3bwMBgNvrpeXFyM2Dk4mE28ASF5rqMEpSZtbT86iHdRqtYqjfr/vCd0E1fgfzlnkZSE3o1ar5QnJK2lo0Zxj0ul0mqTFtcj5yX13bsIeEWtXSD2UhtvtNm42m57evbAxuY5cg+hG1DtXOB6PA0Pt5IpAriPTDYeD6024XCNurFZO7kU7Qfmq8HcQdy3E3OqindQclJFKclDWM/lYu2h5SAR2u118Op2uRs4v7wNdVBD3Wq0WGLpoJ5lVmvJCu+XOy32IyDlX+PDwEPRkEln1gfBw26VuXmhW5ZwU76TDxSl3gNdFTiBJc5JJpW4eeHvduegPkCeDslizEPIstM+DW5xEX1YTe1kTBRlmyHOKoDnJYlnvuYs2B+8wY2cluQOtDKTBm8kNd7HtUhaHwyFIMbfdOytqXQ0lRysHRUFoZR3mYOzpgWegfTRdah7uRRZm4PRdHc9gsVgk3yLSiEa0yJPk5HBEroMs9bPTQhskDaFer5thX/cWyDktUuShdvu9PyzaJyhwulwIFpE2WbA4kZCvBZB3Wn8IgcCifWlZuPGUBm3HEhIex3BCm4uT0/7lYVGFFj79tB27sDDhp+ngXQdyiYc/j23WJlWhC52KLAVFwCbyFHNVqEGOaDfvWijg6/XaTKmvI1GFlyDsLJKWUxqPj49J6N0CnBdVmBf+XcdlorOhoHPCwAZoNunn8lykdOLoD1fKndTDhDlEAAAAAElFTkSuQmCC') no-repeat;
-        *background: url('/Images/back.png') no-repeat;
-        width: 40px;
-        height: 33px;
-        text-indent: -5000px;
-    }
+::selection {
+    background-color: rgba(65,131,196,0.4);
+}
 
 .ghFork {
     position: absolute;
@@ -99,21 +104,12 @@ ul {
             margin-bottom: 1em;
         }
 
-.info {
+em {
     display: inline-block;
-    margin-left: .6em;
-    width: 14px;
-    height: 14px;
-    border: 2px solid #369aca;
-    border-radius: 12px;
-    /*background: #369aca;*/
-    background: #f1f1f1;
+    padding: 0 4px;
     color: #369aca;
-    text-align: center;
     text-decoration: none;
-    font-weight: bold;
-    font-style: normal;
-    font-size: .7em;
+    font-size: .8em;
     cursor: pointer;
     -moz-transform: translate(0, -2px);
     -ms-transform: translate(0, -2px);
@@ -122,7 +118,15 @@ ul {
     transform: translate(0, -2px);
 }
 
-    .info + ul li:first-child {
+em.info:after{
+    content: '◄';
+}
+
+em.open:after{
+    content: '▼';
+}
+
+    em + ul li:first-child {
         margin-top: .5em;
     }
 

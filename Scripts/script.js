@@ -60,14 +60,19 @@
 
             if (details[i] !== detail) {
                 var d = (details[i].nextElementSibling || details[i].nextSibling);
-                d.style.maxHeight = "0";
+                d.style.maxHeight = "0";                
             }
+
+            details[i].className = 'info';
         }
 
-        if (ul.style.maxHeight !== '95px')
+        if (ul.style.maxHeight !== '95px') {
             ul.style.maxHeight = '95px';
-        else
+            detail.className = 'open';
+        }
+        else {
             ul.style.maxHeight = '0';
+        }
     }
 
     function calculateProgress() {
