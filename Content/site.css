@@ -116,6 +116,8 @@ em {
     -o-transform: translate(0, -2px);
     -webkit-transform: translate(0, -2px);
     transform: translate(0, -2px);
+    -webkit-text-shadow: 2px 2px 2px #c1c1c1;
+    text-shadow: 2px 2px 2px #c1c1c1;
 }
 
 em.info:after{

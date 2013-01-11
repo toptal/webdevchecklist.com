@@ -47,22 +47,25 @@
     </rule>
   </category>
 
-  <category name="Accessibility">
-    <rule name="Accessibility validation">
-      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
-      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
-      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
+  <category name="Performance">
+    <rule name="Google Page Speed score of 90+">
+      <link url="https://developers.google.com/speed/pagespeed/">Google Page Speed</link>
     </rule>
-    <rule name="Color contrast">
-      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
+    <rule name="Yahoo YSlow score of 85+">
+      <link url="http://yslow.org/">Yahoo's YSlow</link>
+      <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
     </rule>
-    <rule name="WAI-ARIA Landmarks">
-      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
-      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
-      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
+    <rule name="Optimize HTTP headers">
+      <link url="http://redbot.org">redbot.org</link>
+    </rule>
+    <rule name="Optimize images">
+      <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
+      <link url="http://punypng.com/">PunyPNG.com</link>
+      <link url="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/">Image Optimizer for Visual Studio</link>
+      <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
     </rule>
   </category>
-
+    
   <category name="Usability">
     <rule name="HTML5 compatibility check">
       <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
@@ -123,35 +126,6 @@
     </rule>-->
   </category>
 
-  <category name="Performance">
-    <rule name="Google Page Speed score of 90+">
-      <link url="https://developers.google.com/speed/pagespeed/">Google Page Speed</link>
-    </rule>
-    <rule name="Yahoo YSlow score of 85+">
-      <link url="http://yslow.org/">Yahoo's YSlow</link>
-      <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
-    </rule>
-    <rule name="Optimize HTTP headers">
-      <link url="http://redbot.org">redbot.org</link>
-    </rule>
-    <rule name="Optimize images">
-      <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
-      <link url="http://punypng.com/">PunyPNG.com</link>
-      <link url="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/">Image Optimizer for Visual Studio</link>
-      <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
-    </rule>
-  </category>
-
-  <category name="Semantics">
-    <rule name="Add meaning with Microdata">
-      <link url="http://schema.org/">Schema.org reference</link>
-      <link url="http://schema-creator.org/">Schema-Creator.org</link>
-    </rule>
-    <rule name="Check the semantics">
-      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
-    </rule>
-  </category>
-
   <category name="SEO">
     <rule name="SenSEO score of 85+">
       <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
@@ -166,6 +140,32 @@
     </rule>
     <rule name="XML sitemap">
       <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
+    </rule>
+  </category>
+
+  <category name="Semantics">
+    <rule name="Add meaning with Microdata">
+      <link url="http://schema.org/">Schema.org reference</link>
+      <link url="http://schema-creator.org/">Schema-Creator.org</link>
+    </rule>
+    <rule name="Check the semantics">
+      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+    </rule>
+  </category>
+
+  <category name="Accessibility">
+    <rule name="Accessibility validation">
+      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
+      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
+      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
+    </rule>
+    <rule name="Color contrast">
+      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
+    </rule>
+    <rule name="WAI-ARIA Landmarks">
+      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
+      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
+      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
     </rule>
   </category>
 
