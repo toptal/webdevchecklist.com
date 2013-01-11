@@ -62,7 +62,9 @@
         openDetailsElement(detail);
 
         for (i = 0; i < details.length; i++) {
+
             var detail = details[i];
+
             if (detail.className === 'open') {
                 localStorage && localStorage.setItem(prefix + detail.id, true);
             }
@@ -85,8 +87,8 @@
             details[i].className = 'info';
         }
 
-        if (ul.style.maxHeight !== '95px') {
-            ul.style.maxHeight = '95px';
+        if (ul.style.maxHeight !== '100px') {
+            ul.style.maxHeight = '100px';
             detail.className = 'open';
         }
         else {
@@ -102,6 +104,7 @@
         for (var i = 0; i < checkboxes.length; i++) {
 
             var checkbox = checkboxes[i];
+
             if (checkbox.checked)
                 localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
             else
