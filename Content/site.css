@@ -109,24 +109,24 @@ em {
     padding: 0 4px;
     color: #369aca;
     text-decoration: none;
+    /*-webkit-text-shadow: 2px 2px 2px #c1c1c1;
+    text-shadow: 2px 2px 2px #c1c1c1;*/
+    -webkit-appearance: none;
     font-size: .8em;
     cursor: pointer;
-    -moz-transform: translate(0, -2px);
-    -ms-transform: translate(0, -2px);
-    -o-transform: translate(0, -2px);
-    -webkit-transform: translate(0, -2px);
-    transform: translate(0, -2px);
-    -webkit-text-shadow: 2px 2px 2px #c1c1c1;
-    text-shadow: 2px 2px 2px #c1c1c1;
+    -moz-transition: -moz-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
+    -webkit-transition: transform .4s ease; /* Chrome is having issues with this transition, so it points to the standard transform property */
+    transition: transform .4s ease;
 }
 
-em.info:after{
-    content: '◄';
-}
-
-em.open:after{
-    content: '▼';
-}
+    em.open {
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
 
     em + ul li:first-child {
         margin-top: .5em;
