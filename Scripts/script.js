@@ -19,7 +19,7 @@
 
         details = document.getElementsByTagName('em');
     }
-
+    
     function initialize() {
 
         bonus = document.getElementsByTagName("mark")[0];
@@ -47,6 +47,11 @@
             details[d].onclick = openDetails;
         }
 
+        for (var j = 0; j < details.length; j++) {
+            var detail = details[j];
+            if (Modernizr.localstorage && localStorage.getItem(prefix + detail.id))
+                openDetailsElement(detail);
+        }
         progress.max = max;
     }
 
@@ -54,6 +59,20 @@
 
         if (!e) e = window.event;
         var detail = (e.target || e.srcElement);
+        openDetailsElement(detail);
+
+        for (i = 0; i < details.length; i++) {
+            var detail = details[i];
+            if (detail.className === 'open') {
+                localStorage && localStorage.setItem(prefix + detail.id, true);
+            }
+            else {
+                localStorage && localStorage.removeItem(prefix + detail.id);
+            }
+        }
+    }
+    function openDetailsElement(detail) {
+
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
         for (var i = 0; i < details.length; i++) {
@@ -100,7 +119,7 @@
                 }
             }
         }
-
+       
         bonus.innerHTML = optional.toString();
         setProgressValue(count);
     }
