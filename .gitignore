@@ -1,6 +1,7 @@
 webdevchecklist.com.sln
 Content/all*.css
 *.map
+*.min.js
 
 #################
 ## Visual Studio
