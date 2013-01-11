@@ -37,7 +37,7 @@
             if (Modernizr.localstorage) {
                 var value = localStorage.getItem(prefix + checkbox.id) === "true";
                 checkbox.checked = value;
-            }            
+            }
 
             if (checkbox.parentNode.className !== "optional")
                 max++;
@@ -60,7 +60,7 @@
 
             if (details[i] !== detail) {
                 var d = (details[i].nextElementSibling || details[i].nextSibling);
-                d.style.maxHeight = "0";                
+                d.style.maxHeight = "0";
             }
 
             details[i].className = 'info';
@@ -83,7 +83,10 @@
         for (var i = 0; i < checkboxes.length; i++) {
 
             var checkbox = checkboxes[i];
-            localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
+            if (checkbox.checked)
+                localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
+            else
+                localStorage && localStorage.removeItem(prefix + checkbox.id);
 
             if (checkbox.parentNode.className !== "optional") {
 
@@ -129,6 +132,9 @@
         initialize();
         calculateProgress();
         clearAll();
+     
+        if (localStorage.length === 0)
+            details[0].click();
     };
 
 })();
