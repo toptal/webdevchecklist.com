@@ -17,7 +17,7 @@
             font-size: 2em;
         }
 
-        body > header a {
+/*body > header a {
             position: absolute;
             top: 0;
             left: 1em;
@@ -26,7 +26,8 @@
             width: 40px;
             height: 33px;
             text-indent: -5000px;
-        }
+        }*/
+
 
 ::-moz-selection {
     background-color: rgba(65,131,196,0.4);
@@ -50,6 +51,10 @@ a {
     color: gray;
 }
 
+a:hover{
+    color: black;
+}
+
 #main {
     margin: 1em auto;
     padding: 0 1em 3em 1em;
@@ -63,7 +68,6 @@ a {
 
 section {
     -webkit-column-break-inside: avoid;
-    break-inside: avoid-column;
     overflow: hidden;
     margin: 0 auto 1em auto;
     width: 370px;
@@ -113,7 +117,7 @@ em {
     cursor: pointer;
     -moz-transition: -moz-transform .4s ease;
     -o-transition: -o-transform .4s ease;
-     /* Chrome is having issues with this transition, so no -webkit-transition */
+    /* Chrome is having issues with this transition, so no -webkit-transition */
     transition: transform .3s ease;
 }
 
@@ -225,7 +229,6 @@ progress {
     }
 }
 
-/* Win8 snapped */
 @media screen and (max-width: 400px) {
     @-o-viewport {
         width: 470px;
@@ -236,10 +239,10 @@ progress {
     }
 
     body {
-        overflow-x: hidden;        
+        overflow-x: hidden;
     }
 
-    section{
+    section {
         line-height: 1.6;
     }
 
@@ -248,6 +251,16 @@ progress {
     }
 
     body > header a {
+        display: none;
+    }
+}
+
+@media print {
+    body {
+        width: 850px;
+    }
+
+    footer, #bonus {
         display: none;
     }
 }

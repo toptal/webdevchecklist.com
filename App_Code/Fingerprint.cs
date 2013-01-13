@@ -8,22 +8,18 @@ public class Fingerprint
 {
     public static string Tag(string rootRelativePath)
     {
-        if (HttpRuntime.Cache[rootRelativePath] == null)
-        {
+        //if (HttpRuntime.Cache[rootRelativePath] == null)
+        //{
             string absolute = HostingEnvironment.MapPath("~" + rootRelativePath);
-
-            if (!File.Exists(absolute))
-            {
-                throw new FileNotFoundException("File not found", absolute);
-            }
 
             DateTime date = File.GetLastWriteTime(absolute);
             int index = rootRelativePath.LastIndexOf('/');
 
             string result = rootRelativePath.Insert(index, "/v-" + date.Ticks);
-            HttpRuntime.Cache.Insert(rootRelativePath, result, new CacheDependency(absolute));
-        }
+            return result;
+        //    HttpRuntime.Cache.Insert(rootRelativePath, result, new CacheDependency(absolute));
+        //}
 
-        return HttpRuntime.Cache[rootRelativePath] as string;
+        //return HttpRuntime.Cache[rootRelativePath] as string;
     }
 }
