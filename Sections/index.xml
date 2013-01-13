@@ -53,7 +53,6 @@
     </rule>
     <rule name="Yahoo YSlow score of 85+">
       <link url="http://yslow.org/">Yahoo's YSlow</link>
-      <link url="http://mark.mymonster.nl/2011/10/18/improve-the-yslow-score-remove-the-etags">Remove ETags in ASP.NET</link>
     </rule>
     <rule name="Optimize HTTP headers">
       <link url="http://redbot.org">redbot.org</link>
@@ -61,7 +60,6 @@
     <rule name="Optimize images">
       <link url="http://www.smushit.com/ysmush.it/">SmushIt.com</link>
       <link url="http://punypng.com/">PunyPNG.com</link>
-      <link url="http://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/">Image Optimizer for Visual Studio</link>
       <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
     </rule>
   </category>
@@ -73,7 +71,6 @@
     </rule>
     <rule name="Custom 404 page">
       <link url="http://www.alistapart.com/articles/amoreuseful404/">A more useful 404</link>
-      <link url="http://www.stokia.com/support/misc/web-config-custom-httperrors.aspx">Custom error pages in ASP.NET</link>
     </rule>
     <rule name="Favicon">
       <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
@@ -112,13 +109,10 @@
     </rule>
     <rule name="Run CSS Lint">
       <link url="http://csslint.net/">Run CSS Lint online</link>
-      <link url="http://visualstudiogallery.msdn.microsoft.com/a921b98e-9430-4be2-bf53-1169e12bdb50">CssCop for VS 2010</link>
-      <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
     </rule>
     <rule name="Run JSLint/JSHint">
       <link url="http://jslint.org/">Run JSLint online</link>
       <link url="http://jshint.com/">Run JSHint online</link>
-      <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
     </rule>
     <!--<rule name="RSS/ATOM validation" optional="true">
       <link url="http://validator.w3.org/feed/">W3C feed validator</link>

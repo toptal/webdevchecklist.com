@@ -13,8 +13,8 @@
 
     nav:hover,
     nav.open {
-        -webkit-box-shadow: rgba(192, 192, 192, 0.47) 5px 5px;
-        box-shadow: rgba(192, 192, 192, 0.47) 5px 5px;
+        -webkit-box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
+        box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
     }
 
         nav:hover > ul,

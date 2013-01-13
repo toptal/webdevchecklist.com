@@ -29,7 +29,7 @@ public static class Checklist
         {
             BuildCache(Folder);
 
-            HttpRuntime.Cache.Insert("data", "test", new CacheDependency(Folder));
+           // HttpRuntime.Cache.Insert("data", "test", new CacheDependency(Folder));
         }
 
         var result = Docs.FirstOrDefault(d => d.Key.Equals(name, StringComparison.OrdinalIgnoreCase));

@@ -5,7 +5,11 @@
       <link url="http://validator.w3.org/checklink">W3C link checker</link>
       <link url="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</link>
     </rule>
-    <rule name="Spell-check" />
+    <rule name="Spell-check">
+      <link url="http://visualstudiogallery.msdn.microsoft.com/09cdc0c3-c50b-4bfd-a567-b7125c244b10">HTML Spell Checker for VS2012</link>
+      <link url="http://visualstudiogallery.msdn.microsoft.com/0db4814c-255e-4cc6-a2c2-a428de7f8949">HTML Spell Checker for VS2010</link>
+      <link url="http://visualstudiogallery.msdn.microsoft.com/7c8341f1-ebac-40c8-92c2-476db8d523ce">Spell Checker for VS2010/2012</link>
+    </rule>
     <rule name="Check website in all browsers">
       <link url="http://browsershots.org/">BrowserShots.org</link>
       <link url="https://browserling.com/">Browserling.com</link>
@@ -28,6 +32,7 @@
     <rule name="Use correct input types">
       <link url="http://html5tutorial.info/html5-contact.php">Input type: Email, Url, Phone</link>
       <link url="http://diveintohtml5.info/forms.html">Diving in to HTML5 forms</link>
+      <link url="http://weblogs.asp.net/sreejukg/archive/2011/11/28/new-html-5-input-types-in-asp-net-4-5.aspx">Input types in ASP.NET WebForms 4.5</link>
     </rule>
     <rule name="Manual check using emulators">
       <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
@@ -48,6 +53,9 @@
   </category>
 
   <category name="Performance">
+    <rule name="Run in Release Mode">
+      <link url="http://weblogs.asp.net/scottgu/archive/2006/04/11/Don_1920_t-run-production-ASP.NET-Applications-with-debug_3D001D20_true_1D20_-enabled.aspx">Release Mode and Retail switch</link>
+    </rule>
     <rule name="Google Page Speed score of 90+">
       <link url="https://developers.google.com/speed/pagespeed/">Google Page Speed</link>
     </rule>
@@ -82,7 +90,6 @@
     <rule name="Use friendly URLs">
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
       <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
-      <link url="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">URL rewrite in Apache</link>
     </rule>
     <rule name="Add P3P policy" optional="true">
       <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
@@ -129,6 +136,7 @@
   <category name="SEO">
     <rule name="SenSEO score of 85+">
       <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
+      <link url="http://weblogs.asp.net/sreejukg/archive/2011/11/28/new-html-5-input-types-in-asp-net-4-5.aspx">SEO toolkit for IIS</link>
     </rule>
     <rule name="Google Rich Snippets">
       <link url="http://www.google.com/webmasters/tools/richsnippets">Online tester</link>
@@ -137,9 +145,11 @@
     <rule name="robots.txt">
       <link url="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=156449&amp;from=35237&amp;rd=1">robots.txt tutorial</link>
       <link url="http://www.robotsgenerator.com/">Create robots.txt online</link>
+      <link url="http://www.iis.net/learn/extensions/iis-search-engine-optimization-toolkit/managing-robotstxt-and-sitemap-files">Manage it in SEO Toolkit for IIS</link>
     </rule>
     <rule name="XML sitemap">
       <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
+      <link url="http://stackoverflow.com/questions/1835664/generate-xml-sitemap-automatically-using-routes-and-controllers-in-asp-net-mvc">Sitemap.xml using ASP.NET MVC</link>
     </rule>
   </category>
 
@@ -172,21 +182,21 @@
   <category name="Security">
     <rule name="Follow best practices">
       <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
-      <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
-      <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+      <link url="http://msdn.microsoft.com/en-us/library/zdh19h94(v=VS.100).aspx">Basic security practices for ASP.NET</link>
+      <link url="http://www.microsoft.com/en-us/download/details.aspx?id=19968">Microsoft CAT.NET for ASP.NET</link>
     </rule>
     <rule name="Cross-site scripting">
-      <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
-      <link url="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">DOM based XSS cheat sheet</link>
+      <link url="http://msdn.microsoft.com/en-us/magazine/hh708755.aspx">Prevent XSS in ASP.NET WebForms</link>
+      <link url="http://www.microsoft.com/en-us/download/details.aspx?id=28589">Microsoft Anti-XSS library</link>
       <link url="http://www.acunetix.com/cross-site-scripting/scanner/">Free XSS scanner</link>
     </rule>
     <rule name="Cross-site request forgery">
       <link url="http://www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html">Explanation and walkthrough</link>
       <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
+      <link url="http://blog.stevensanderson.com/2008/09/01/prevent-cross-site-request-forgery-csrf-using-aspnet-mvcs-antiforgerytoken-helper/">Prevent CSRF in ASP.NET MVC</link>
     </rule>
     <rule name="Secure connection (SSL)" optional="true">
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
-      <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
       <link url="http://certlogik.com/ssl-checker/">Online SSL checker</link>
       <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</link>
     </rule>
