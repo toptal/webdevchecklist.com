@@ -4,7 +4,7 @@
 
     var checkboxes = [],
         details = [],
-        progress, bonus, fallback, prefix;
+        progress, bonus, fallback, prefix, menu;
 
     function findCheckboxes() {
 
@@ -24,6 +24,7 @@
 
         bonus = document.getElementsByTagName("mark")[0];
         progress = document.getElementsByTagName("progress")[0];
+        menu = document.getElementsByTagName("nav")[0];
         fallback = (progress.firstElementChild || progress.firstChild);
         prefix = location.pathname.substr(1);
 
@@ -149,6 +150,27 @@
         };
     }
 
+    function menuClick(e) {
+        if (!e) e = window.event;
+        var element = (e.target || e.srcElement);
+
+        while (element.parentNode) {            
+            
+            if (element.tagName === "NAV")
+                break;
+
+            element = element.parentNode;
+        }
+        
+        if (element.tagName === "NAV")
+        {
+            menu.className = "open";
+        }
+        else {
+            menu.className = "";
+        }
+    }
+
     window.onload = function () {
         findCheckboxes();
         initialize();
@@ -157,6 +179,8 @@
      
         if (localStorage.length === 0)
             details[0].click();
+
+        window.onclick = menuClick;
     };
 
 })();

@@ -23,6 +23,7 @@
     <meta name="description" content="The ultimate checklist for all serious web developers building modern websites. @DataName" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     @if (DataName != Checklist.Title)
     { 
@@ -31,9 +32,8 @@
     }
     else { 
         <title>Web Developer Checklist</title>
-    }
+    }    
     
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body class="@Section">
@@ -44,7 +44,6 @@
         @if (DataName != Checklist.Title)
         { 
             <h2>@DataName</h2>            
-            @*<a href="/" title="Return to the Web Developer Checklist">Back to main checklist</a>*@
         }
     </header>
 

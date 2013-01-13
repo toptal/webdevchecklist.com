@@ -4,4 +4,5 @@
 	<file>/Content/normalize.css</file>
 	<file>/Content/site.css</file>
 	<file>/content/menu.css</file>
+	<file>/content/mediaqueries.css</file>
 </bundle>

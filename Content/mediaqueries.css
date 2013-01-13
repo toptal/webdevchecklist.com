@@ -1,0 +1,39 @@
+﻿@media screen and (max-width: 768px) {
+    @-o-viewport {
+        width: 440px;
+    }
+
+    @-ms-viewport {
+        width: 440px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    body > header a {
+        display: none;
+    }
+    
+    nav {
+        display: none;
+    }
+}
+
+@media print {
+    body {
+        width: 850px;
+    }
+
+    footer, #bonus {
+        display: none;
+    }
+}
