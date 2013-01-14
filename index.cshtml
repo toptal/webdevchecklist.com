@@ -12,7 +12,7 @@
 
     string DataName = Checklist.PageName(Request).Replace("/", " ");
     string Subtitle = Checklist.Subtitle(Request);
-    string Section = Checklist.BaseName(Request).Replace(".", string.Empty).ToLowerInvariant();
+    string Section = Checklist.BaseName(Request);
 }
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
     @if (DataName != Checklist.Title)
     { 
         <title>Web Developer Checklist - @DataName</title>
-        <link rel="stylesheet" href="@Fingerprint.Tag("/content/themes/" + Section + ".css")" />
+        <link rel="stylesheet" href="@Fingerprint.Tag("/Sections/" + Section + "/section.css")" />
     }
     else { 
         <title>Web Developer Checklist</title>
@@ -36,7 +36,7 @@
     
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
-<body class="@Section">
+<body class="@Section.Replace(".", string.Empty).ToLowerInvariant()">
 
     <header itemscope itemtype="http://schema.org/WebApplication">
         <h1 itemprop="name">Web Developer Checklist</h1>
