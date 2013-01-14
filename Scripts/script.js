@@ -138,15 +138,20 @@
         fallback.style.width = (value * 100 / max) + "%";
     }
 
-    function clearAll() {
+    function reset() {
 
-        document.getElementById("clearall").onclick = function () {
+        document.getElementById("reset").onclick = function () {
 
             for (var i = 0; i < checkboxes.length; i++) {
                 checkboxes[i].checked = false;
+
+                if(Modernizr.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
             }
 
-            localStorage && localStorage.clear();
+            for (var j = 0; j < details.length; j++) {
+                if (Modernizr.localstorage) localStorage.removeItem(prefix + details[j].id);
+            }
+
             calculateProgress();
 
             return false;
@@ -169,7 +174,7 @@
         findCheckboxes();
         initialize();
         calculateProgress();
-        clearAll();
+        reset();
 
         if (localStorage.length === 0)
             details[0].click();
