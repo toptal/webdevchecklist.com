@@ -14,12 +14,11 @@ public static class Checklist
 {
     public static Dictionary<string, XmlDocument> Docs = new Dictionary<string, XmlDocument>();
     public const string Title = "Web Developer";
-
-    private static string folder = HostingEnvironment.MapPath("~/app_data/");    
+    public static string Folder = HostingEnvironment.MapPath("~/sections/");    
 
     static Checklist()
     {
-        BuildCache(folder);
+        BuildCache(Folder);
     }
     
     public static XmlDocument GetXmlDocument(HttpRequestBase request)
@@ -28,9 +27,9 @@ public static class Checklist
 
         if (HttpRuntime.Cache["data"] == null)
         {
-            BuildCache(folder);
+            BuildCache(Folder);
 
-            HttpRuntime.Cache.Insert("data", "test", new CacheDependency(folder));
+           // HttpRuntime.Cache.Insert("data", "test", new CacheDependency(Folder));
         }
 
         var result = Docs.FirstOrDefault(d => d.Key.Equals(name, StringComparison.OrdinalIgnoreCase));
@@ -40,18 +39,27 @@ public static class Checklist
             return result.Value;
         }
 
-        return Docs["items"]; ;
+        return Docs["index"]; ;
     }
 
     private static void BuildCache(string folder)
     {
         Docs.Clear();
-        foreach (string file in Directory.GetFiles(folder, "*.xml", SearchOption.TopDirectoryOnly))
+        foreach (string file in Directory.GetFiles(folder, "*.xml", SearchOption.AllDirectories))
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(file);
 
-            string key = Path.GetFileName(file).Replace(Path.GetExtension(file), string.Empty);
+            string key = file
+                .Replace(folder, string.Empty)
+                .Replace("\\", "/")
+                .Replace(".xml", string.Empty);
+
+            if (key.Contains("/") && key.EndsWith("index"))
+            {
+                key = key.Replace("/index", string.Empty);
+            }
+
             Docs.Add(key, doc);
         }
     }
@@ -73,11 +81,16 @@ public static class Checklist
     {        
         if (PageName(request) != Title)
         {
-            int index = request.RawUrl.IndexOf('/', 1);
+            string clean = request.RawUrl.Trim('/');
+
+            if (Docs.Any(d => d.Key.Equals(clean, StringComparison.OrdinalIgnoreCase)))
+                return string.Empty;
+
+            int index = clean.IndexOf('/', 1);
          
             if (index > -1)
             {
-                return request.RawUrl.Substring(index);
+                return clean.Substring(index);
             }
 
             return string.Empty;
@@ -86,9 +99,25 @@ public static class Checklist
         return request.RawUrl;
     }
 
+    public static string BaseName(HttpRequestBase request)
+    {
+        string fullName = GetFileName(request.RawUrl);
+        int index = fullName.IndexOf('/');
+
+        if (index > -1)
+        {
+            return fullName.Substring(0, index);
+        }
+
+        return fullName;
+    }
+
     static private string GetFileName(string path)
     {
         string clean = path.Trim('/');
+
+        if (Docs.Any(d => d.Key.Equals(clean, StringComparison.OrdinalIgnoreCase)))
+            return clean;
 
         int index = clean.IndexOf('/');
 

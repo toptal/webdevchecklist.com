@@ -4,7 +4,7 @@
 
     var checkboxes = [],
         details = [],
-        progress, bonus, fallback, prefix;
+        progress, bonus, fallback, prefix, menu;
 
     function findCheckboxes() {
 
@@ -19,13 +19,15 @@
 
         details = document.getElementsByTagName('em');
     }
-    
+
     function initialize() {
 
         bonus = document.getElementsByTagName("mark")[0];
         progress = document.getElementsByTagName("progress")[0];
+        menu = document.getElementsByTagName("nav")[0];
         fallback = (progress.firstElementChild || progress.firstChild);
         prefix = location.pathname.substr(1);
+        (menu.firstElementChild || menu.firstChild).onclick = menuClick;
 
         var max = 0;
 
@@ -52,6 +54,7 @@
             if (Modernizr.localstorage && localStorage.getItem(prefix + detail.id))
                 openDetailsElement(detail);
         }
+
         progress.max = max;
     }
 
@@ -73,6 +76,7 @@
             }
         }
     }
+
     function openDetailsElement(detail) {
 
         var ul = (detail.nextElementSibling || detail.nextSibling);
@@ -84,8 +88,8 @@
                 d.style.maxHeight = "0";
             }
 
-            details[i].className = 'info';
-        }
+            details[i].className = '';
+        }        
 
         if (ul.style.maxHeight !== '100px') {
             ul.style.maxHeight = '100px';
@@ -122,7 +126,7 @@
                 }
             }
         }
-       
+
         bonus.innerHTML = optional.toString();
         setProgressValue(count);
     }
@@ -149,12 +153,24 @@
         };
     }
 
+    function menuClick(e) {
+        if (!e) e = window.event;
+        var element = (e.target || e.srcElement);
+        
+        if (menu.className !== "open") {
+            menu.className = "open";
+        }
+        else {
+            menu.className = "";
+        }
+    }
+
     window.onload = function () {
         findCheckboxes();
         initialize();
         calculateProgress();
         clearAll();
-     
+
         if (localStorage.length === 0)
             details[0].click();
     };

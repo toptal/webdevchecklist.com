@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <checklist>
-  <category name="Best practices">
+  <category name="Best practices2">
     <rule name="Fix broken links">
       <link url="http://validator.w3.org/checklink">W3C link checker</link>
       <link url="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</link>

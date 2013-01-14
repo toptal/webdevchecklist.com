@@ -1,0 +1,54 @@
+﻿@media only screen and (max-width: 600px) {
+    @-o-viewport {
+        width: 440px;
+    }
+
+    @-ms-viewport {
+        width: 440px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    body > header {
+        text-align: left;
+        text-indent: .6em;
+    }
+
+        body > header h1 {
+            font-size: 1.7em;
+        }
+
+        body > header h2 {
+            font-size: 1.4em;
+        }
+
+    nav {
+        display: none;
+    }
+
+    .ghFork {
+        width: 0;
+        height: 0;
+        background-image: none;
+    }
+}
+
+@media print {
+    body {
+        width: 850px;
+    }
+
+    footer, #bonus {
+        display: none;
+    }
+}

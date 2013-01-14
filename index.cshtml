@@ -10,45 +10,44 @@
         Response.AddFileDependency(file);
     }
 
-    string DataName = Checklist.PageName(Request);
+    string DataName = Checklist.PageName(Request).Replace("/", " ");
     string Subtitle = Checklist.Subtitle(Request);
-    string Section = DataName.Replace(".", string.Empty).ToLowerInvariant();
+    string Section = Checklist.BaseName(Request).Replace(".", string.Empty).ToLowerInvariant();
 }
 
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-    <title>Web Developer Checklist</title>
+<head>    
     <meta charset="utf-8" />
-    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website" />
-    <meta name="description" content="The ultimate checklist for all serious web developers building modern websites" />
-    <meta name="author" content="Sayed Hashimi @@sayedihashimi, Mads Kristensen @@mkristensen" />
+    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website, @DataName" />
+    <meta name="description" content="The ultimate checklist for all serious web developers building modern websites. @DataName" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     @if (DataName != Checklist.Title)
     { 
+        <title>Web Developer Checklist - @DataName</title>
         <link rel="stylesheet" href="@Fingerprint.Tag("/content/themes/" + Section + ".css")" />
     }
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    else { 
+        <title>Web Developer Checklist</title>
+    }    
+    
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body class="@Section">
 
     <header itemscope itemtype="http://schema.org/WebApplication">
-        <h1 itemprop="name">@DataName Checklist</h1>
-
-        @if (Subtitle.Length > 1)
-        {
-            <h2>@Subtitle</h2>
-        }
+        <h1 itemprop="name">Web Developer Checklist</h1>
 
         @if (DataName != Checklist.Title)
         { 
-            <a href="/" title="Return to the Web Developer Checklist">Back to main checklist</a>
+            <h2>@DataName</h2>            
         }
     </header>
+
+    @RenderPage("~/views/_menu.cshtml", null)
 
     <aside role="complementary">
         <a href="https://github.com/ligershark/webdevchecklist.com">
