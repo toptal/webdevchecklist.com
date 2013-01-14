@@ -10,13 +10,13 @@
 	z-index: 2;
 }
 
-	nav span {
-		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAARElEQVQ4y+2QQQoAIBACNfrZvtu32S0iKBa2Y3MVBYe2sUMSWWgbETFXJOXbAPopWEdPSGK/hekLFQcNRb7EL/GJxDIDEGwzw19p5hYAAAAASUVORK5CYII=') no-repeat;
-		*background: url(/Images/menu.png) no-repeat; /* For IE 6 and 7 */
-		padding-left: 20px;
-		line-height: 16px;
-		display: inline-block;
-	}
+    nav span {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVQ4y2P8//8/AyWAEWSAs7Mz3JS9e/cyUsUAZDFcAKSWOi6gOAxGA3E0EId+IAIArFBf4TIqIjsAAAAASUVORK5CYII=') no-repeat;
+        *background: url(/Images/menu.png) no-repeat; /* For IE 6 and 7 */
+        padding-left: 20px;
+        line-height: 16px;
+        display: inline-block;
+    }
 
 	.no-touch nav:hover,
 	nav.open {
