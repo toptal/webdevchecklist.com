@@ -4,36 +4,41 @@
 
 <nav role="navigation">
     <span>Menu</span>
-    <ul role="menu">
-        <li role="menuitem"><a href="/" rel="first">Home</a></li>
+    <ul>
+        <li><a href="/">Home</a>
 
-        @foreach (string dir in folders)
-        {
-            string dirName = Path.GetFileName(dir);
+            @foreach (string dir in folders)
+            {
+                string dirName = Path.GetFileName(dir);
             
-            <ul>
-                <li role="menuitem"><a href="/@dirName.ToLowerInvariant()">@dirName</a></li>
+                <ul>
+                    <li><a href="/@dirName.ToLowerInvariant()">@dirName</a>
 
-                @{var files = Directory.GetFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Where(f => !f.EndsWith("index.xml"));}
+                        @{var files = Directory.GetFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Where(f => !f.EndsWith("index.xml"));}
 
-                @if (files.Count() > 0)
-                {
-                    <ul>
-                        @foreach (string file in files)
+                        @if (files.Count() > 0)
                         {
-                            string fileName = Path.GetFileNameWithoutExtension(file);
-                            string url = file.Replace(Checklist.Folder, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").ToLowerInvariant();
-                            <li role="menuitem"><a href="/@url">@fileName</a></li>
+                            <ul>
+                                @foreach (string file in files)
+                                {
+                                    string fileName = Path.GetFileNameWithoutExtension(file);
+                                    string url = file.Replace(Checklist.Folder, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").ToLowerInvariant();
+                                    <li><a href="/@url">@fileName</a></li>
+                                }
+                            </ul>
                         }
-                    </ul>
-                }
+                    </li>
 
-                <li><br />PHP (planned)</li>
-                <li>Rails (planned)</li>
-                <li>NodeJS (planned)</li>
-                <li>Python (planned)</li>
-                <li><br /><a href="https://github.com/ligershark/webdevchecklist.com">Help needed</a></li>
-            </ul>
-        }
+                    <li>PHP (planned)</li>
+                    <li>Rails (planned)</li>
+                    <li>NodeJS (planned)</li>
+                    <li>Python (planned)</li>
+                    <li>
+                        <br />
+                        <a href="https://github.com/ligershark/webdevchecklist.com">Help needed</a></li>
+                </ul>
+            }
+
+        </li>
     </ul>
 </nav>
