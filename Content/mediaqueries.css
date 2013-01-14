@@ -1,4 +1,4 @@
-﻿@media screen and (max-width: 768px) {
+﻿@media only screen and (max-width: 600px) {
     @-o-viewport {
         width: 440px;
     }
@@ -19,12 +19,27 @@
         font-size: 1.2em;
     }
 
-    body > header a {
-        display: none;
+    body > header {
+        text-align: left;
+        text-indent: .6em;
     }
-    
+
+        body > header h1 {
+            font-size: 1.7em;
+        }
+
+        body > header h2 {
+            font-size: 1.4em;
+        }
+
     nav {
         display: none;
+    }
+
+    .ghFork {
+        width: 0;
+        height: 0;
+        background-image: none;
     }
 }
 

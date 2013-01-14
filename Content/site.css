@@ -197,34 +197,3 @@ progress {
 
 
 /*#endregion */
-
-@media only screen and (max-width : 768px) {
-
-    @-ms-viewport {
-        width: 400px;
-    }
-
-    body {
-        width: 410px;
-        line-height: 1.3;
-    }
-
-        body > header {
-            text-align: left;
-            text-indent: .6em;
-        }
-
-            body > header h1 {
-                font-size: 1.7em;
-            }
-
-            body > header h2 {
-                font-size: 1.4em;
-            }
-
-    .ghFork {
-        width: 0;
-        height: 0;
-        background-image: none;
-    }
-}

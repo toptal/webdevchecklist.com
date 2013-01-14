@@ -1,30 +1,37 @@
 ﻿nav {
-    min-width: 16px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAR0lEQVQ4y+3QMQoAIAiFYY0mz+Zx39nealtEIBQ29o0KIr+SDNmYmcohJRnuPgcA5EbPFuvRDID8wOknWm3QpOhH/BGfRCwbes80G6vaaBIAAAAASUVORK5CYII=') no-repeat 0 2px white;
-    *background: url(/Images/menu.png) no-repeat 0 2px white; /* For IE 6 and 7 */
+    min-width: 16px;    
     position: absolute;
     top: 1em;
     left: 1em;
-    padding: 0 1.2em;
+    background: white;
+    padding: 0 1.2em 0 0 ;
     border-radius: 3px;
     cursor: default;
     z-index: 2;
 }
 
-    nav:hover,
+nav span{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAR0lEQVQ4y+3QMQoAIAiFYY0mz+Zx39nealtEIBQ29o0KIr+SDNmYmcohJRnuPgcA5EbPFuvRDID8wOknWm3QpOhH/BGfRCwbes80G6vaaBIAAAAASUVORK5CYII=') no-repeat;
+    *background: url(/Images/menu.png) no-repeat; /* For IE 6 and 7 */
+    padding-left: 20px;
+    line-height: 16px;
+    display: inline-block;
+}
+
+    .no-touch nav:hover,
     nav.open {
         -webkit-box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
         box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
     }
 
-        nav:hover > ul,
+        .no-touch nav:hover > ul,
         nav.open > ul {
             max-height: 300px;
             max-width: 200px;
         }
 
     nav > ul {
-        padding: 0;
+        padding: 0 0 0 1.2em;
         max-height: 0;
         max-width: 45px;
         overflow: hidden;
