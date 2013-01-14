@@ -83,7 +83,7 @@
       <link url="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">URL rewrite in Apache</link>
     </rule>
     <rule name="Add P3P policy" optional="true">
-      <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
+      <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deploy P3P</link>
       <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
       <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
     </rule>
