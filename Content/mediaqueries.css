@@ -1,55 +1,70 @@
-﻿@media only screen and (max-width: 720px) {
-	
-	@-o-viewport {
-		width: 440px;
-	}
+﻿
+@media screen and (max-width: 720px) {
 
-	@-ms-viewport {
-		width: 440px;
-	}
+    @-o-viewport {
+        width: 380px;
+    }
 
-	body {
-		overflow-x: hidden;
-	}
+    @-ms-viewport {
+        width: 380px;
+    }
 
-	section {
-		line-height: 1.6;
-	}
+    section {
+        line-height: 1.6;
+    }
 
-	h2 {
-		font-size: 1.2em;
-	}
+    h2 {
+        font-size: 1.2em;
+    }
 
-	body > header {
-		text-align: left;
-		text-indent: .6em;
-	}
+    #main {
+        -moz-columns: auto;
+        -webkit-columns: auto;
+        columns: auto;
+    }
 
-		body > header h1 {
-			font-size: 1.7em;
-		}
+    body {
+        width: 380px;
+        overflow-x: hidden;
+    }
 
-		body > header h2 {
-			font-size: 1.4em;
-		}
+        body > header {
+            text-align: left;
+            text-indent: .6em;
+        }
 
-	nav {
-		display: none;
-	}
+            body > header h1 {
+                font-size: 1.4em;
+            }
 
-	.ghFork {
-		width: 0;
-		height: 0;
-		background-image: none;
-	}
+            body > header h2 {
+                font-size: 1.4em;
+            }
+
+    nav {
+        display: none;
+    }
+
+    .ghFork {
+        width: 0;
+        height: 0;
+        background-image: none;
+    }
 }
 
 @media print {
-	body {
-		width: 850px;
-	}
+    body {
+        width: 850px;
+    }
 
-	footer, #bonus {
-		display: none;
-	}
+    footer, #bonus {
+        display: none;
+    }
+}
+
+/* Win8 snapped view*/
+@media screen and (max-width: 400px) {
+    @-ms-viewport {
+        width: 430px;
+    }
 }
