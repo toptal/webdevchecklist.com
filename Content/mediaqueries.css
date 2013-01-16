@@ -29,6 +29,7 @@
     }
 
         body > header {
+            margin-top: 2.3em;
             text-align: left;
             text-indent: .6em;
         }
@@ -41,9 +42,9 @@
                 font-size: 1.4em;
             }
 
-    nav {
+    /*nav {
         display: none;
-    }
+    }*/
 
     .ghFork {
         width: 0;

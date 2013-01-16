@@ -1,9 +1,10 @@
 ﻿@{
-    string[] folders = Directory.GetDirectories(Checklist.Folder);
+    string[] folders = Directory.GetDirectories(Checklist.Folder).Where(f => !f.EndsWith("DemoList")).ToArray();
 }
 
 <nav role="navigation">
     <span>Menu</span>
+
     <ul>
         <li><a href="/">Home</a>
 
@@ -23,22 +24,19 @@
                                 {
                                     string fileName = Path.GetFileNameWithoutExtension(file);
                                     string url = file.Replace(Checklist.Folder, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").ToLowerInvariant();
-                                    <li><a href="/@url">@fileName</a></li>
+                                    <li><a href="/@url">@Path.GetFileNameWithoutExtension(file)</a></li>
                                 }
                             </ul>
                         }
                     </li>
-                                        
-                    <li>NodeJS (planned)</li>
-                    <li>PHP (planned)</li>
-                    <li>Python (planned)</li>
-                    <li>Rails (planned)</li>                    
-                    <li>
-                        <br />
-                        <a href="https://github.com/ligershark/webdevchecklist.com">Help needed</a></li>
                 </ul>
             }
 
+            <li>NodeJS (planned)</li>
+            <li>PHP (planned)</li>
+            <li>Python (planned)</li>
+            <li>Rails (planned)</li>
+            <li><a href="Sayed Hashimi9:03 PMhttps://github.com/ligershark/webdevchecklist.com/wiki/">Help needed</a></li>
         </li>
     </ul>
 </nav>
