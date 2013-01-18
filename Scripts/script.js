@@ -3,7 +3,9 @@
 (function () {
 
     var checkboxes = [],
+        checkboxesRandom = [],
         details = [],
+        detailsRandom = [],
         progress, bonus, fallback, prefix, menu;
 
     function findCheckboxes() {
@@ -18,6 +20,12 @@
         }
 
         details = document.getElementsByTagName('em');
+
+        checkboxesRandom = checkboxes.slice(0);
+        randomizeArray(checkboxesRandom);
+
+        detailsRandom = Array.prototype.slice.call(details);
+        randomizeArray(detailsRandom);
     }
 
     function initialize() {
@@ -56,8 +64,9 @@
         }
 
         progress.max = max;
+        if (prefix === 'demo') { startDemo(); }
     }
-
+    
     function openDetails(e) {
 
         if (!e) e = window.event;
@@ -78,7 +87,7 @@
     }
 
     function openDetailsElement(detail) {
-
+        
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
         for (var i = 0; i < details.length; i++) {
@@ -141,21 +150,24 @@
     function reset() {
 
         document.getElementById("reset").onclick = function () {
-
-            for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].checked = false;
-
-                if(Modernizr.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
-            }
-
-            for (var j = 0; j < details.length; j++) {
-                if (Modernizr.localstorage) localStorage.removeItem(prefix + details[j].id);
-            }
-
-            calculateProgress();
+            resetInner();            
 
             return false;
         };
+    }
+
+    function resetInner() {
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false;
+
+            if (Modernizr.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
+        }
+
+        for (var j = 0; j < details.length; j++) {
+            if (Modernizr.localstorage) localStorage.removeItem(prefix + details[j].id);
+        }
+
+        calculateProgress();
     }
 
     function menuClick(e) {
@@ -180,4 +192,42 @@
             details[0].click();
     };
 
+    // demo related items below this
+    function randomizeArray(myArray) {
+        // Taken from: http://sedition.com/perl/javascript-fy.html
+        var i = myArray.length, j, tempi, tempj;
+        if (i == 0) return false;
+        while (--i) {
+            j = Math.floor(Math.random() * (i + 1));
+            tempi = myArray[i];
+            tempj = myArray[j];
+            myArray[i] = tempj;
+            myArray[j] = tempi;
+        }
+    }
+
+    function startDemo() {
+        animateChecboxes(0, checkboxes);
+        animateDetails(0, detailsRandom);
+    }
+    function animateChecboxes(index, items) {
+
+        if (index == 0) { resetInner(); }
+        if (index > items.length - 1) { index = 0; resetInner(); items = checkboxesRandom; }
+
+        setTimeout(function () {
+            items[index].checked = true;
+            calculateProgress();
+            animateChecboxes(++index, items);
+        }, 200);
+    }
+    function animateDetails(index, items) {
+
+        if (index > detailsRandom.length - 1) { index = 0; resetInner(); }
+
+        openDetailsElement(items[index]);
+        setTimeout(function () {
+            animateDetails(++index, items);
+        }, 200 * 10);
+    }
 })();
