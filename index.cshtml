@@ -1,18 +1,18 @@
 ﻿@{
-    if (!Request.IsLocal)
-    {
+    //if (!Request.IsLocal)
+    //{
         Response.Cache.SetValidUntilExpires(true);
         Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
         Response.Cache.SetCacheability(HttpCacheability.Public);
-        Response.Cache.VaryByParams["site"] = true;
+        //Response.Cache.VaryByParams["site"] = true;
 
         string file = Server.MapPath(Request.CurrentExecutionFilePath);
         Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
         Response.AddFileDependency(file);
-    }
+    //}
 
     string SiteName = Checklist.GetSiteName (Request);
-    string DataName = Checklist.GetPageName(Request).Replace("/", " ");
+    string DataName = Checklist.GetPageName(Request).Replace("/", " ").Replace("index", string.Empty);
     string Section = Checklist.GetBaseName(Request);
     string PageTitle = Checklist.GetPageTitle(Request);
 }
@@ -82,6 +82,6 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-    <!-- @Checklist.Docs.Count -->
+<!-- @Request.QueryString["site"] -->    
 </body>
 </html>

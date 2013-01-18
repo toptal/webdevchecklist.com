@@ -67,6 +67,10 @@ public static class Checklist
             {
                 return site[result];
             }
+            else if (site["index"] != null)
+            {
+                return site["index"];
+            }
         }
 
         return Docs[defaultSite]["index"];
@@ -108,7 +112,8 @@ public static class Checklist
 
             while (true)
             {
-                var result = pair.Keys.SingleOrDefault(k => k.Equals(path, StringComparison.OrdinalIgnoreCase));
+                string clean = string.IsNullOrEmpty(path) ? "index" : path;
+                var result = pair.Keys.SingleOrDefault(k => k.Equals(clean, StringComparison.OrdinalIgnoreCase));
 
                 if (result != null)
                     return result;

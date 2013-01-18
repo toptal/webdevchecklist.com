@@ -35,7 +35,9 @@
         menu = document.getElementsByTagName("nav")[0];
         fallback = (progress.firstElementChild || progress.firstChild);
         prefix = location.pathname.substr(1);
-        (menu.firstElementChild || menu.firstChild).onclick = menuClick;
+
+        if (menu)
+            (menu.firstElementChild || menu.firstChild).onclick = menuClick;
 
         var max = 0;
 
@@ -66,7 +68,7 @@
         progress.max = max;
         if (prefix && prefix.endsWith('demo')) { startDemo(); }
     }
-    
+
     function openDetails(e) {
 
         if (!e) e = window.event;
@@ -75,19 +77,19 @@
 
         for (i = 0; i < details.length; i++) {
 
-            var detail = details[i];
+            var d = details[i];
 
             if (detail.className === 'open') {
-                localStorage && localStorage.setItem(prefix + detail.id, true);
+                localStorage && localStorage.setItem(prefix + d.id, true);
             }
             else {
-                localStorage && localStorage.removeItem(prefix + detail.id);
+                localStorage && localStorage.removeItem(prefix + d.id);
             }
         }
     }
 
     function openDetailsElement(detail) {
-        
+
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
         for (var i = 0; i < details.length; i++) {
@@ -98,7 +100,7 @@
             }
 
             details[i].className = '';
-        }        
+        }
 
         if (ul.style.maxHeight !== '100px') {
             ul.style.maxHeight = '100px';
@@ -150,7 +152,7 @@
     function reset() {
 
         document.getElementById("reset").onclick = function () {
-            resetInner();            
+            resetInner();
 
             return false;
         };
@@ -173,7 +175,7 @@
     function menuClick(e) {
         if (!e) e = window.event;
         var element = (e.target || e.srcElement);
-        
+
         if (menu.className !== "open") {
             menu.className = "open";
         }
