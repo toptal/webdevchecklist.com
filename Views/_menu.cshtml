@@ -1,5 +1,5 @@
 ﻿@{
-    string[] folders = Directory.GetDirectories(Checklist.Folder).Where(f => !f.EndsWith("DemoList")).ToArray();
+    string[] folders = Directory.GetDirectories(Checklist.GetSiteSectionFolder(Request)).Where(f => !f.EndsWith("DemoList")).ToArray();
 }
 
 <nav role="navigation">
@@ -10,21 +10,20 @@
 
             @foreach (string dir in folders)
             {
-                string dirName = Path.GetFileName(dir);
-            
+                var dirName = Path.GetFileName(dir);
+                var files = Directory.GetFiles(dir, "*.xml").Where(f => !f.EndsWith("index.xml"));
+                
                 <ul>
-                    <li><a href="/@dirName.ToLowerInvariant()">@dirName</a>
-
-                        @{var files = Directory.GetFiles(dir, "*.xml", SearchOption.TopDirectoryOnly).Where(f => !f.EndsWith("index.xml"));}
+                    <li><a href="/@dirName.ToLowerInvariant()/">@dirName</a>
 
                         @if (files.Count() > 0)
                         {
                             <ul>
                                 @foreach (string file in files)
                                 {
-                                    string fileName = Path.GetFileNameWithoutExtension(file);
-                                    string url = file.Replace(Checklist.Folder, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").ToLowerInvariant();
-                                    <li><a href="/@url">@Path.GetFileNameWithoutExtension(file)</a></li>
+                                    var fileName = Path.GetFileNameWithoutExtension(file);
+                                    var url = file.Replace(dir, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").TrimStart('/').ToLowerInvariant();
+                                    <li><a href="/@dirName.ToLowerInvariant()/@url/">@Path.GetFileNameWithoutExtension(file)</a></li>
                                 }
                             </ul>
                         }

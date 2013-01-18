@@ -3,118 +3,130 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Caching;
 using System.Web.Hosting;
 using System.Xml;
 
-/// <summary>
-/// Summary description for DataProvider
-/// </summary>
 public static class Checklist
 {
-    public static Dictionary<string, XmlDocument> Docs = new Dictionary<string, XmlDocument>();
-    public const string Title = "Web Developer";
-    public static string Folder = HostingEnvironment.MapPath("~/sections/");    
+    // Public
+    public static Dictionary<string, Dictionary<string, XmlDocument>> Docs = new Dictionary<string, Dictionary<string, XmlDocument>>();
+    public const string Title = "Web Developer Checklist";
+
+    // Private
+    private const string defaultSite = "webdevchecklist.com";
+    private static string SitesFolder = HostingEnvironment.MapPath("~/sites/");
 
     static Checklist()
     {
-        BuildCache(Folder);
-    }
-    
-    public static XmlDocument GetXmlDocument(HttpRequestBase request)
-    {
-        string name = GetFileName(request.RawUrl);
-
-        if (HttpRuntime.Cache["data"] == null)
-        {
-            BuildCache(Folder);
-
-           // HttpRuntime.Cache.Insert("data", "test", new CacheDependency(Folder));
-        }
-
-        var result = Docs.FirstOrDefault(d => d.Key.Equals(name, StringComparison.OrdinalIgnoreCase));
-
-        if (result.Value != null)
-        {
-            return result.Value;
-        }
-
-        return Docs["index"]; ;
+        BuildCache();
     }
 
-    private static void BuildCache(string folder)
+    private static void BuildCache()
     {
         Docs.Clear();
-        foreach (string file in Directory.GetFiles(folder, "*.xml", SearchOption.AllDirectories))
+
+        foreach (string folder in Directory.GetDirectories(SitesFolder))
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(file);
+            var dic = new Dictionary<string, XmlDocument>();
 
-            string key = file
-                .Replace(folder, string.Empty)
-                .Replace("\\", "/")
-                .Replace(".xml", string.Empty);
-
-            if (key.Contains("/") && key.EndsWith("index"))
+            foreach (string file in Directory.GetFiles(folder, "*.xml", SearchOption.AllDirectories))
             {
-                key = key.Replace("/index", string.Empty);
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
+
+                string key = file
+                    .Replace(folder, string.Empty)
+                    .Replace("Sections", string.Empty)
+                    .Replace("\\", "/")
+                    .Replace(".xml", string.Empty)
+                    .TrimStart('/');
+
+                if (key.Contains("/") && key.EndsWith("index"))
+                {
+                    key = key.Replace("/index", string.Empty);
+                }
+
+                dic.Add(key, doc);
             }
 
-            Docs.Add(key, doc);
+            Docs.Add(Path.GetFileName(folder), dic);
         }
     }
 
-    public static string PageName(HttpRequestBase request)
+    public static XmlDocument GetXmlDocument(HttpRequestBase request)
     {
-        string name = GetFileName(request.RawUrl);
-        var result = Docs.FirstOrDefault(d => d.Key.Equals(name, StringComparison.OrdinalIgnoreCase));
+        string section = GetSiteName(request);
 
-        if (result.Value != null)
+        if (Docs.ContainsKey(section))
         {
-            return result.Key;
+            var site = Docs[section];
+            var pageName = GetPageName(request);
+            var result = site.Keys.SingleOrDefault(k => k.Equals(pageName, StringComparison.OrdinalIgnoreCase));
+
+            if (result != null)
+            {
+                return site[result];
+            }
         }
-                
+
+        return Docs[defaultSite]["index"];
+    }
+
+    public static string GetSiteName(HttpRequestBase request)
+    {
+        return request.Url.Host.StartsWith("localhost") ? defaultSite : request.Url.Host;
+    }
+
+    public static string GetSiteSectionFolder(HttpRequestBase request)
+    {
+        string siteName = GetSiteName(request);
+
+        return Path.Combine(SitesFolder, siteName, "Sections");
+    }
+
+    public static string GetPageTitle(HttpRequestBase request)
+    {
+        XmlDocument doc = GetXmlDocument(request);
+        XmlAttribute attr = doc.SelectSingleNode("checklist").Attributes["name"];
+
+        if (attr != null)
+        {
+            return attr.InnerText;
+        }
+
         return Title;
     }
 
-    public static string Subtitle(HttpRequestBase request)
-    {        
-        if (PageName(request) != Title)
+    public static string GetPageName(HttpRequestBase request)
+    {
+        string site = GetSiteName(request);
+
+        if (Docs.ContainsKey(site))
         {
-            string clean = request.RawUrl.Trim('/');
+            var pair = Docs[site];
+            var path = request.RawUrl.Trim('/');
 
-            if (Docs.Any(d => d.Key.Equals(clean, StringComparison.OrdinalIgnoreCase)))
-                return string.Empty;
-
-            int index = clean.IndexOf('/', 1);
-         
-            if (index > -1)
+            while (true)
             {
-                return clean.Substring(index);
+                var result = pair.Keys.SingleOrDefault(k => k.Equals(path, StringComparison.OrdinalIgnoreCase));
+
+                if (result != null)
+                    return result;
+
+                int index = path.LastIndexOf('/');
+                if (index == -1)
+                    break;
+
+                path = path.Substring(0, index);
             }
-
-            return string.Empty;
         }
 
-        return request.RawUrl;
+        return Title;
     }
 
-    public static string BaseName(HttpRequestBase request)
+    public static string GetBaseName(HttpRequestBase request)
     {
-        string fullName = GetFileName(request.RawUrl);
-        int index = fullName.IndexOf('/');
-
-        if (index > -1)
-        {
-            return fullName.Substring(0, index);
-        }
-
-        return fullName;
-    }
-
-    static private string GetFileName(string path)
-    {
-        string clean = path.Trim('/');
+        string clean = request.RawUrl.Trim('/');
 
         if (Docs.Any(d => d.Key.Equals(clean, StringComparison.OrdinalIgnoreCase)))
             return clean;
@@ -122,9 +134,7 @@ public static class Checklist
         int index = clean.IndexOf('/');
 
         if (index > -1)
-        {
             clean = clean.Substring(0, index);
-        }
 
         return clean;
     }
