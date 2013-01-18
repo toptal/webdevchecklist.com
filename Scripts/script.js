@@ -64,7 +64,7 @@
         }
 
         progress.max = max;
-        if (prefix === 'demo') { startDemo(); }
+        if (prefix && prefix.endsWith('demo')) { startDemo(); }
     }
     
     function openDetails(e) {
@@ -230,4 +230,8 @@
             animateDetails(++index, items);
         }, 200 * 10);
     }
+
+    String.prototype.endsWith = function (suffix) {
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+    };
 })();
