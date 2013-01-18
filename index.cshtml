@@ -4,10 +4,10 @@
         Response.Cache.SetValidUntilExpires(true);
         Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
         Response.Cache.SetCacheability(HttpCacheability.Public);
-        //Response.Cache.VaryByParams["site"] = true;
+        Response.Cache.SetLastModifiedFromFileDependencies();
+        Response.Cache.VaryByParams["site"] = true;
 
-        string file = Server.MapPath(Request.CurrentExecutionFilePath);
-        Response.Cache.SetLastModified(File.GetLastWriteTimeUtc(file));
+        string file = Server.MapPath(Request.CurrentExecutionFilePath);        
         Response.AddFileDependency(file);
     //}
 
@@ -39,7 +39,7 @@
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body class="@Section.Replace(".", string.Empty).ToLowerInvariant()">
-
+    
     <header itemscope itemtype="http://schema.org/WebApplication">
         <h1 itemprop="name">@PageTitle</h1>
 
