@@ -216,21 +216,39 @@
         if (index > items.length - 1) { index = 0; resetInner(); items = checkboxesRandom; }
 
         setTimeout(function () {
+            makeVisible(items[index]);
             items[index].checked = true;
             calculateProgress();
+
             animateChecboxes(++index, items);
         }, 200);
     }
     function animateDetails(index, items) {
 
         if (index > detailsRandom.length - 1) { index = 0; resetInner(); }
-
+        makeVisible(items[index]);
         openDetailsElement(items[index]);
+
         setTimeout(function () {
             animateDetails(++index, items);
         }, 200 * 10);
     }
+    function makeVisible(obj) {
+        var pos = findPos(obj);
+        window.scrollTo(pos[0], pos[1]);
+    }
+    function findPos(obj) {
+        // http://www.quirksmode.org/js/findpos.html
+        var curleft = curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curleft += obj.offsetLeft;
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+        }
 
+        return [curleft, curtop];
+    }
     String.prototype.endsWith = function (suffix) {
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
