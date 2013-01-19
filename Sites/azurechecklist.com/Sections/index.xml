@@ -12,5 +12,13 @@
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove 'www' in web.config</link>
     </rule>
   </category>
+
+  <category name="Diagnostics">
+    <rule name="Enable diagnostics">
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/diagnostics/">Enabling Diagnostics in Windows Azure</link>
+    </rule>
+    <rule name="Configure performance counters and log files" />
+    <rule name="Diagnostics on a separate storage account" />
+  </category>
   
 </checklist>
