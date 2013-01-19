@@ -40,5 +40,12 @@
     <rule name="Configure performance counters and log files" />
     <rule name="Diagnostics on a separate storage account" />
   </category>
+
+  <category name="Security">
+    <rule name="Security best practices">
+      <link url="http://www.windowsazure.com/en-us/develop/net/best-practices/security/">Security Best Practices</link>
+      <link url="http://fabriccontroller.net/blog/posts/apply-ip-address-restrictions-to-your-windows-azure-cloud-services/">Apply IP address restrictions to your Windows Azure Cloud Services (optional)</link>
+    </rule>
+  </category>
   
 </checklist>
