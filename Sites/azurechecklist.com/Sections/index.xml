@@ -19,6 +19,14 @@
   <category name="Configuration">
   </category>
 
+  <category name="Windows Identity Foundation / ACS">
+    <rule name="IssuerNameRegistry contains only trusted issuers" />
+    <rule name="cookieHandler set to use SSL" />
+    <rule name="wsFederation requireHttps set to true" />
+    <rule name="tokenReplayDetection enabled" />
+    <rule name="audienceUris contains only your realm(s)" />
+  </category>
+
   <category name="Certificates">
     <rule name="Install required certificates" />
     <rule name="Monitor expiry" />
