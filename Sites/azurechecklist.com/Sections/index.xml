@@ -19,6 +19,11 @@
   <category name="Configuration">
   </category>
 
+  <category name="Certificates">
+    <rule name="Install required certificates" />
+    <rule name="Monitor expiry" />
+  </category>
+
   <category name="SQL Database">
     <rule name="Using retry logic" />
     <rule name="Using connection pooling" />
