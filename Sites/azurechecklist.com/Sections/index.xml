@@ -13,6 +13,12 @@
     </rule>
   </category>
 
+  <category name="Deployment">
+  </category>
+
+  <category name="Configuration">
+  </category>
+
   <category name="RoleEntryPoint (optional)">
     <rule name="Bootstrapping in OnStart" />
     <rule name="No blocking code in OnRun" />
