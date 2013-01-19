@@ -12,5 +12,60 @@
       <link url="http://keyvan.io/remove-www-prefix-from-urls-with-url-rewrite-module-for-iis-7-0">Remove 'www' in web.config</link>
     </rule>
   </category>
+
+  <category name="Design">
+    <rule name="Application is stateless" />
+  </category>
+
+  <category name="Deployment">
+    <rule name="Every role on at least 2 instances" />
+    <rule name="Application and data in same datacenter" />
+    <rule name="Application and data in same affinity group" />
+  </category>
+
+  <category name="Configuration">
+  </category>
+
+  <category name="Windows Identity Foundation / ACS">
+    <rule name="IssuerNameRegistry contains only trusted issuers" />
+    <rule name="cookieHandler set to use SSL" />
+    <rule name="wsFederation requireHttps set to true" />
+    <rule name="tokenReplayDetection enabled" />
+    <rule name="audienceUris contains only your realm(s)" />
+  </category>
+
+  <category name="Certificates">
+    <rule name="Install required certificates" />
+    <rule name="Monitor expiry" />
+  </category>
+
+  <category name="SQL Database">
+    <rule name="Using retry logic" />
+    <rule name="Using connection pooling" />
+    <rule name="Configured firewall" />
+    <rule name="Using less-privileged user" />
+  </category>
+
+  <category name="RoleEntryPoint (optional)">
+    <rule name="Bootstrapping in OnStart" />
+    <rule name="No blocking code in OnRun" />
+    <rule name="Handle last-chance Exceptions" />
+    <rule name="Handle RoleEnvironment.ConfigurationChanged event" />
+  </category>
+
+  <category name="Diagnostics">
+    <rule name="Enable diagnostics">
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/diagnostics/">Enabling Diagnostics in Windows Azure</link>
+    </rule>
+    <rule name="Configure performance counters and log files" />
+    <rule name="Diagnostics on a separate storage account" />
+  </category>
+
+  <category name="Security">
+    <rule name="Security best practices">
+      <link url="http://www.windowsazure.com/en-us/develop/net/best-practices/security/">Security Best Practices</link>
+      <link url="http://fabriccontroller.net/blog/posts/apply-ip-address-restrictions-to-your-windows-azure-cloud-services/">Apply IP address restrictions to your Windows Azure Cloud Services (optional)</link>
+    </rule>
+  </category>
   
 </checklist>
