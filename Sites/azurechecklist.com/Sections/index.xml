@@ -13,7 +13,14 @@
     </rule>
   </category>
 
+  <category name="Design">
+    <rule name="Application is stateless" />
+  </category>
+
   <category name="Deployment">
+    <rule name="Every role on at least 2 instances" />
+    <rule name="Application and data in same datacenter" />
+    <rule name="Application and data in same affinity group" />
   </category>
 
   <category name="Configuration">
