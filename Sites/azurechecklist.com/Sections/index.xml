@@ -13,6 +13,13 @@
     </rule>
   </category>
 
+  <category name="RoleEntryPoint (optional)">
+    <rule name="Bootstrapping in OnStart" />
+    <rule name="No blocking code in OnRun" />
+    <rule name="Handle last-chance Exceptions" />
+    <rule name="Handle RoleEnvironment.ConfigurationChanged event" />
+  </category>
+
   <category name="Diagnostics">
     <rule name="Enable diagnostics">
       <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/diagnostics/">Enabling Diagnostics in Windows Azure</link>
