@@ -19,6 +19,13 @@
   <category name="Configuration">
   </category>
 
+  <category name="SQL Database">
+    <rule name="Using retry logic" />
+    <rule name="Using connection pooling" />
+    <rule name="Configured firewall" />
+    <rule name="Using less-privileged user" />
+  </category>
+
   <category name="RoleEntryPoint (optional)">
     <rule name="Bootstrapping in OnStart" />
     <rule name="No blocking code in OnRun" />
