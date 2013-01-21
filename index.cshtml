@@ -1,6 +1,6 @@
 ﻿@{
-    //if (!Request.IsLocal)
-    //{
+    if (!Request.IsLocal)
+    {
         Response.Cache.SetValidUntilExpires(true);
         Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
         Response.Cache.SetCacheability(HttpCacheability.Public);
@@ -9,7 +9,7 @@
 
         string file = Server.MapPath(Request.CurrentExecutionFilePath);        
         Response.AddFileDependency(file);
-    //}
+    }
 
     string SiteName = Checklist.GetSiteName (Request);
     string DataName = Checklist.GetPageName(Request).Replace("/", " ").Replace("index", string.Empty);
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-    @if (DataName != Checklist.Title)
+    @if (!string.IsNullOrEmpty(Section))
     { 
         <title>@PageTitle - @DataName</title>
         <link rel="stylesheet" href="@Fingerprint.Tag("/sites/" + SiteName + "/Sections/" + Section + "/section.css")" />

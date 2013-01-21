@@ -90,7 +90,7 @@
     </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
-      <link url="http://www.opensearch.org/">Consider 'Open Search'</link>
+      <link url="http://www.opensearch.org/Home">Consider 'Open Search'</link>
     </rule>
     <rule name="Environment Integration" optional="true">
       <link url="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Safari on iOS</link>
