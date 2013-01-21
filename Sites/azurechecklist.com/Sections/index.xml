@@ -23,6 +23,14 @@
     <rule name="Application and data in same affinity group" />
   </category>
 
+  <category name="Development">
+    <rule name="Use the integrated power of Git, Bitbucket or TFS for ALM and CI integration" />
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-git/" />Setup publishing with GIT</url>
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/" />Setup publishing with TFS</url>
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/continuous-delivery/" />Setup CI with TFS</url>
+      <link url="https://techmike2kx.wordpress.com/2012/10/25/tfs-preview-error403-and-windowsazure-continuous-integrationdelivery/" />resolving a common issue on TFS : Error403 (c:\a\bin folder) </url>
+    </rule>  
+  </category>
   <category name="Configuration">
   </category>
 
