@@ -4,11 +4,11 @@
         Response.Cache.SetValidUntilExpires(true);
         Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
         Response.Cache.SetCacheability(HttpCacheability.Public);
-        Response.Cache.SetLastModifiedFromFileDependencies();
         Response.Cache.VaryByParams["site"] = true;
 
-        string file = Server.MapPath(Request.CurrentExecutionFilePath);        
+        string file = Server.MapPath("~/web.config");
         Response.AddFileDependency(file);
+        Response.Cache.SetLastModifiedFromFileDependencies();
     }
 
     string SiteName = Checklist.GetSiteName (Request);
