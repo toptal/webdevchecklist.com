@@ -42,7 +42,10 @@
   <category name="SQL Database">
     <rule name="Using retry logic" />
     <rule name="Using connection pooling" />
-    <rule name="Configured firewall" />
+    <rule name="Configured firewall"> 
+	<link url="http://msdn.microsoft.com/en-us/library/ee621783.aspx">Creating a server level FW rule</link>
+      	<link url="http://msdn.microsoft.com/en-us/library/jj553530.aspx">Creating a database level FW rule</link>
+    </rule>
     <rule name="Using less-privileged user" />
   </category>
 
@@ -67,5 +70,9 @@
       <link url="http://fabriccontroller.net/blog/posts/apply-ip-address-restrictions-to-your-windows-azure-cloud-services/">Apply IP address restrictions to your Windows Azure Cloud Services (optional)</link>
     </rule>
   </category>
-  
+  <category name ="Best Practices (Generic)">
+	<rule name="Design for Cost efficiency">
+		 <link url="http://www.slideshare.net/maartenba/cost-architecting-for-windows-azure-engineeringworld-2011">Cost Architecting for Windows Azure by Maarten Balliauw</link>
+	</rule>
+  </category>
 </checklist>
