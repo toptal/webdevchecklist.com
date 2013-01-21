@@ -23,6 +23,14 @@
     <rule name="Application and data in same affinity group" />
   </category>
 
+  <category name="Development">
+    <rule name="Use the integrated power of Git, Bitbucket or TFS for ALM and CI integration" />
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-git/" />Setup publishing with GIT</url>
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/publishing-with-tfs/" />Setup publishing with TFS</url>
+      <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/continuous-delivery/" />Setup CI with TFS</url>
+      <link url="https://techmike2kx.wordpress.com/2012/10/25/tfs-preview-error403-and-windowsazure-continuous-integrationdelivery/" />resolving a common issue on TFS : Error403 (c:\a\bin folder) </url>
+    </rule>  
+  </category>
   <category name="Configuration">
   </category>
 
@@ -42,7 +50,10 @@
   <category name="SQL Database">
     <rule name="Using retry logic" />
     <rule name="Using connection pooling" />
-    <rule name="Configured firewall" />
+    <rule name="Configured firewall"> 
+	<link url="http://msdn.microsoft.com/en-us/library/ee621783.aspx">Creating a server level FW rule</link>
+      	<link url="http://msdn.microsoft.com/en-us/library/jj553530.aspx">Creating a database level FW rule</link>
+    </rule>
     <rule name="Using less-privileged user" />
   </category>
 
@@ -67,5 +78,9 @@
       <link url="http://fabriccontroller.net/blog/posts/apply-ip-address-restrictions-to-your-windows-azure-cloud-services/">Apply IP address restrictions to your Windows Azure Cloud Services (optional)</link>
     </rule>
   </category>
-  
+  <category name ="Best Practices (Generic)">
+	<rule name="Design for Cost efficiency">
+		 <link url="http://www.slideshare.net/maartenba/cost-architecting-for-windows-azure-engineeringworld-2011">Cost Architecting for Windows Azure by Maarten Balliauw</link>
+	</rule>
+  </category>
 </checklist>
