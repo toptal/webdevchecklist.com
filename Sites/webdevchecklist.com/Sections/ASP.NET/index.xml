@@ -85,16 +85,11 @@
     </rule>
     <rule name="Favicon">
       <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
-      <link url="http://stackoverflow.com/questions/3728392/whats-the-optimal-html-link-syntax-to-use-for-site-icons-favions">How to properly link a favicon</link>
+      <link url="http://www.thesitewizard.com/archive/favicon.shtml">How to properly link a favicon</link>
     </rule>
     <rule name="Use friendly URLs">
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
       <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
-    </rule>
-    <rule name="Add P3P policy" optional="true">
-      <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
-      <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
-      <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
     </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
@@ -143,7 +138,7 @@
       <link url="http://schema.org/docs/gs.html">Getting started</link>
     </rule>
     <rule name="robots.txt">
-      <link url="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=156449&amp;from=35237&amp;rd=1">robots.txt tutorial</link>
+      <link url="http://tools.seobook.com/robots-txt/">robots.txt tutorial</link>
       <link url="http://www.robotsgenerator.com/">Create robots.txt online</link>
       <link url="http://www.iis.net/learn/extensions/iis-search-engine-optimization-toolkit/managing-robotstxt-and-sitemap-files">Manage it in SEO Toolkit for IIS</link>
     </rule>
