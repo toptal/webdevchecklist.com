@@ -1,27 +1,27 @@
 ﻿nav {
 	min-width: 16px;
 	position: absolute;
-	top: .85em;
-	left: .85em;
-	background: white;
-	padding: 0 1.2em 0 0;
+	top: 1em;
+	left: 1em;
+	background: #222;
+	padding: .5em;
 	border-radius: 3px;
 	cursor: default;
 	z-index: 2;
 }
 
-    nav span {
-        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVQ4y2P8//8/AyWAEWSAs7Mz3JS9e/cyUsUAZDFcAKSWOi6gOAxGA3E0EId+IAIArFBf4TIqIjsAAAAASUVORK5CYII=') no-repeat;
-        *background: url(/Images/menu.png) no-repeat; /* For IE 6 and 7 */
-        padding-left: 20px;
-        line-height: 16px;
-        display: inline-block;
-    }
+	nav span {
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVQ4y2P8//8/AyWAEWSAs7Mz3JS9e/cyUsUAZDFcAKSWOi6gOAxGA3E0EId+IAIArFBf4TIqIjsAAAAASUVORK5CYII=') no-repeat;
+		*background: url(/Images/menu.png) no-repeat; /* For IE 6 and 7 */
+		padding-left: 20px;
+		line-height: 16px;
+		display: inline-block;
+	}
 
 	.no-touch nav:hover,
 	nav.open {
-		-webkit-box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
-		box-shadow: rgba(222, 222, 222, 0.79) 5px 5px;
+		-webkit-box-shadow: rgba(0, 0, 0, 0.79) 5px 5px;
+		box-shadow: rgba(0, 0, 0, 0.79) 5px 5px;
 	}
 
 		.no-touch nav:hover > ul,
@@ -44,7 +44,7 @@
 		padding: 0 0 0 1.2em;
 		max-height: 0;
 		max-width: 45px;
-        margin: 0;
+		margin: 0;
 		overflow: hidden;
 		-moz-transition: all .4s ease;
 		-o-transition: all .4s ease;
