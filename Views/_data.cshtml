@@ -29,7 +29,7 @@
                             @foreach (XmlNode link in links)
                             {   
                                 <li>
-                                    <a href="@link.Attributes["url"].InnerText">@link.InnerText</a>
+                                    <a href="@link.Attributes["url"].InnerText" target="_blank">@link.InnerText</a>
                                 </li>                     
                             }
                         </ul>
