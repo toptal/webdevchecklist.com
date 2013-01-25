@@ -142,6 +142,10 @@
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
     </rule>
+    <rule name="Twitter Cards" optional="true">
+      <link url="https://dev.twitter.com/docs/cards">Documentation</link>
+      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
+    </rule>
   </category>
 
   <category name="Accessibility">
