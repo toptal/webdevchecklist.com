@@ -44,8 +44,7 @@
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
-      <link url="http://clicky.com/">Clicky</link>
-      <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
+      <link url="http://clicky.com/">Clicky</link>      
     </rule>
   </category>
 
@@ -102,15 +101,15 @@
     <rule name="CSS validation">
       <link url="http://jigsaw.w3.org/css-validator/">W3C CSS validator</link>
     </rule>
-    <rule name="World ready">
-      <link url="http://validator.w3.org/i18n-checker/">W3C i18n checker</link>
-    </rule>
     <rule name="Run CSS Lint">
       <link url="http://csslint.net/">Run CSS Lint online</link>
-    </rule>
+    </rule>    
     <rule name="Run JSLint/JSHint">
       <link url="http://jslint.org/">Run JSLint online</link>
       <link url="http://jshint.com/">Run JSHint online</link>
+    </rule>
+    <rule name="World ready">
+      <link url="http://validator.w3.org/i18n-checker/">W3C i18n checker</link>
     </rule>
     <!--<rule name="RSS/ATOM validation" optional="true">
       <link url="http://validator.w3.org/feed/">W3C feed validator</link>
@@ -142,13 +141,6 @@
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
-    </rule>
-    <rule name="Open Graph protocol" optional="true">
-      <link url="http://ogp.me/">Open Graph protocol reference</link>
-    </rule>
-    <rule name="Twitter Cards" optional="true">
-      <link url="https://dev.twitter.com/docs/cards">Documentation</link>
-      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
     </rule>
   </category>
 
@@ -195,6 +187,19 @@
     </rule>
   </category>
 
+  <category name="Social Media">
+    <rule name="Open Graph protocol" optional="true">
+      <link url="http://ogp.me/">Open Graph protocol reference</link>
+    </rule>
+    <rule name="Twitter Cards" optional="true">
+      <link url="https://dev.twitter.com/docs/cards">Documentation</link>
+      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
+    </rule>
+    <rule name="Facebook Insights">
+      <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
+    </rule>
+  </category>
+  
   <category name="...and finally">
     <rule name="Add humans.txt" optional="true">
       <link url="http://humanstxt.org/">We are humans, not machines!</link>
