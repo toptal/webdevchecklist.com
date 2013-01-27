@@ -145,6 +145,10 @@
     <rule name="Open Graph protocol" optional="true">
       <link url="http://ogp.me/">Open Graph protocol reference</link>
     </rule>
+    <rule name="Twitter Cards" optional="true">
+      <link url="https://dev.twitter.com/docs/cards">Documentation</link>
+      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
+    </rule>
   </category>
 
   <category name="Accessibility">
