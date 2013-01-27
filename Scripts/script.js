@@ -210,17 +210,23 @@
     }
 
     function startDemo() {
-        animateChecboxes(0, checkboxes);
+        animateChecboxes(0, checkboxesRandom);
         animateDetails(0, detailsRandom);
     }
     function animateChecboxes(index, items) {
 
         if (index == 0) { resetInner(); }
-        if (index > items.length - 1) { index = 0; resetInner(); items = checkboxesRandom; }
+        if (index > items.length + 5) {
+            // going over the length on purpose, so that it pauses at the end
+            index = 0; resetInner(); items = checkboxesRandom;
+        }
 
-        setTimeout(function () {
+        if (items[index]) {
             items[index].checked = true;
             calculateProgress();
+        }
+
+        setTimeout(function() {
             animateChecboxes(++index, items);
         }, 200);
     }
