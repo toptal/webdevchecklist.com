@@ -55,21 +55,18 @@ public static class Checklist
 
     public static XmlDocument GetXmlDocument(HttpRequestBase request)
     {
-        string section = GetSiteName(request);
+        string site = GetSiteName(request);
 
-        if (Docs.ContainsKey(section))
+        var section = Docs[site];
+        var pageName = GetPageName(request);
+        var result = section.Keys.SingleOrDefault(k => k.Equals(pageName, StringComparison.OrdinalIgnoreCase));
+
+        if (result != null)
         {
-            var site = Docs[section];
-            var pageName = GetPageName(request);
-            var result = site.Keys.SingleOrDefault(k => k.Equals(pageName, StringComparison.OrdinalIgnoreCase));
-
-            if (result != null)
-            {
-                return site[result];
-            }
+            return section[result];
         }
 
-        return Docs[defaultSite]["index"];
+        return Docs[site]["index"];
     }
 
     public static string GetSiteName(HttpRequestBase request)
@@ -108,7 +105,8 @@ public static class Checklist
 
             while (true)
             {
-                var result = pair.Keys.SingleOrDefault(k => k.Equals(path, StringComparison.OrdinalIgnoreCase));
+                string clean = string.IsNullOrEmpty(path) ? "index" : path;
+                var result = pair.Keys.SingleOrDefault(k => k.Equals(clean, StringComparison.OrdinalIgnoreCase));
 
                 if (result != null)
                     return result;

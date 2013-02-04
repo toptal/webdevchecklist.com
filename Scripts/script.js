@@ -35,7 +35,10 @@
         menu = document.getElementsByTagName("nav")[0];
         fallback = (progress.firstElementChild || progress.firstChild);
         prefix = location.pathname.substr(1);
-        (menu.firstElementChild || menu.firstChild).onclick = menuClick;
+
+        if (menu) {
+            (menu.firstElementChild || menu.firstChild).onclick = menuClick;
+        }
 
         var max = 0;
 
@@ -207,17 +210,23 @@
     }
 
     function startDemo() {
-        animateChecboxes(0, checkboxes);
+        animateChecboxes(0, checkboxesRandom);
         animateDetails(0, detailsRandom);
     }
     function animateChecboxes(index, items) {
 
         if (index == 0) { resetInner(); }
-        if (index > items.length - 1) { index = 0; resetInner(); items = checkboxesRandom; }
+        if (index > items.length + 5) {
+            // going over the length on purpose, so that it pauses at the end
+            index = 0; resetInner(); items = checkboxesRandom;
+        }
 
-        setTimeout(function () {
+        if (items[index]) {
             items[index].checked = true;
             calculateProgress();
+        }
+
+        setTimeout(function() {
             animateChecboxes(++index, items);
         }, 200);
     }

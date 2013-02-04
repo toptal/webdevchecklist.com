@@ -77,6 +77,7 @@
   <category name="Usability">
     <rule name="HTML5 compatibility check">
       <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
+      <link url="http://www.modern.ie/report">modern.IE</link>
       <link url="http://modernizr.com/">Modernizr JS library</link>
     </rule>
     <rule name="Custom 404 page">
@@ -85,16 +86,11 @@
     </rule>
     <rule name="Favicon">
       <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
-      <link url="http://stackoverflow.com/questions/3728392/whats-the-optimal-html-link-syntax-to-use-for-site-icons-favions">How to properly link a favicon</link>
+      <link url="http://www.thesitewizard.com/archive/favicon.shtml">How to properly link a favicon</link>
     </rule>
     <rule name="Use friendly URLs">
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
       <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
-    </rule>
-    <rule name="Add P3P policy" optional="true">
-      <link url="http://msdn.microsoft.com/en-us/library/ms537341.aspx">How to deply P3P</link>
-      <link url="http://support.microsoft.com/kb/324013">Configure IIS to use P3P</link>
-      <link url="http://www.w3.org/P3P/validator.html">P3P validator</link>
     </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
@@ -103,6 +99,42 @@
     <rule name="Environment Integration" optional="true">
       <link url="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Safari on iOS</link>
       <link url="http://msdn.microsoft.com/en-us/library/ie/hh781490%28v=vs.85%29.aspx">Internet Explorer on Windows</link>
+    </rule>
+  </category>
+
+  <category name="Accessibility">
+    <rule name="Accessibility validation">
+      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
+      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
+      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
+    </rule>
+    <rule name="Color contrast">
+      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
+    </rule>
+    <rule name="WAI-ARIA Landmarks">
+      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
+      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
+      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
+    </rule>
+  </category>
+
+  <category name="SEO">
+    <rule name="SenSEO score of 85+">
+      <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
+      <link url="http://weblogs.asp.net/sreejukg/archive/2011/11/28/new-html-5-input-types-in-asp-net-4-5.aspx">SEO toolkit for IIS</link>
+    </rule>
+    <rule name="Google Rich Snippets">
+      <link url="http://www.google.com/webmasters/tools/richsnippets">Online tester</link>
+      <link url="http://schema.org/docs/gs.html">Getting started</link>
+    </rule>
+    <rule name="robots.txt">
+      <link url="http://tools.seobook.com/robots-txt/">robots.txt tutorial</link>
+      <link url="http://www.robotsgenerator.com/">Create robots.txt online</link>
+      <link url="http://www.iis.net/learn/extensions/iis-search-engine-optimization-toolkit/managing-robotstxt-and-sitemap-files">Manage it in SEO Toolkit for IIS</link>
+    </rule>
+    <rule name="XML sitemap">
+      <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
+      <link url="http://stackoverflow.com/questions/1835664/generate-xml-sitemap-automatically-using-routes-and-controllers-in-asp-net-mvc">Sitemap.xml using ASP.NET MVC</link>
     </rule>
   </category>
 
@@ -133,26 +165,6 @@
     </rule>-->
   </category>
 
-  <category name="SEO">
-    <rule name="SenSEO score of 85+">
-      <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
-      <link url="http://weblogs.asp.net/sreejukg/archive/2011/11/28/new-html-5-input-types-in-asp-net-4-5.aspx">SEO toolkit for IIS</link>
-    </rule>
-    <rule name="Google Rich Snippets">
-      <link url="http://www.google.com/webmasters/tools/richsnippets">Online tester</link>
-      <link url="http://schema.org/docs/gs.html">Getting started</link>
-    </rule>
-    <rule name="robots.txt">
-      <link url="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=156449&amp;from=35237&amp;rd=1">robots.txt tutorial</link>
-      <link url="http://www.robotsgenerator.com/">Create robots.txt online</link>
-      <link url="http://www.iis.net/learn/extensions/iis-search-engine-optimization-toolkit/managing-robotstxt-and-sitemap-files">Manage it in SEO Toolkit for IIS</link>
-    </rule>
-    <rule name="XML sitemap">
-      <link url="http://www.xml-sitemaps.com/">Create sitemap online</link>
-      <link url="http://stackoverflow.com/questions/1835664/generate-xml-sitemap-automatically-using-routes-and-controllers-in-asp-net-mvc">Sitemap.xml using ASP.NET MVC</link>
-    </rule>
-  </category>
-
   <category name="Semantics">
     <rule name="Add meaning with Microdata">
       <link url="http://schema.org/">Schema.org reference</link>
@@ -160,22 +172,6 @@
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
-    </rule>
-  </category>
-
-  <category name="Accessibility">
-    <rule name="Accessibility validation">
-      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
-      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
-      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
-    </rule>
-    <rule name="Color contrast">
-      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
-    </rule>
-    <rule name="WAI-ARIA Landmarks">
-      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
-      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
-      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
     </rule>
   </category>
 
@@ -203,6 +199,19 @@
     <rule name="HTTP Strict Transport Security" optional="true">
       <link url="https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security">MDN Overview</link>
       <link url="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">OWASP Overview</link>
+    </rule>
+  </category>
+
+  <category name="Social Media">
+    <rule name="Open Graph protocol" optional="true">
+      <link url="http://ogp.me/">Open Graph protocol reference</link>
+    </rule>
+    <rule name="Twitter Cards" optional="true">
+      <link url="https://dev.twitter.com/docs/cards">Documentation</link>
+      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
+    </rule>
+    <rule name="Facebook Insights">
+      <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
     </rule>
   </category>
 
