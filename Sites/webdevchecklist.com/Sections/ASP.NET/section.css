@@ -1,23 +1,27 @@
 ﻿
 /* ASP.NET theme     */
 
+.aspnet > header h2 {
+    color: #8c31b2;
+}
+
 .aspnet progress {
-    color: #742894; 
+    color: #8c31b2;
 }
 
     .aspnet progress span {
-        background: #742894;
+        background: #8c31b2;
     }
 
     .aspnet progress::-webkit-progress-value {
-        background: #742894;
+        background: #8c31b2;
     }
 
     .aspnet progress::-moz-progress-bar {
-        background-color: #742894;
+        background-color: #8c31b2;
     }
 
 
 .aspnet em {
-    color: #742894;
+    color: #8c31b2;
 }

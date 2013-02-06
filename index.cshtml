@@ -27,14 +27,23 @@
     <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     
-    <meta name="application-name" content="webdevchecklist.com"/> 
-    <meta name="msapplication-TileColor" content="#F7F7F7"/> 
-    <meta name="msapplication-TileImage" content="webdevchecklist.png"/>
+    <meta name="application-name" content="Web Dev Checklist" /> 
+    <meta name="msapplication-TileColor" content="#f7f7f7" /> 
+    <meta name="msapplication-TileImage" content="/images/webdevchecklist.png" />
+
+    <meta name="twitter:title" content="@PageTitle" /> 
+    <meta name="twitter:description" content="The ultimate checklist for all serious web developers building modern websites." /> 
+    <meta name="twitter:image" content="http://webdevchecklist.com/images/webdevchecklist.png" /> 
+
+    <meta name="og:title" content="@PageTitle" /> 
+    <meta name="og:type" content="website" /> 
+    <meta name="og:url" content="@string.Format("http://webdevchecklist.com{0}", Request.RawUrl)" /> 
+    <meta name="og:image" content="http://webdevchecklist.com/images/webdevchecklist.png" /> 
     
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-114x114-precomposed.png" />  
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />   
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-144x144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-114x114-precomposed.png" />  
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png" />   
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png" />
 
     @if (!string.IsNullOrEmpty(Section))
     { 

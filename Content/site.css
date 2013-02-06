@@ -21,10 +21,6 @@
 			margin: .8em auto;
 		}
 
-		body > header h2 {
-			display: none; /* Remove from HTML? Doesn't seem to contain anything? */
-		}
-
 ::-moz-selection {
 	background-color: rgba(65,131,196,0.4);
 }
