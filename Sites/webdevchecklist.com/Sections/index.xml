@@ -40,10 +40,7 @@
     <rule name="Uptime monitoring">
       <link url="http://www.uptimerobot.com/">Uptime robot</link>
       <link url="http://www.gotsitemonitor.com/">GotSiteMonitor.com</link>
-    </rule>
-    <rule name="Automated testing">
-      <link url="http://beta.testomato.com/">Testomato</link>
-    </rule>
+    </rule>    
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
@@ -98,19 +95,13 @@
     </rule>
   </category>
 
-  <category name="Accessibility">
-    <rule name="Accessibility validation">
-      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
-      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
-      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
+  <category name="Semantics">
+    <rule name="Add meaning with Microdata">
+      <link url="http://schema.org/">Schema.org reference</link>
+      <link url="http://schema-creator.org/">Schema-Creator.org</link>
     </rule>
-    <rule name="Color contrast">
-      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
-    </rule>
-    <rule name="WAI-ARIA Landmarks">
-      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
-      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
-      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
+    <rule name="Check the semantics">
+      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
     </rule>
   </category>
 
@@ -149,19 +140,24 @@
     <rule name="World ready">
       <link url="http://validator.w3.org/i18n-checker/">W3C i18n checker</link>
     </rule>
-    <!--<rule name="RSS/ATOM validation" optional="true">
-      <link url="http://validator.w3.org/feed/">W3C feed validator</link>
-      <link url="http://feedvalidator.org/">feedvalidator.org</link>
-    </rule>-->
+    <rule name="Automated testing">
+      <link url="http://beta.testomato.com/">Testomato</link>
+    </rule>
   </category>
 
-  <category name="Semantics">
-    <rule name="Add meaning with Microdata">
-      <link url="http://schema.org/">Schema.org reference</link>
-      <link url="http://schema-creator.org/">Schema-Creator.org</link>
+  <category name="Accessibility">
+    <rule name="Accessibility validation">
+      <link url="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</link>
+      <link url="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</link>
+      <link url="http://www.nvda-project.org/">Test using a screen reader</link>
     </rule>
-    <rule name="Check the semantics">
-      <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+    <rule name="Color contrast">
+      <link url="http://www.checkmycolours.com/">Check color contrast online</link>
+    </rule>
+    <rule name="WAI-ARIA Landmarks">
+      <link url="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</link>
+      <link url="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</link>
+      <link url="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</link>
     </rule>
   </category>
 
