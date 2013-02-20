@@ -14,7 +14,7 @@
                 var files = Directory.GetFiles(dir, "*.xml").Where(f => !f.EndsWith("index.xml"));
                 
                 <ul>
-                    <li><a href="/@dirName.ToLowerInvariant()/">@dirName</a>
+                    <li><a href="/@dirName.ToLowerInvariant()/">@dirName.Replace("-", " ")</a>
 
                         @if (files.Count() > 0)
                         {
@@ -23,7 +23,7 @@
                                 {
                                     var fileName = Path.GetFileNameWithoutExtension(file);
                                     var url = file.Replace(dir, string.Empty).Replace(".xml", string.Empty).Replace("\\", "/").TrimStart('/').ToLowerInvariant();
-                                    <li><a href="/@dirName.ToLowerInvariant()/@url/">@Path.GetFileNameWithoutExtension(file)</a></li>
+                                    <li><a href="/@dirName.ToLowerInvariant()/@url/">@fileName</a></li>
                                 }
                             </ul>
                         }
@@ -32,10 +32,10 @@
             }
 
         </li>
-        <li>NodeJS (planned)</li>
-        <li>PHP (planned)</li>
-        <li>Python (planned)</li>
-        <li>Rails (planned)</li>
-        <li><a href="https://github.com/ligershark/webdevchecklist.com/wiki/sections/">Help needed</a></li>
+        <li class="planned"><br />NodeJS (planned)</li>
+        <li class="planned">PHP (planned)</li>
+        <li class="planned">Python (planned)</li>
+        <li class="planned">Rails (planned)</li>
+        <li class="planned"><a href="https://github.com/ligershark/webdevchecklist.com/wiki/sections/">Help needed</a></li>
     </ul>
 </nav>

@@ -6,23 +6,23 @@
     The class name will always be lower-case and any dots (.) in the name will be removed.
 */
 
-.playframework progress {
+.play-framework progress {
     color: orange;
 }
 
-    .playframework progress span {
+    .play-framework progress span {
         background: orange;
     }
 
-    .playframework progress::-webkit-progress-value {
+    .play-framework progress::-webkit-progress-value {
         background: orange;
     }
 
-    .playframework progress::-moz-progress-bar {
+    .play-framework progress::-moz-progress-bar {
         background-color: orange;
     }
 
 
-.playframework em {
+.play-framework em {
     color: orange;
 }
