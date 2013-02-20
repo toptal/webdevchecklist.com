@@ -2,10 +2,10 @@
 
 Created by:
 
-**Sayed Ibrahim Hashimi**
-http://sedodream.com 
+**Sayed Ibrahim Hashimi**  
+http://sedodream.com   
 @sayedihashimi
 
-**Mads Kristensen**
-http://madskristensen.net
+**Mads Kristensen**  
+http://madskristensen.net  
 @mkristensen
