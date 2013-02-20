@@ -41,6 +41,9 @@
       <link url="http://www.uptimerobot.com/">Uptime robot</link>
       <link url="http://www.gotsitemonitor.com/">GotSiteMonitor.com</link>
     </rule>
+    <rule name="Automated testing">
+      <link url="http://beta.testomato.com/">Testomato</link>
+    </rule>
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
