@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<checklist name="ASP.NET - Don’t Do That! Do This!">
+  <category name="Standards Compliance">
+    <rule name="Control Adapters">
+      <text class="dont" title="AVOID">
+        Control adapters, as these were created to support mobile controls rendering different markup for different devices
+      </text>
+      <text class="do" title="PREFER">
+        CSS media queries, responsive design and mobile specific views
+      </text>
+    </rule>
+    <rule name="Style Properties on Controls">
+      <text class="dont" title="AVOID">
+        The four thousand specific control style properties, e.g.
+        EditItemTemplate-AlternateItem-Font-ForeColor-Opacity-Level :S
+      </text>
+      <text class="do" title="PREFER">
+        CSS stylesheets
+      </text>
+    </rule>
+    <rule name="Page &amp; Control Callbacks">
+      <text class="dont" title="TRY TO AVOID">
+        Page callbacks or controls with callbacks
+      </text>
+      <text class="do" title="PREFER">
+        Anything else, e.g. UpdatePanel, Ajax, MVC, Web API
+      </text>
+    </rule>
+    <rule name="Capability Detection">
+      <text class="dont" title="TRY TO AVOID">
+        BrowserCaps, as it has a history of breaking as new browser versions are released
+      </text>
+      <text class="do" title="PREFER">
+        Client-side feature detection and lightup, such as via Modernizr
+      </text>
+    </rule>
+  </category>
+
+  <category name="Security">
+    <rule name="Request Validation">
+      <text class="dont" title="DO NOT">
+        Depend on request validation to protect your site against XSS attacks
+      </text>
+      <text class="do" title="DO">
+        Validate well-formedness of data on the way in e.g.
+          “Is this user-submitted value a valid System.Uri whose scheme is http: or https:?”
+      </text>
+      <text class="do" title="DO">
+        Encode data on the way out in CSHTML and ASPX, e.g:
+        CSHTML: @foo &amp; ASPX: &lt;%: foo %&gt; 
+      </text>
+      <text class="do" title="DO">
+        Don’t forget about JavaScriptStringEncode, UrlEncode, etc.
+      </text>
+    </rule>
+    <rule name="Cookieless Forms Auth &amp; Session">
+      <text class="dont" title="DO NOT">
+        Enable cookieless forms authentication or session, as they could make your users victim to hijacking attacks
+      </text>
+      <text class="do" title="DO">
+        Enable “require cookies” for these features
+      </text>
+      <text class="do" title="DO">
+        Consider using only secure (SSL) cookies for sites serving sensitive information
+      </text>
+    </rule>
+    <rule name="EnableViewStateMac">
+      <text class="dont" title="DO NOT">
+        Set EnableViewStateMac = false. Not ever. Not even on a single page. "But I’m not using ViewState!" is not a valid excuse.
+      </text>
+      <text class="do" title="DO">
+        Tease us for even allowing this as an option in the first place
+      </text>
+    </rule>
+    <rule name="Medium Trust">
+      <text class="dont" title="DO NOT">
+        Depend on Medium Trust (or any other &lt;trust&gt; level) as a security boundary
+      </text>
+      <text class="do" title="DO">
+        Place untrusted applications into their own application pools
+      </text>
+      <text class="do" title="DO">
+        Run each application pool under its own unique identity
+      </text>
+      <text class="do" title="DO">
+        Follow our guidance at http://support.microsoft.com/kb/2698981
+      </text>
+    </rule>
+    <rule name="&lt;appSettings&gt;">
+      <text class="dont" title="DO NOT">
+        Use &lt;appSettings&gt; to disable our security fixes for any lengthy time in production
+      </text>
+      <text class="do" title="DO">
+        Use our security-sensitive &lt;appSettings&gt; config as temporary compatibility shims while rolling out server upgrades or patches
+      </text>
+      <link url="http://msdn.microsoft.com/en-us/library/hh975440.aspx">Consult the list for security-sensitive &lt;appSettings&gt;</link>
+    </rule>
+    <rule name="UrlPathEncode">
+      <text class="dont" title="DO NOT">
+        Use UrlPathEncode to encode arbitrary user-provided strings
+      </text>
+      <text class="do" title="DO">
+        Sanitize inputs instead, checking submitted URLs for well-formedness
+      </text>
+      <text class="do" title="DO">
+        Use UrlEncode to encode user input meant to appear as a query string parameter in a URL
+      </text>
+    </rule>
+  </category>
+
+  <category name="Reliability &amp; Performance">
+    <rule name="PreSendRequestHeaders &amp; PreSendRequestContent">
+      <text class="dont" title="TRY TO AVOID">
+        Registering for these events from within managed IHttpModule instances
+      </text>
+      <text class="do" title="PREFER">
+        Using native IIS modules if you need to hook these asynchronous pipeline events
+      </text>
+    </rule>
+    <rule name="Asynchronous Page Events">
+      <text class="dont" title="TRY TO AVOID">
+        Writing async void methods [like Page_Load] for Page lifecycle events
+      </text>
+      <text class="do" title="PREFER">
+        Using Page.RegisterAsyncTask() instead if you need to register asynchronous work
+      </text>
+      <text class="do" title="DO">
+        Set &lt;httpRuntime targetFramework="4.5" /&gt; if using Task
+      </text>
+    </rule>
+    <rule name="Fire-and-Forget Work">
+      <text class="dont" title="TRY TO AVOID">
+        Kicking off fire-and-forget work [e.g., timers, ThreadPool.QUWI] from within ASP.NET, as we might tear the AppDomain out from under you
+      </text>
+      <text class="do" title="PREFER">
+        Moving to a Windows Service or Worker Role for maximum reliability
+      </text>
+      <text class="do" title="PREFER">
+        Using WebBackgrounder (http://nuget.org/packages/WebBackgrounder) if the work needs to be done in-proc
+      </text>
+    </rule>
+    <rule name="The Request Entity Body">
+      <text class="dont" title="TRY TO AVOID">
+        Reading Request.Form / InputStream before the HandlerExecute event
+      </text>
+      <text class="do" title="PREFER">
+        Deferring to HandlerExecute if possible
+      </text>
+      <text class="do" title="PREFER">
+        Using Request.GetBufferlessInputStream() / GetBufferedInputStream() if you need to read the request entity body asynchronously
+      </text>
+      <text class="do" title="Using Bufferless">
+        You’re given raw stream; Request.Form and InputStream unavailable
+      </text>
+      <text class="do" title="Using Buffered">
+        You’re given a copy; Request.Form and InputStream are still available
+      </text>
+    </rule>
+    <rule name="Response.Redirect &amp; End">
+      <text class="warning" title="BE AWARE">
+        Response.Redirect(String) calls Response.End(), which aborts the current thread in synchronous requests and halts code execution.
+      </text>
+      <text class="warning" title="BE AWARE">
+        For asynchronous handlers, Response.End() does not abort the current thread, so code execution continues.
+      </text>
+      <text class="warning" title="BE AWARE">
+        If you need to redirect the response, use the method appropriate for the framework you’re using.  For example, in MVC return a RedirectResult instead of calling Response.Redirect.
+      </text>
+    </rule>
+    <rule name="EnableViewState and ViewStateMode">
+      <text class="dont" title="TRY TO AVOID">
+        Using EnableViewState
+      </text>
+      <text class="do" title="PREFER">
+        Set ViewStateMode="Disabled" at the Page Directive level
+      </text>
+      <text class="do" title="PREFER">
+        Set ViewStateMode="Enabled" only on controls that require state
+      </text>
+    </rule>
+    <rule name="SqlMembershipProvider">
+      <text class="warning" title="BE AWARE">
+        Replaced by the UniversalProviders which work with all databases that Entity Framework supports including SQL, Azure SQL, SQL Compact, MySQL and more...
+      </text>
+    </rule>
+    <rule name="Long-Running Requests (&gt;110 seconds)">
+      <text class="dont" title="TRY TO AVOID">
+        Session, as ASP.NET will forcibly release the session object lock at a potentially inopportune time
+      </text>
+      <text class="dont" title="TRY TO AVOID">
+        Blocking I/O operations
+      </text>
+      <text class="do" title="PREFER">
+        WebSockets if possible, as it has much lower per-request memory overhead
+      </text>
+    </rule>
+  </category>
+</checklist>
