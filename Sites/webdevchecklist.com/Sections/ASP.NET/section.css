@@ -25,3 +25,17 @@
 .aspnet em {
     color: #8c31b2;
 }
+
+/* Don’t Do That! Do This! - Style*/
+
+.do {
+    color: #9f3;
+}
+
+.dont {
+    color: #d10909;    
+}
+
+.warning {
+    color: #fffe41;    
+}

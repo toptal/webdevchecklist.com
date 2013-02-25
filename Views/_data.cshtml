@@ -19,6 +19,7 @@
                 <li@className>
                     <input type="checkbox" id="@id" tabindex="1" />
                     <label for="@id">@name</label>
+ 
 
                     @{XmlNodeList links = item.SelectNodes("link");}
 
@@ -33,6 +34,18 @@
                                 </li>                     
                             }
                         </ul>
+                    }
+                    
+                    @{XmlNodeList textNodes = item.SelectNodes("text");}
+
+                    @if (textNodes.Count > 0)
+                    {
+                        <div>
+                            @foreach (XmlNode text in textNodes)
+                            {  
+                                <p><b class="@text.Attributes["class"].InnerText">@text.Attributes["title"].InnerText:</b> @text.InnerText</p>
+                            }
+                        </div>
                     }
                 </li>  
             }
