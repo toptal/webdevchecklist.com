@@ -193,6 +193,7 @@
     <rule name="Secure connection (SSL)" optional="true">
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
       <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
+      <link url="https://www.ssllabs.com/ssltest/">Qualys SSL Server Test score of C+</link>
       <link url="http://certlogik.com/ssl-checker/">Online SSL checker</link>
     </rule>
     <rule name="HTTP Strict Transport Security (HSTS)" optional="true">
