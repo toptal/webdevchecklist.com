@@ -5,7 +5,11 @@
       <link url="http://validator.w3.org/checklink">W3C link checker</link>
       <link url="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</link>
     </rule>
-    <rule name="Spell-check" />
+    <rule name="Spelling and grammar">
+      <link url="http://en.wikipedia.org/wiki/Capitalization">Capitalization</link>
+      <link url="http://en.wikipedia.org/wiki/Writing_style">Writing Style</link>
+      <link url="http://en.wikipedia.org/wiki/American_and_British_English_spelling_differences">Word Variations e.g. UK vs US</link>
+    </rule>
     <rule name="Check website in all browsers">
       <link url="http://browsershots.org/">BrowserShots.org</link>
       <link url="https://browserling.com/">Browserling.com</link>
