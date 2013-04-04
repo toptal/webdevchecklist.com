@@ -44,6 +44,7 @@
     <rule name="Uptime monitoring">
       <link url="http://www.uptimerobot.com/">Uptime robot</link>
       <link url="http://www.gotsitemonitor.com/">GotSiteMonitor.com</link>
+      <link url="http://getglimpse.com/">Glimpse</link>
     </rule>
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
@@ -182,6 +183,7 @@
       <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
       <link url="http://msdn.microsoft.com/en-us/library/zdh19h94(v=VS.100).aspx">Basic security practices for ASP.NET</link>
       <link url="http://www.microsoft.com/en-us/download/details.aspx?id=19968">Microsoft CAT.NET for ASP.NET</link>
+      <link url="http://www.troyhunt.com/2011/12/free-ebook-owasp-top-10-for-net.html">OWASP Top 10 for .NET developers</link>
     </rule>
     <rule name="Cross-site scripting">
       <link url="http://msdn.microsoft.com/en-us/magazine/hh708755.aspx">Prevent XSS in ASP.NET WebForms</link>
