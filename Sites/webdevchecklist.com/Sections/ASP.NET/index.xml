@@ -123,7 +123,7 @@
   <category name="SEO">
     <rule name="SenSEO score of 85+">
       <link url="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</link>
-      <link url="http://weblogs.asp.net/sreejukg/archive/2011/11/28/new-html-5-input-types-in-asp-net-4-5.aspx">SEO toolkit for IIS</link>
+      <link url="http://www.iis.net/downloads/microsoft/search-engine-optimization-toolkit">SEO toolkit for IIS</link>
     </rule>
     <rule name="Google Rich Snippets">
       <link url="http://www.google.com/webmasters/tools/richsnippets">Online tester</link>
