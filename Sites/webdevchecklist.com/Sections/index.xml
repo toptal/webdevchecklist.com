@@ -25,6 +25,10 @@
     <rule name="MobileOK score of 75+">
       <link url="http://validator.w3.org/mobile/">W3C mobile checker</link>
     </rule>
+    <rule name="Provide a AppleTouch Icon">
+      <link url="http://testico.net/">Online Icon checker - See how it looks </link>
+      <link url="http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html">Diffrent sizes for optimal icon </link>
+    </rule>
     <rule name="Use 'viewport' meta-tag">
       <link url="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Don’t Forget the Viewport Meta Tag</link>
       <link url="http://www.hanselman.com/blog/MakeYourWebsiteMobileAndIPhoneFriendlyAddHomeScreenIPhoneIconsAndAdjustTheViewPort.aspx">Make your website mobile friendly</link>
