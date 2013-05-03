@@ -44,11 +44,11 @@
     <rule name="Uptime monitoring">
       <link url="http://www.uptimerobot.com/">Uptime robot</link>
       <link url="http://www.gotsitemonitor.com/">GotSiteMonitor.com</link>
-    </rule>    
+    </rule>
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
-      <link url="http://clicky.com/">Clicky</link>      
+      <link url="http://clicky.com/">Clicky</link>
     </rule>
   </category>
 
@@ -69,7 +69,7 @@
       <link url="http://imageoptim.com/">Image Optim for Mac</link>
     </rule>
   </category>
-    
+
   <category name="Usability">
     <rule name="HTML5 compatibility check">
       <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
@@ -96,6 +96,7 @@
     <rule name="Environment Integration" optional="true">
       <link url="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Safari on iOS</link>
       <link url="http://msdn.microsoft.com/en-us/library/ie/hh781490%28v=vs.85%29.aspx">Internet Explorer on Windows</link>
+      <link url="http://www.buildmypinnedsite.com/">Windows 8 Tiles</link>
     </rule>
   </category>
 
@@ -204,7 +205,7 @@
       <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
     </rule>
   </category>
-  
+
   <category name="...and finally">
     <rule name="Add humans.txt" optional="true">
       <link url="http://humanstxt.org/">We are humans, not machines!</link>
