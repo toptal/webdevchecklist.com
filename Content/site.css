@@ -18,8 +18,14 @@
 			border-radius: .4em;
 			text-align: center;
 			width: 480px;
-			margin: .8em auto;
+			margin: .8em auto .2em auto;
 		}
+
+        body > header a{
+            margin-top: -1em;
+            display: inline-block;
+            color: #ccc;
+        }
 
 ::-moz-selection {
 	background-color: rgba(65,131,196,0.4);
