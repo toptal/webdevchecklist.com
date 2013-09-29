@@ -1,5 +1,6 @@
 ﻿body {
     -ms-touch-action: auto;
+    touch-action: auto;
 	padding: 0;
 	font: .9em/1.2 Arial, sans-serif;
 	color: #ccc;
