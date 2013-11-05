@@ -48,7 +48,9 @@
   </category>
 
   <category name="SQL Database">
-    <rule name="Using retry logic" />
+    <rule name="Using retry logic">
+      <link url="http://msdn.microsoft.com/en-us/library/hh680934.aspx">Use the Transient Fault Handling Application Block</link>
+    </rule>    
     <rule name="Using connection pooling" />
     <rule name="Configured firewall">
       <link url="http://msdn.microsoft.com/en-us/library/ee621783.aspx">Creating a server level FW rule</link>
@@ -64,12 +66,16 @@
     <rule name="Handle RoleEnvironment.ConfigurationChanged event" />
   </category>
 
-  <category name="Diagnostics">
+  <category name="Diagnostics & Logging">
     <rule name="Enable diagnostics">
       <link url="http://www.windowsazure.com/en-us/develop/net/common-tasks/diagnostics/">Enabling Diagnostics in Windows Azure</link>
     </rule>
     <rule name="Configure performance counters and log files" />
     <rule name="Diagnostics on a separate storage account" />
+    <rule name="Consider enabling Windows Azure Storage Analytics">
+      <link url="http://msdn.microsoft.com/en-us/library/windowsazure/hh343262.aspx">Analytics Logging gives access to details access logs for Blobs, Tables, and Queues</link>
+      <link url="http://msdn.microsoft.com/en-us/library/windowsazure/hh343258.aspx">Analytics Metrics gives access to aggregate usage statistics for Blobs, Tables, and Queues</link>
+    </rule>
   </category>
 
   <category name="Security">
