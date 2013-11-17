@@ -86,9 +86,8 @@
       <link url="http://www.stokia.com/support/misc/web-config-custom-httperrors.aspx">Custom error pages in ASP.NET</link>
     </rule>
     <rule name="Favicon">
-      <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
-      <link url="http://www.thesitewizard.com/archive/favicon.shtml">How to properly link a favicon</link>
-      <link url="http://www.jonathantneal.com/blog/understand-the-favicon/">Understand favicons</link>
+      <link url="http://realfavicongenerator.net/">Real Favicon Generator</link>
+      <link url="http://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</link>
     </rule>
     <rule name="Use friendly URLs">
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
