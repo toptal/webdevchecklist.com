@@ -71,7 +71,7 @@ public static class Checklist
 
     public static string GetSiteName(HttpRequestBase request)
     {
-        return request.Url.Host.StartsWith("localhost") ? defaultSite : request.Url.Host;
+        return (request.Url.Host.StartsWith("localhost") || request.Url.Host.Contains("azurewebsites.net")) ? defaultSite : request.Url.Host;
     }
 
     public static string GetSiteSectionFolder(HttpRequestBase request)
