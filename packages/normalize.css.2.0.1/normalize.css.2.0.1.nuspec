@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>normalize.css</id>
+    <version>2.0.1</version>
+    <title>normalize.css</title>
+    <authors>Nicolas Gallagher, Jonathan Neal</authors>
+    <owners>Nicolas Gallagher, Jonathan Neal</owners>
+    <licenseUrl>https://raw.github.com/necolas/normalize.css/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://necolas.github.com/normalize.css/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards. We researched the differences between default browser styles in order to precisely target only the styles that need normalizing.</description>
+    <copyright>Copyright 2012</copyright>
+    <language>en-US</language>
+    <tags>normalize css reset</tags>
+  </metadata>
+</package>
