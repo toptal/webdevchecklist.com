@@ -103,7 +103,7 @@
       <link url="http://www.alistapart.com/articles/amoreuseful404/">A more useful 404</link>
     </rule>
     <rule name="Favicon">
-      <link url="http://tools.dynamicdrive.com/favicon/">Online generator</link>
+      <link url="http://realfavicongenerator.net/">Real Favicon Generator</link>
       <link url="http://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</link>
     </rule>
     <rule name="Use friendly URLs">
