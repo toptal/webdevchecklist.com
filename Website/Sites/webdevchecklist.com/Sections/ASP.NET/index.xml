@@ -93,6 +93,9 @@
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
       <link url="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</link>
     </rule>
+    <rule name="Print-friendly CSS">
+      <link url="http://coding.smashingmagazine.com/2011/11/24/how-to-set-up-a-print-style-sheet/">Set up a print stylesheet</link>
+    </rule>
     <rule name="Add search feature" optional="true">
       <link url="http://www.google.com/cse/">Google Custom Search</link>
       <link url="http://www.opensearch.org/">Consider 'Open Search'</link>

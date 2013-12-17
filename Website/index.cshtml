@@ -7,6 +7,7 @@
         Response.Cache.VaryByParams["site"] = true;
 
         string file = Server.MapPath("~/web.config");
+        Response.AddFileDependency(Server.MapPath("~/sites"));
         Response.AddFileDependency(file);
         Response.Cache.SetLastModifiedFromFileDependencies();
     }

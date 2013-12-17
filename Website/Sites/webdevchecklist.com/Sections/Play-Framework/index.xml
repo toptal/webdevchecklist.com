@@ -109,6 +109,9 @@
     <rule name="Use friendly URLs">
       <link url="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</link>
     </rule>
+    <rule name="Print-friendly CSS">
+      <link url="http://coding.smashingmagazine.com/2011/11/24/how-to-set-up-a-print-style-sheet/">Set up a print stylesheet</link>
+    </rule>
     <rule name="Have a unified notification system across app" />
     <rule name="Don't display unfriendly errors directly to the user" />
 
