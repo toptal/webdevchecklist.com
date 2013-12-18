@@ -1,0 +1,107 @@
+﻿@{
+    if (!Request.IsLocal)
+    {
+        Response.Cache.SetValidUntilExpires(true);
+        Response.Cache.SetExpires(DateTime.UtcNow.AddDays(1));
+        Response.Cache.SetCacheability(HttpCacheability.Public);
+        Response.Cache.VaryByParams["site"] = true;
+
+        string file = Server.MapPath("~/web.config");
+        Response.AddFileDependency(Server.MapPath("~/sites"));
+        Response.AddFileDependency(file);
+        Response.Cache.SetLastModifiedFromFileDependencies();
+    }
+
+    string SiteName = Checklist.GetSiteName (Request);
+    string DataName = Checklist.GetPageName(Request).Replace("/", " ").Replace("index", string.Empty);
+    string Section = Checklist.GetBaseName(Request);
+    string PageTitle = Checklist.GetPageTitle(Request);
+}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website, @DataName" />
+    <meta name="description" content="The ultimate checklist for all serious web developers building modern websites. @DataName" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="@Fingerprint.Tag("/content/all.min.css")" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    
+    <meta name="application-name" content="Web Dev Checklist" /> 
+    <meta name="msapplication-TileColor" content="#f7f7f7" /> 
+    <meta name="msapplication-TileImage" content="/images/webdevchecklist.png" />
+
+    <meta name="twitter:title" content="@PageTitle" /> 
+    <meta name="twitter:description" content="The ultimate checklist for all serious web developers building modern websites." /> 
+    <meta name="twitter:image" content="http://webdevchecklist.com/images/webdevchecklist.png" /> 
+
+    <meta property="og:title" content="@PageTitle" /> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="@string.Format("http://webdevchecklist.com{0}", Request.RawUrl)" /> 
+    <meta property="og:image" content="http://webdevchecklist.com/images/webdevchecklist.png" /> 
+    
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-114x114-precomposed.png" />  
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png" />   
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png" />
+
+    @if (!string.IsNullOrEmpty(Section))
+    { 
+        <title>@PageTitle - @DataName</title>
+        <link rel="stylesheet" href="@Fingerprint.Tag("/sites/" + SiteName + "/Sections/" + Section + "/section.css")" />
+    }
+    else { 
+        <title>@PageTitle</title>
+    }
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body class="@Section.Replace(".", string.Empty).ToLowerInvariant()">
+    
+    <header itemscope itemtype="http://schema.org/WebApplication">
+        <h1 itemprop="name">@PageTitle</h1>
+        <a href="https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp" target="_blank">Get the Chrome extension</a>    
+
+        @if (DataName != Checklist.Title)
+        { 
+            <h2>@DataName.Replace("-", " ")</h2>            
+        }
+    </header>
+    
+    @if (Checklist.Docs[SiteName].Count > 1) {
+        @RenderPage("~/views/_menu.cshtml", null);
+    }
+
+    <aside role="complementary">
+        <a href="https://github.com/ligershark/webdevchecklist.com">
+            <span class="ghFork"></span>
+        </a>
+    </aside>
+
+    <div id="main" role="main">
+        @RenderPage("~/views/_data.cshtml", null)
+    </div>
+
+    <footer>
+        <a href="#" id="reset">Reset</a>
+        <progress value="1" max="100">
+            <span id="fallback">&nbsp;</span>
+        </progress>
+    </footer>
+
+    <script src="@Fingerprint.Tag("/scripts/script.min.js")" async="async"></script>
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37479788-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+<!-- @Request.QueryString["site"] -->    
+</body>
+</html>
