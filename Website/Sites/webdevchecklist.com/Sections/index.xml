@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <checklist>
   <category name="Best practices">
     <rule name="Fix broken links">
@@ -38,6 +38,9 @@
       <link url="http://screenqueri.es/">Online media query tester</link>
       <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
       <link url="http://www.opera.com/developer/tools/mobile/">Opera Mobile Emulator</link>
+    </rule>
+    <rule name="Quality assurance using real devices">
+      <link url="http://OpenDeviceLab.com/">Leverage Open Device Labs to access a variety of devices for free</link>
     </rule>
   </category>
 
