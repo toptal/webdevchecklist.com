@@ -8,7 +8,7 @@
     <rule name="Compress all text-based files">
       <link url="http://www.iis.net/configreference/system.webserver/urlcompression">Enable compression in web.config</link>
       <link url="http://www.codeproject.com/Articles/18607/HTTP-Compression-Module">Custom HTTP module</link>
-      <link url="http://madskristensen.net/post/Fix-for-uncompressed-JS-files.aspx">Fix for uncompressed JS files</link>
+      <link url="http://madskristensen.net/post/fix-for-uncompressed-js-files">Fix for uncompressed JS files</link>
     </rule>
     <rule name="Run in Release Mode">
       <link url="http://weblogs.asp.net/scottgu/archive/2006/04/11/Don_1920_t-run-production-ASP.NET-Applications-with-debug_3D001D20_true_1D20_-enabled.aspx">Release Mode and Retail switch</link>
@@ -47,26 +47,25 @@
       <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
     </rule>
     <rule name="Minify HTML">
-      <link url="http://madskristensen.net/post/Remove-whitespace-safely-at-runtime.aspx">Remove whitespace in WebForms</link>
-      <link url="http://cestdumeleze.net/blog/2011/minifying-the-html-with-asp-net-mvc-and-razor/">Remove whitespace in Razor</link>
+      <link url="http://madskristensen.net/post/remove-whitespace-safely-at-runtime">Remove whitespace in WebForms</link>
     </rule>
   </category>
 
   <category name="Expiration">
     <rule name="Use long expiration dates">
-      <link url="http://madskristensen.net/post/Performance-tuning-tricks-for-ASPNET-and-IIS-7-part-1.aspx">Set expiration in web.config</link>
+      <link url="http://madskristensen.net/post/performance-tuning-tricks-for-aspnet-and-iis-7-part-1">Set expiration in web.config</link>
       <link url="http://msdn.microsoft.com/en-us/library/y18he7cw(v=VS.100).aspx">Set expiration programmatically</link>
     </rule>
     <rule name="Fingerprint resources">
-      <link url="http://madskristensen.net/post/Cache-busting-in-ASPNET.aspx">Cache busting in ASP.NET</link>
+      <link url="http://madskristensen.net/post/cache-busting-in-aspnet">Cache busting in ASP.NET</link>
     </rule>
   </category>
 
   <category name="Optimize responses">
     <rule name="Conditional GETs">
       <link url="http://optimizeasp.net/conditional-get">Conditional GET explained</link>
-      <link url="http://madskristensen.net/post/Use-If-Modified-Since-header-in-ASPNET.aspx">Use Last-Modified in ASP.NET WebForms</link>
-      <link url="http://madskristensen.net/post/The-WebOptimizer-class.aspx">The WebOptimizer C# class</link>
+      <link url="http://madskristensen.net/post/use-if-modified-since-header-in-aspnet">Use Last-Modified in ASP.NET WebForms</link>
+      <link url="http://madskristensen.net/post/the-weboptimizer-class">The WebOptimizer C# class</link>
     </rule>
   </category>
 
@@ -76,7 +75,7 @@
       <link url="http://pnggauntlet.com/">PNGGauntlet application</link>
     </rule>
     <rule name="Inline small images">
-      <link url="http://madskristensen.net/post/Embed-images-in-stylesheets.aspx">Video: How to embed images</link>
+      <link url="http://madskristensen.net/post/embed-images-in-stylesheets">Video: How to embed images</link>
       <link url="http://webcodertools.com/imagetobase64converter/">Online base64 converter</link>
       <link url="http://vswebessentials.com/">Web Essentials for VS2012</link>
     </rule>
@@ -94,7 +93,7 @@
     </rule>
     <rule name="Remove 'X-Powered-By'" />
     <rule name="Remove 'X-AspNet-Version'">
-      <link url="http://madskristensen.net/post/Remove-the-X-AspNet-Version-header.aspx">Remove the X-AspNet-Version header</link>
+      <link url="http://madskristensen.net/post/remove-the-x-aspnet-version-header">Remove the X-AspNet-Version header</link>
     </rule>
     <rule name="Remove 'X-AspNetMvc-Version'" optional="true" />
     <rule name="Remove 'X-AspNetWebPages-Version'" optional="true" />    
