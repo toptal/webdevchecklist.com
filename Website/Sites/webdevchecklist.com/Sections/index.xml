@@ -191,11 +191,16 @@
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
       <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
       <link url="https://www.ssllabs.com/ssltest/">SSL Server Test</link>
-      <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</link>
     </rule>
     <rule name="HTTP Strict Transport Security" optional="true">
       <link url="https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security">MDN Overview</link>
       <link url="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">OWASP Overview</link>
+    </rule>
+    <rule name="Enable Content Security Policy" optional="true">
+      <link url="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</link>
+      <link url="https://developer.mozilla.org/en-US/docs/Security/CSP/Using_Content_Security_Policy">MDN Guide</link>
+      <link url="https://www.owasp.org/index.php/Content_Security_Policy">OWASP Overview</link>
+      <link url="https://github.com/oxdef/csp-tester">CSP Tester</link>
     </rule>
   </category>
 
