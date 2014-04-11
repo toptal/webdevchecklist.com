@@ -207,6 +207,10 @@
     <rule name="Facebook Insights">
       <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
     </rule>
+    <rule name="Google+" optional="true">
+      <link url="https://plus.google.com/authorship">Google+ Authorship</link>
+      <link url="https://support.google.com/webmasters/answer/1708844?hl=en">Google+ Publisher</link>
+    </rule>
   </category>
 
   <category name="...and finally">
