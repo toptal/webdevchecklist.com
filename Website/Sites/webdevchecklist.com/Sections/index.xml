@@ -39,8 +39,8 @@
       <link url="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</link>
       <link url="http://www.opera.com/developer/tools/mobile/">Opera Mobile Emulator</link>
     </rule>
-    <rule name="Quality assurance using real devices">
-      <link url="http://OpenDeviceLab.com/">Leverage Open Device Labs to access a variety of devices for free</link>
+    <rule name="Test using real devices">
+      <link url="http://OpenDeviceLab.com/">Use Open Device Labs to test multiple devices</link>
     </rule>
   </category>
 
