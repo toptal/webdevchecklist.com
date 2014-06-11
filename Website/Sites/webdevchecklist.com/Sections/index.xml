@@ -141,6 +141,9 @@
     <rule name="CSS validation">
       <link url="http://jigsaw.w3.org/css-validator/">W3C CSS validator</link>
     </rule>
+    <rule name="JavaScript Coding Style validation">
+      <link url="https://github.com/dsheiko/jscodesniffer">JS_CodeSniffer</link>
+    </rule>
     <rule name="Run CSS Lint">
       <link url="http://csslint.net/">Run CSS Lint online</link>
     </rule>
