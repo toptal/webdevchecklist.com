@@ -16,7 +16,7 @@
       <link url="http://spoon.net/browsers">Spoon.net</link>
     </rule>
     <rule name="Decide on www-subdomain">
-      <link url="http://no-www.org/verify.php">no-www.org score of 'B'</link>
+      <link url="http://no-www.org/">no-www.org score of 'B'</link>
       <link url="http://www.yes-www.org/">...or www.yes-www.org</link>
       <link url="http://madskristensen.net/post/url-rewrite-and-the-www-subdomain">Handle 'www' in web.config</link>
     </rule>
