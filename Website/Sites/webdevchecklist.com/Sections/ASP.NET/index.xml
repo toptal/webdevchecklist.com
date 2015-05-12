@@ -215,7 +215,6 @@
     </rule>
     <rule name="Twitter Cards" optional="true">
       <link url="https://dev.twitter.com/docs/cards">Documentation</link>
-      <link url="https://dev.twitter.com/docs/cards/preview">Preview Tool</link>
     </rule>
     <rule name="Facebook Insights">
       <link url="https://developers.facebook.com/docs/insights/">Facebook Insights</link>
