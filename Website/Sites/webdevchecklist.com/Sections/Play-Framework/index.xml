@@ -54,7 +54,8 @@
     <rule name="Traffic analysis">
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
-      <link url="http://clicky.com/">Clicky</link>      
+      <link url="http://clicky.com/">Clicky</link>
+      <link url="http://piwik.org/">Piwik</link>      
     </rule>
   </category>
 
@@ -217,9 +218,9 @@
       <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
     </rule>
     <rule name="Secure Passwords" >
-	 <link url="http://www.mindrot.org/projects/jBCrypt/">BCrypt</link>
-	 <link url="https://github.com/wg/scrypt">SCrypt</link>
-	 <link url="#">Hash passwords using salt to prevent rainbow attacks</link>
+   <link url="http://www.mindrot.org/projects/jBCrypt/">BCrypt</link>
+   <link url="https://github.com/wg/scrypt">SCrypt</link>
+   <link url="#">Hash passwords using salt to prevent rainbow attacks</link>
     </rule>
 
     <rule name="Secure connection (SSL)" optional="true">
