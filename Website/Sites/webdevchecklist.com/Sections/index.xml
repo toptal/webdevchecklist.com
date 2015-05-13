@@ -178,6 +178,7 @@
       <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
       <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
       <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+      <link url="http://cwe.mitre.org/top25/">CWE/SANS Top 25</link>
     </rule>
     <rule name="Cross-site scripting">
       <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
