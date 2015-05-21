@@ -107,7 +107,7 @@
   </category>
 
   <category name="Semantics">
-    <rule name="Add meaning with RDFa/Microdata/OpenGraph">
+    <rule name="Add meaning with structured data">
       <link url="http://schema.org/">Schema.org reference</link>
       <link url="http://schema-creator.org/">Schema-Creator.org</link>
     </rule>
