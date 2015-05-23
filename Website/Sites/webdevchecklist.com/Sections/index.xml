@@ -108,12 +108,15 @@
   </category>
 
   <category name="Semantics">
-    <rule name="Add meaning with Microdata">
+    <rule name="Add meaning with structured data">
       <link url="http://schema.org/">Schema.org reference</link>
       <link url="http://schema-creator.org/">Schema-Creator.org</link>
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+      <link url="http://www.google.com/webmasters/tools/richsnippets">Google Structured Data Testing Tool</link>
+      <link url="https://developers.facebook.com/tools/debug/">Facebook OpenGraph Debugger</link>
+      <link url="https://dev.twitter.com/docs/cards/validation/validator">Twitter Card Validator</link>
     </rule>
   </category>
 
