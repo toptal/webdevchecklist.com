@@ -184,7 +184,7 @@
 
   <category name="Security">
     <rule name="Follow best practices">
-      <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
+      <link url="https://asafaweb.com/">ASafaWeb security analyzer</link>
       <link url="http://msdn.microsoft.com/en-us/library/zdh19h94(v=VS.100).aspx">Basic security practices for ASP.NET</link>
       <link url="http://www.microsoft.com/en-us/download/details.aspx?id=19968">Microsoft CAT.NET for ASP.NET</link>
       <link url="http://www.troyhunt.com/2011/12/free-ebook-owasp-top-10-for-net.html">OWASP Top 10 for .NET developers</link>
