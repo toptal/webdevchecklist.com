@@ -193,6 +193,8 @@
       <link url="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</link>
     </rule>
     <rule name="Secure connection (SSL)" optional="true">
+      <link 
+      <link url="https://letsencrypt.org/">Get Free SSL Certificate from Let’s Encrypt</link>
       <link url="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</link>
       <link url="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</link>
       <link url="https://www.ssllabs.com/ssltest/">SSL Server Test</link>
