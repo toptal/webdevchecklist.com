@@ -73,6 +73,12 @@
       <link url="http://pnggauntlet.com/">PNGGauntlet for Windows</link>
       <link url="http://imageoptim.com/">Image Optim for Mac</link>
     </rule>
+    <rule name="Caching">
+      <link url="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/">Service workers (Note: The appcache approach is deprecated)</link>
+      <link url="https://developers.google.com/speed/docs/insights/MinifyResources">Minify assets</link>
+      <link url="https://developers.google.com/speed/pagespeed/module/filter-js-combine/">Concatenate static assets</link>
+      <link url="https://developers.google.com/speed/docs/insights/EnableCompression/">Use compression when serving content (Gzip)</link>
+    </rule>
   </category>
 
   <category name="Usability">
@@ -111,6 +117,7 @@
     <rule name="Add meaning with structured data">
       <link url="http://schema.org/">Schema.org reference</link>
       <link url="http://schema-creator.org/">Schema-Creator.org</link>
+      <link url="https://developer.mozilla.org/en-US/docs/Web/Manifest/">Manifest file</link>
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
