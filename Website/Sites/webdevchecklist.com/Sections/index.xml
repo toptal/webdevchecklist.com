@@ -24,8 +24,9 @@
 
   <category name="Mobile">
     <rule name="MobileOK score of 75+">
-      <link url="https://validator.w3.org/mobile-alpha/">W3C mobile checker</link>
       <link url="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</link>
+      <link url="https://www.bing.com/webmaster/tools/mobile-friendliness">Bing Mobile Friendliness Test</link>
+      <link url="http://minify.mobi/">Minify.mobi</link>
     </rule>
     <rule name="Use 'viewport' meta-tag">
       <link url="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Don’t Forget the Viewport Meta Tag</link>
