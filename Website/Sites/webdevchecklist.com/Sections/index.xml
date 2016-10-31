@@ -78,7 +78,7 @@
   <category name="Usability">
     <rule name="HTML5 compatibility check">
       <link url="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</link>
-      <link url="http://www.modern.ie/report">modern.IE</link>
+      <link url="https://developer.microsoft.com/en-us/microsoft-edge/tools/staticscan/">Microsoft Site Scan</link>
       <link url="http://modernizr.com/">Modernizr JS library</link>
     </rule>
     <rule name="Custom 404 page">
