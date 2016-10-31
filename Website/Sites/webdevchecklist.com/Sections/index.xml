@@ -53,6 +53,7 @@
       <link url="http://www.google.com/analytics">Google Analytics</link>
       <link url="http://statcounter.com/">StatCounter</link>
       <link url="http://clicky.com/">Clicky</link>
+      <link url="http://piwik.org/">Piwik</link>
     </rule>
   </category>
 
@@ -107,12 +108,15 @@
   </category>
 
   <category name="Semantics">
-    <rule name="Add meaning with Microdata">
+    <rule name="Add meaning with structured data">
       <link url="http://schema.org/">Schema.org reference</link>
       <link url="http://schema-creator.org/">Schema-Creator.org</link>
     </rule>
     <rule name="Check the semantics">
       <link url="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</link>
+      <link url="http://www.google.com/webmasters/tools/richsnippets">Google Structured Data Testing Tool</link>
+      <link url="https://developers.facebook.com/tools/debug/">Facebook OpenGraph Debugger</link>
+      <link url="https://dev.twitter.com/docs/cards/validation/validator">Twitter Card Validator</link>
     </rule>
   </category>
 
@@ -177,6 +181,7 @@
       <link url="https://asafaweb.com/">ASafaaWeb security analyzer</link>
       <link url="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</link>
       <link url="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</link>
+      <link url="http://cwe.mitre.org/top25/">CWE/SANS Top 25</link>
     </rule>
     <rule name="Cross-site scripting">
       <link url="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</link>
