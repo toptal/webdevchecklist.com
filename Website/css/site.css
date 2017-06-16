@@ -1,199 +1,193 @@
 ﻿body {
-    -ms-touch-action: auto;
-    touch-action: auto;
-	padding: 0;
-	font: .9em/1.2 Arial, sans-serif;
-	color: #ccc;
-	background: #333;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    padding: 0;
+    font: .9em/1.2 Arial, sans-serif;
+    color: #ccc;
+    background: #333;
 }
 
-	body > header {
-		text-align: center;
-	}
+    body > header {
+        text-align: center;
+    }
 
-		body > header h1 {
-			font-size: 2em;
-			color: #9f3;
-			background: #222;
-			padding: .4em;
-			border-radius: .4em;
-			text-align: center;
-			width: 480px;
-			margin: .8em auto .2em auto;
-		}
+        body > header h1 {
+            font-size: 2em;
+            color: #9f3;
+            background: #222;
+            padding: .4em;
+            border-radius: .4em;
+            text-align: center;
+            width: 480px;
+            margin: .8em auto .2em auto;
+        }
 
-        body > header a{
+        body > header a {
             margin-top: -1em;
             display: inline-block;
             color: #ccc;
         }
 
 ::-moz-selection {
-	background-color: rgba(65,131,196,0.4);
+    background-color: rgba(65,131,196,0.4);
 }
 
 ::selection {
-	background-color: rgba(65,131,196,0.4);
+    background-color: rgba(65,131,196,0.4);
 }
 
 a {
-	color: gray;
+    color: gray;
 }
 
-	a:hover {
-		color: #ccc;
-	}
+    a:hover {
+        color: #ccc;
+    }
 
 /*#region Main */
 
 #main {
-	margin: 1em auto;
-	padding: 0 1em 3em 1em;
-	-moz-column-width: 360px;
-	-webkit-column-width: 360px;
-	column-width: 360px;
-	-moz-column-gap: 2em;
-	-webkit-column-gap: 2em;
-	column-gap: 2em;
+    margin: 1em auto;
+    padding: 0 1em 3em 1em;
+    column-width: 360px;
+    column-gap: 2em;
 }
 
-	#main section {
-		-webkit-column-break-inside: avoid;
-		overflow: hidden;
-		margin: 0 auto 1em auto;
-		width: 370px;
-	}
+    #main section {
+        -webkit-column-break-inside: avoid;
+        overflow: hidden;
+        margin: 0 auto 1em auto;
+        width: 370px;
+    }
 
-		#main section h2 {
-			margin: 0;
-			font-weight: normal;
-			color: #999;
-		}
+        #main section h2 {
+            margin: 0;
+            font-weight: normal;
+            color: #999;
+        }
 
-	#main ul {
-		padding-left: 1em;
-		list-style: none;
-	}
+    #main ul {
+        padding-left: 1em;
+        list-style: none;
+    }
 
-		#main li {
-			padding: .2em 0;
-		}
+    #main li {
+        padding: .2em 0;
+    }
 
-		#main ul a {
-			font-size: .95em;
-		}
+    #main ul a {
+        font-size: .95em;
+    }
 
-		#main ul :not(.optional) + .optional:before {
-			display: block;
-			margin: 1em 0 .3em 0;
-			content: 'Optional:';
-			font-weight: bold;
-		}
+    #main ul :not(.optional) + .optional:before {
+        display: block;
+        margin: 1em 0 .3em 0;
+        content: 'Optional:';
+        font-weight: bold;
+    }
 
-		#main ul li ul {
-			overflow: hidden;
-			padding-left: 2em;
-			max-height: 0;
-			-moz-transition: max-height .4s ease;
-			-o-transition: max-height .4s ease;
-			-webkit-transition: max-height .4s ease;
-			transition: max-height .4s ease;
-		}
+    #main ul li ul {
+        overflow: hidden;
+        padding-left: 2em;
+        max-height: 0;
+        -moz-transition: max-height .4s ease;
+        -o-transition: max-height .4s ease;
+        -webkit-transition: max-height .4s ease;
+        transition: max-height .4s ease;
+    }
 
-			#main ul li ul li:last-child {
-				margin-bottom: 1em;
-			}
+        #main ul li ul li:last-child {
+            margin-bottom: 1em;
+        }
 
 em {
-	display: inline-block;
-	padding: 0 4px;
-	color: #9f3;
-	text-decoration: none;
-	-webkit-appearance: none;
-	font-size: .8em;
-	cursor: pointer;
-	-moz-transition: -moz-transform .4s ease;
-	-o-transition: -o-transform .4s ease;
-	/* Chrome is having issues with this transition, so no -webkit-transition */
-	transition: transform .3s ease;
+    display: inline-block;
+    padding: 0 4px;
+    color: #9f3;
+    text-decoration: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-size: .8em;
+    cursor: pointer;
+    -moz-transition: -moz-transform .4s ease;
+    -o-transition: -o-transform .4s ease;
+    /* Chrome is having issues with this transition, so no -webkit-transition */
+    transition: transform .3s ease;
 }
 
-	em.open {
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		-webkit-transform: rotate(-90deg);
-		transform: rotate(-90deg);
-	}
+    em.open {
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
 
-	em + ul li:first-child {
-		margin-top: .5em;
-	}
+    em + ul li:first-child {
+        margin-top: .5em;
+    }
 
 input[type="checkbox"] {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
-	input[type="checkbox"]:checked + label {
-		color: #9f3;
-		text-decoration: line-through;
-	}
+    input[type="checkbox"]:checked + label {
+        color: #9f3;
+        text-decoration: line-through;
+    }
 
 /*#endregion */
 
 /*#region Footer */
 
-footer {
+footer a {
+    position: fixed;
+    right: 1em;
+    bottom: 1.5em;
+    display: inline-block;
+    color: #9f3;
+    text-decoration: none;
 }
-
-	footer a {
-		position: fixed;
-		right: 1em;
-		bottom: 1.5em;
-		display: inline-block;
-		color: #9f3;
-		text-decoration: none;
-	}
 
 #bonus {
-	position: fixed;
-	right: 1em;
-	bottom: 0;
-	z-index: 1;
-	margin: 0;
-	color: #333;
+    position: fixed;
+    right: 1em;
+    bottom: 0;
+    z-index: 1;
+    margin: 0;
+    color: #333;
 }
 
-	#bonus mark {
-		background: none;
-	}
+    #bonus mark {
+        background: none;
+    }
 
 progress {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 1.2em;
-	border: none;
-	background: #eaeaea;
-	color: #9f3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.2em;
+    border: none;
+    background: #eaeaea;
+    color: #9f3;
 }
 
-	progress span {
-		display: block;
-		background: #9f3;
-	}
+    progress span {
+        display: block;
+        background: #9f3;
+    }
 
-	progress::-webkit-progress-bar {
-		background: #eaeaea;
-	}
+    progress::-webkit-progress-bar {
+        background: #eaeaea;
+    }
 
-	progress::-webkit-progress-value {
-		background: #9f3;
-	}
+    progress::-webkit-progress-value {
+        background: #9f3;
+    }
 
-	progress::-moz-progress-bar {
-		background-color: #9f3;
-	}
+    progress::-moz-progress-bar {
+        background-color: #9f3;
+    }
 
 /*#endregion */
