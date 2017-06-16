@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <title>Web Developer Checklist</title>
+    <meta name="keywords" content="checklist, best practices, web development, performance, usability, mobile, website, " />
+    <meta name="description" content="The ultimate checklist for all serious web developers building modern websites. " />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="img/x-icon" />
+    <meta name="application-name" content="Web Dev Checklist" />
+    <meta name="msapplication-TileColor" content="#f7f7f7" />
+    <meta name="msapplication-TileImage" content="/img/webdevchecklist.png" />
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/iahamcpedabephpcgkeikbclmaljebjp" />
+    <meta name="twitter:title" content="Web Developer Checklist" />
+    <meta name="twitter:description" content="The ultimate checklist for all serious web developers building modern websites." />
+    <meta name="twitter:image" content="http://webdevchecklist.com/img/webdevchecklist.png" />
+    <meta property="og:title" content="Web Developer Checklist" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://webdevchecklist.com/" />
+    <meta property="og:image" content="http://webdevchecklist.com/img/webdevchecklist.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144-precomposed.png" />
+</head>
+<body class="">
+
+    <header itemscope itemtype="http://schema.org/WebApplication">
+        <h1 itemprop="name">Web Developer Checklist</h1>
+        Get the extension
+        <a href="https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp" target="_blank">Chrome</a> |
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/webdeveloperchecklist/" target="_blank">Firefox</a>
+    </header>
+
+    <nav role="navigation">
+        <span>Menu</span>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/demo/">Demo mode</a></li>
+            <li>
+                Browser extensions
+                <ul>
+                    <li><a href="https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp">Chrome</a></li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/webdeveloperchecklist/">Firefox</a></li>
+                    <li>Edge (coming soon)</li>
+                    <li>Opera (coming soon)</li>
+                </ul>
+            </li>
+            <li><a href="https://github.com/ligershark/webdevchecklist.com">Source on GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div id="main" role="main">
+        <section>
+            <h2>Best practices</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="fixbrokenlinks" tabindex="1" />
+                    <label for="fixbrokenlinks">Fix broken links</label>
+                    <em id="details-fixbrokenlinks">◄</em>
+                    <ul>
+                        <li>
+                            <a href="http://validator.w3.org/checklink">W3C link checker</a>
+                        </li>
+                        <li>
+                            <a href="http://iwebtool.com/broken_link_checker">iWebTool Broken Link Checker</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="spellingandgrammar" tabindex="1" />
+                    <label for="spellingandgrammar">Spelling and grammar</label>
+                    <em id="details-spellingandgrammar">◄</em>
+                    <ul>
+                        <li><a href="http://en.wikipedia.org/wiki/Capitalization">Capitalization</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/Writing_style">Writing Style</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/American_and_British_English_spelling_differences">Word Variations e.g. UK vs US</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="checkwebsiteinallbrowsers" tabindex="1" />
+                    <label for="checkwebsiteinallbrowsers">Check website in all browsers</label>
+                    <em id="details-checkwebsiteinallbrowsers">◄</em>
+                    <ul>
+                        <li><a href="http://browsershots.org/">BrowserShots.org</a></li>
+                        <li><a href="https://browserling.com/">Browserling.com</a></li>
+                        <li><a href="http://spoon.net/browsers">Spoon.net</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="decideonwww-subdomain" tabindex="1" />
+                    <label for="decideonwww-subdomain">Decide on www-subdomain</label>
+                    <em id="details-decideonwww-subdomain">◄</em>
+                    <ul>
+                        <li><a href="http://no-www.org/">no-www.org score of &#39;B&#39;</a></li>
+                        <li><a href="http://www.yes-www.org/">...or www.yes-www.org</a></li>
+                        <li><a href="http://madskristensen.net/post/url-rewrite-and-the-www-subdomain">Handle &#39;www&#39; in web.config</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Mobile</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="mobileokscoreof75+" tabindex="1" />
+                    <label for="mobileokscoreof75+">MobileOK score of 75+</label>
+                    <em id="details-mobileokscoreof75+">◄</em>
+                    <ul>
+                        <li><a href="http://validator.w3.org/mobile/">W3C mobile checker</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="use&#39;viewport&#39;meta-tag" tabindex="1" />
+                    <label for="use&#39;viewport&#39;meta-tag">Use &#39;viewport&#39; meta-tag</label>
+                    <em id="details-use&#39;viewport&#39;meta-tag">◄</em>
+                    <ul>
+                        <li><a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag/">Don’t Forget the Viewport Meta Tag</a></li>
+                        <li><a href="http://www.hanselman.com/blog/MakeYourWebsiteMobileAndIPhoneFriendlyAddHomeScreenIPhoneIconsAndAdjustTheViewPort.aspx">Make your website mobile friendly</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="usecorrectinputtypes" tabindex="1" />
+                    <label for="usecorrectinputtypes">Use correct input types</label>
+                    <em id="details-usecorrectinputtypes">◄</em>
+                    <ul>
+                        <li><a href="http://html5tutorial.info/html5-contact.php">Input type: Email, Url, Phone</a></li>
+                        <li><a href="http://diveintohtml5.info/forms.html">Diving in to HTML5 forms</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="manualcheckusingemulators" tabindex="1" />
+                    <label for="manualcheckusingemulators">Manual check using emulators</label>
+                    <em id="details-manualcheckusingemulators">◄</em>
+                    <ul>
+                        <li><a href="http://screenqueri.es/">Online media query tester</a></li>
+                        <li><a href="http://www.webdesignerdepot.com/2012/11/6-free-mobile-device-emulators-for-testing-your-site/">6 free mobile emulators</a></li>
+                        <li><a href="http://www.opera.com/developer/tools/mobile/">Opera Mobile Emulator</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="testusingrealdevices" tabindex="1" />
+                    <label for="testusingrealdevices">Test using real devices</label>
+                    <em id="details-testusingrealdevices">◄</em>
+                    <ul>
+                        <li><a href="http://OpenDeviceLab.com/">Use Open Device Labs to test multiple devices</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Analytics</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="uptimemonitoring" tabindex="1" />
+                    <label for="uptimemonitoring">Uptime monitoring</label>
+                    <em id="details-uptimemonitoring">◄</em>
+                    <ul>
+                        <li><a href="http://www.uptimerobot.com/">Uptime robot</a></li>
+                        <li><a href="http://www.gotsitemonitor.com/">GotSiteMonitor.com</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="trafficanalysis" tabindex="1" />
+                    <label for="trafficanalysis">Traffic analysis</label>
+                    <em id="details-trafficanalysis">◄</em>
+                    <ul>
+                        <li><a href="http://www.google.com/analytics">Google Analytics</a></li>
+                        <li><a href="http://statcounter.com/">StatCounter</a></li>
+                        <li><a href="http://clicky.com/">Clicky</a></li>
+                        <li><a href="http://piwik.org/">Piwik</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Performance</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="googlepagespeedscoreof90+" tabindex="1" />
+                    <label for="googlepagespeedscoreof90+">Google Page Speed score of 90+</label>
+                    <em id="details-googlepagespeedscoreof90+">◄</em>
+                    <ul>
+                        <li><a href="https://developers.google.com/speed/pagespeed/">Google Page Speed</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="yahooyslowscoreof85+" tabindex="1" />
+                    <label for="yahooyslowscoreof85+">Yahoo YSlow score of 85+</label>
+                    <em id="details-yahooyslowscoreof85+">◄</em>
+                    <ul>
+                        <li><a href="http://yslow.org/">Yahoo&#39;s YSlow</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="optimizehttpheaders" tabindex="1" />
+                    <label for="optimizehttpheaders">Optimize HTTP headers</label>
+                    <em id="details-optimizehttpheaders">◄</em>
+                    <ul>
+                        <li><a href="http://redbot.org">redbot.org</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="optimizeimages" tabindex="1" />
+                    <label for="optimizeimages">Optimize images</label>
+                    <em id="details-optimizeimages">◄</em>
+                    <ul>
+                        <li><a href="http://www.smushit.com/ysmush.it/">SmushIt.com</a></li>
+                        <li><a href="http://punypng.com/">PunyPNG.com</a></li>
+                        <li><a href="http://pnggauntlet.com/">PNGGauntlet for Windows</a></li>
+                        <li><a href="http://imageoptim.com/">Image Optim for Mac</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Usability</h2>mod
+            <ul>
+                <li>
+                    <input type="checkbox" id="html5compatibilitycheck" tabindex="1" />
+                    <label for="html5compatibilitycheck">HTML5 compatibility check</label>
+                    <em id="details-html5compatibilitycheck">◄</em>
+                    <ul>
+                        <li><a href="http://ie.microsoft.com/testdrive/HTML5/CompatInspector/">Compat Inspector</a></li>
+                        <li><a href="http://www.modern.ie/report">modern.IE</a></li>
+                        <li><a href="http://modernizr.com/">Modernizr JS library</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="custom404page" tabindex="1" />
+                    <label for="custom404page">Custom 404 page</label>
+                    <em id="details-custom404page">◄</em>
+                    <ul>
+                        <li><a href="http://www.alistapart.com/articles/amoreuseful404/">A more useful 404</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="favicon" tabindex="1" />
+                    <label for="favicon">Favicon</label>
+                    <em id="details-favicon">◄</em>
+                    <ul>
+                        <li><a href="http://realfavicongenerator.net/">Real Favicon Generator</a></li>
+                        <li><a href="http://github.com/audreyr/favicon-cheat-sheet">Favicon Cheat Sheet</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="usefriendlyurls" tabindex="1" />
+                    <label for="usefriendlyurls">Use friendly URLs</label>
+                    <em id="details-usefriendlyurls">◄</em>
+                    <ul>
+                        <li><a href="http://www.seomoz.org/blog/11-best-practices-for-urls">11 best practices for URLs</a></li>
+                        <li><a href="http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-configuration-reference">URL rewriting in IIS</a></li>
+                        <li><a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">URL rewrite in Apache</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="print-friendlycss" tabindex="1" />
+                    <label for="print-friendlycss">Print-friendly CSS</label>
+                    <em id="details-print-friendlycss">◄</em>
+                    <ul>
+                        <li><a href="http://coding.smashingmagazine.com/2011/11/24/how-to-set-up-a-print-style-sheet/">Set up a print stylesheet</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="addsearchfeature" tabindex="1" />
+                    <label for="addsearchfeature">Add search feature</label>
+                    <em id="details-addsearchfeature">◄</em>
+                    <ul>
+                        <li><a href="http://www.google.com/cse/">Google Custom Search</a></li>
+                        <li><a href="http://www.opensearch.org/Home">Consider &#39;Open Search&#39;</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="environmentintegration" tabindex="1" />
+                    <label for="environmentintegration">Environment Integration</label>
+                    <em id="details-environmentintegration">◄</em>
+                    <ul>
+                        <li><a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">Safari on iOS</a></li>
+                        <li><a href="http://msdn.microsoft.com/en-us/library/ie/hh781490%28v=vs.85%29.aspx">Internet Explorer on Windows</a></li>
+                        <li><a href="http://www.buildmypinnedsite.com/">Windows 8 Tiles</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Semantics</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="addmeaningwithstructureddata" tabindex="1" />
+                    <label for="addmeaningwithstructureddata">Add meaning with structured data</label>
+                    <em id="details-addmeaningwithstructureddata">◄</em>
+                    <ul>
+                        <li><a href="http://schema.org/">Schema.org reference</a></li>
+                        <li><a href="http://schema-creator.org/">Schema-Creator.org</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="checkthesemantics" tabindex="1" />
+                    <label for="checkthesemantics">Check the semantics</label>
+                    <em id="details-checkthesemantics">◄</em>
+                    <ul>
+                        <li><a href="http://www.w3.org/2003/12/semantic-extractor.html">W3C semantic extractor</a></li>
+                        <li><a href="http://www.google.com/webmasters/tools/richsnippets">Google Structured Data Testing Tool</a></li>
+                        <li><a href="https://developers.facebook.com/tools/debug/">Facebook OpenGraph Debugger</a></li>
+                        <li><a href="https://dev.twitter.com/docs/cards/validation/validator">Twitter Card Validator</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>SEO</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="senseoscoreof85+" tabindex="1" />
+                    <label for="senseoscoreof85+">SenSEO score of 85+</label>
+                    <em id="details-senseoscoreof85+">◄</em>
+                    <ul>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/senseo/">SenSEO for Firefox</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="googlerichsnippets" tabindex="1" />
+                    <label for="googlerichsnippets">Google Rich Snippets</label>
+                    <em id="details-googlerichsnippets">◄</em>
+                    <ul>
+                        <li><a href="http://www.google.com/webmasters/tools/richsnippets">Online tester</a></li>
+                        <li><a href="http://schema.org/docs/gs.html">Getting started</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="robots.txt" tabindex="1" />
+                    <label for="robots.txt">robots.txt</label>
+                    <em id="details-robots.txt">◄</em>
+                    <ul>
+                        <li><a href="http://tools.seobook.com/robots-txt/">robots.txt tutorial</a></li>
+                        <li><a href="http://www.robotsgenerator.com/">Create robots.txt online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="xmlsitemap" tabindex="1" />
+                    <label for="xmlsitemap">XML sitemap</label>
+                    <em id="details-xmlsitemap">◄</em>
+                    <ul>
+                        <li><a href="http://www.xml-sitemaps.com/">Create sitemap online</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Code quality</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="htmlvalidation" tabindex="1" />
+                    <label for="htmlvalidation">HTML validation</label>
+                    <em id="details-htmlvalidation">◄</em>
+                    <ul>
+                        <li><a href="http://validator.w3.org/">W3C HTML validator</a></li>
+                        <li><a href="http://watson.addy.com/">Dr. Watson</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="cssvalidation" tabindex="1" />
+                    <label for="cssvalidation">CSS validation</label>
+                    <em id="details-cssvalidation">◄</em>
+                    <ul>
+                        <li><a href="http://jigsaw.w3.org/css-validator/">W3C CSS validator</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="runcsslint" tabindex="1" />
+                    <label for="runcsslint">Run CSS Lint</label>
+                    <em id="details-runcsslint">◄</em>
+                    <ul>
+                        <li><a href="http://csslint.net/">Run CSS Lint online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="runjslint/jshint" tabindex="1" />
+                    <label for="runjslint/jshint">Run JSLint/JSHint</label>
+                    <em id="details-runjslint/jshint">◄</em>
+                    <ul>
+                        <li><a href="http://jslint.org/">Run JSLint online</a></li>
+                        <li><a href="http://jshint.com/">Run JSHint online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="worldready" tabindex="1" />
+                    <label for="worldready">World ready</label>
+                    <em id="details-worldready">◄</em>
+                    <ul>
+                        <li><a href="http://validator.w3.org/i18n-checker/">W3C i18n checker</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="automatedtesting" tabindex="1" />
+                    <label for="automatedtesting">Automated testing</label>
+                    <em id="details-automatedtesting">◄</em>
+                    <ul>
+                        <li><a href="http://www.testomato.com/">Testomato</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Accessibility</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="accessibilityvalidation" tabindex="1" />
+                    <label for="accessibilityvalidation">Accessibility validation</label>
+                    <em id="details-accessibilityvalidation">◄</em>
+                    <ul>
+                        <li><a href="http://accessibility.oit.ncsu.edu/accessibleu/problems.html">Common problems and solutions</a></li>
+                        <li><a href="http://achecker.ca/checker/index.php">IDI Web Accessibility Checker</a></li>
+                        <li><a href="http://www.nvda-project.org/">Test using a screen reader</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="colorcontrast" tabindex="1" />
+                    <label for="colorcontrast">Color contrast</label>
+                    <em id="details-colorcontrast">◄</em>
+                    <ul>
+                        <li><a href="http://www.checkmycolours.com/">Check color contrast online</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="wai-arialandmarks" tabindex="1" />
+                    <label for="wai-arialandmarks">WAI-ARIA Landmarks</label>
+                    <em id="details-wai-arialandmarks">◄</em>
+                    <ul>
+                        <li><a href="http://accessibility.oit.ncsu.edu/blog/2011/06/30/using-aria-landmarks-a-demonstration/">Using WAI-ARIA Landmarks</a></li>
+                        <li><a href="http://www.alistapart.com/articles/the-accessibility-of-wai-aria/">Guide to WAI-ARIA</a></li>
+                        <li><a href="http://www.punkchip.com/2010/11/aria-basic-findings/">Practical examples</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Security</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="followbestpractices" tabindex="1" />
+                    <label for="followbestpractices">Follow best practices</label>
+                    <em id="details-followbestpractices">◄</em>
+                    <ul>
+                        <li><a href="https://asafaweb.com/">ASafaaWeb security analyzer</a></li>
+                        <li><a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">OWASP Top 10 project</a></li>
+                        <li><a href="https://www.owasp.org/index.php/Cheat_Sheets">OWASP Cheat Sheets</a></li>
+                        <li><a href="http://cwe.mitre.org/top25/">CWE/SANS Top 25</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="cross-sitescripting" tabindex="1" />
+                    <label for="cross-sitescripting">Cross-site scripting</label>
+                    <em id="details-cross-sitescripting">◄</em>
+                    <ul>
+                        <li><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">XSS cheat sheet</a></li>
+                        <li><a href="https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet">DOM based XSS cheat sheet</a></li>
+                        <li><a href="http://www.acunetix.com/cross-site-scripting/scanner/">Free XSS scanner</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="cross-siterequestforgery" tabindex="1" />
+                    <label for="cross-siterequestforgery">Cross-site request forgery</label>
+                    <em id="details-cross-siterequestforgery">◄</em>
+                    <ul>
+                        <li><a href="http://www.codinghorror.com/blog/2008/09/cross-site-request-forgeries-and-you.html">Explanation and walkthrough</a></li>
+                        <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">CSRF cheat sheet</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="secureconnection(ssl)" tabindex="1" />
+                    <label for="secureconnection(ssl)">Secure connection (SSL)</label>
+                    <em id="details-secureconnection(ssl)">◄</em>
+                    <ul>
+                        <li><a href="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</a></li>
+                        <li><a href="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</a></li>
+                        <li><a href="https://www.ssllabs.com/ssltest/">SSL Server Test</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="httpstricttransportsecurity" tabindex="1" />
+                    <label for="httpstricttransportsecurity">HTTP Strict Transport Security</label>
+                    <em id="details-httpstricttransportsecurity">◄</em>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security">MDN Overview</a></li>
+                        <li><a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">OWASP Overview</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="enablecontentsecuritypolicy" tabindex="1" />
+                    <label for="enablecontentsecuritypolicy">Enable Content Security Policy</label>
+                    <em id="details-enablecontentsecuritypolicy">◄</em>
+                    <ul>
+                        <li><a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">Content Security Policy</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Security/CSP/Using_Content_Security_Policy">MDN Guide</a></li>
+                        <li><a href="https://www.owasp.org/index.php/Content_Security_Policy">OWASP Overview</a></li>
+                        <li><a href="https://github.com/oxdef/csp-tester">CSP Tester</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Social Media</h2>
+            <ul>
+                <li class="optional">
+                    <input type="checkbox" id="opengraphprotocol" tabindex="1" />
+                    <label for="opengraphprotocol">Open Graph protocol</label>
+                    <em id="details-opengraphprotocol">◄</em>
+                    <ul>
+                        <li><a href="http://ogp.me/">Open Graph protocol reference</a></li>
+                    </ul>
+                </li>
+                <li class="optional">
+                    <input type="checkbox" id="twittercards" tabindex="1" />
+                    <label for="twittercards">Twitter Cards</label>
+                    <em id="details-twittercards">◄</em>
+                    <ul>
+                        <li><a href="https://dev.twitter.com/docs/cards">Documentation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="facebookinsights" tabindex="1" />
+                    <label for="facebookinsights">Facebook Insights</label>
+                    <em id="details-facebookinsights">◄</em>
+                    <ul>
+                        <li><a href="https://developers.facebook.com/docs/insights/">Facebook Insights</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="checkbox" id="google+" tabindex="1" />
+                    <label for="google+">Google+</label>
+                    <em id="details-google+">◄</em>
+                    <ul>
+                        <li><a href="https://plus.google.com/authorship">Google+ Authorship</a></li>
+                        <li><a href="https://support.google.com/webmasters/answer/1708844?hl=en">Google+ Publisher</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>...and finally</h2>
+            <ul>
+                <li class="optional">
+                    <input type="checkbox" id="addhumans.txt" tabindex="1" />
+                    <label for="addhumans.txt">Add humans.txt</label>
+                    <em id="details-addhumans.txt">◄</em>
+                    <ul>
+                        <li><a href="http://humanstxt.org/">We are humans, not machines!</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <p id="bonus">
+            Optional:
+            <mark aria-relevant="text" aria-live="polite">0</mark>/8
+        </p>
+    </div>
+
+    <footer>
+        <a href="#" id="reset">Reset</a>
+        <progress value="1" max="100"><span id="fallback">&nbsp;</span></progress>
+    </footer>
+
+    <script src="/js/script.min.js" async="async"></script>
+</body>
+</html>

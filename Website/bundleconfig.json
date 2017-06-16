@@ -1,0 +1,17 @@
+[
+  {
+    "outputFileName": "css/all.css",
+    "inputFiles": [
+      "css/normalize.css",
+      "css/menu.css",
+      "css/site.css",
+      "css/mediaqueries.css"
+    ]
+  },
+  {
+    "outputFileName": "js/script.min.js",
+    "inputFiles": [
+      "js/script.js"
+    ]
+  }
+]

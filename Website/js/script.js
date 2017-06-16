@@ -1,6 +1,4 @@
-﻿/// <reference path="modernizr-2.6.2.js" />
-
-(function () {
+﻿(function () {
 
     var checkboxes = [],
         checkboxesRandom = [],
@@ -47,7 +45,7 @@
             var checkbox = checkboxes[i];
             checkbox.onchange = calculateProgress;
 
-            if (Modernizr.localstorage) {
+            if (window.localstorage) {
                 var value = localStorage.getItem(prefix + checkbox.id) === "true";
                 checkbox.checked = value;
             }
@@ -62,14 +60,14 @@
 
         for (var j = 0; j < details.length; j++) {
             var detail = details[j];
-            if (Modernizr.localstorage && localStorage.getItem(prefix + detail.id))
+            if (window.localstorage && localStorage.getItem(prefix + detail.id))
                 openDetailsElement(detail);
         }
 
         progress.max = max;
-        if (prefix && prefix.endsWith('demo')) { startDemo(); }
+        if (prefix && (prefix.endsWith('demo/') || prefix.endsWith('demo'))) { startDemo(); }
     }
-    
+
     function openDetails(e) {
 
         if (!e) e = window.event;
@@ -78,7 +76,7 @@
 
         for (i = 0; i < details.length; i++) {
 
-            var detail = details[i];
+            detail = details[i];
 
             if (detail.className === 'open') {
                 localStorage && localStorage.setItem(prefix + detail.id, true);
@@ -90,7 +88,7 @@
     }
 
     function openDetailsElement(detail) {
-        
+
         var ul = (detail.nextElementSibling || detail.nextSibling);
 
         for (var i = 0; i < details.length; i++) {
@@ -101,7 +99,7 @@
             }
 
             details[i].className = '';
-        }        
+        }
 
         if (ul.style.maxHeight !== '100px') {
             ul.style.maxHeight = '100px';
@@ -153,7 +151,7 @@
     function reset() {
 
         document.getElementById("reset").onclick = function () {
-            resetInner();            
+            resetInner();
 
             return false;
         };
@@ -163,11 +161,11 @@
         for (var i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = false;
 
-            if (Modernizr.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
+            if (window.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
         }
 
         for (var j = 0; j < details.length; j++) {
-            if (Modernizr.localstorage) localStorage.removeItem(prefix + details[j].id);
+            if (window.localstorage) localStorage.removeItem(prefix + details[j].id);
         }
 
         calculateProgress();
@@ -176,7 +174,7 @@
     function menuClick(e) {
         if (!e) e = window.event;
         var element = (e.target || e.srcElement);
-        
+
         if (menu.className !== "open") {
             menu.className = "open";
         }
