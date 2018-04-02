@@ -191,6 +191,14 @@
 
         if (localStorage.length === 0)
             details[0].click();
+
+        $('a').click(function() {
+                console.log('pulse enlace: '+$(this).attr('href'));
+                if (!$(this).attr('target')) {
+                    $(this).attr('target', '_blank');
+                }
+         
+        });
     };
 
     // demo related items below this
