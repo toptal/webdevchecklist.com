@@ -97,6 +97,9 @@
                     <em id="details-mobilefriendly">◄</em>
                     <ul>
                         <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Mobile Friendly checker</a></li>
+                        <li><a href="https://www.bing.com/webmaster/tools/mobile-friendliness">Bing Mobile Friendliness Test</a></li>
+                        <li><a href="http://validator.w3.org/mobile/">W3C mobile checker</a></li>
+                        <li><a href="http://minify.mobi/">Minify.mobi</a></li>
                     </ul>
                 </li>
                 <li>
@@ -151,12 +154,13 @@
                 </li>
                 <li>
                     <input type="checkbox" id="trafficanalysis" tabindex="1" />
-                    <label for="trafficanalysis">Traffic analysis</label>
+                    <label for="trafficanalysis">Traffic analysis2</label>
                     <em id="details-trafficanalysis">◄</em>
                     <ul>
                         <li><a href="http://www.google.com/analytics">Google Analytics</a></li>
                         <li><a href="http://statcounter.com/">StatCounter</a></li>
                         <li><a href="http://clicky.com/">Clicky</a></li>
+                        <li><a href="http://get.gaug.es/">Gauges</a></li>
                         <li><a href="http://piwik.org/">Piwik</a></li>
                     </ul>
                 </li>
@@ -190,6 +194,19 @@
                         <li><a href="http://punypng.com/">PunyPNG.com</a></li>
                         <li><a href="http://pnggauntlet.com/">PNGGauntlet for Windows</a></li>
                         <li><a href="http://imageoptim.com/">Image Optim for Mac</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <input type="checkbox" id="Caching" tabindex="1" />
+                    <label for="Caching">Optimize images</label>
+                    <em id="details-Caching">◄</em>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/">Service workers (Note: The appcache approach is deprecated)</a></li>
+                        <li><a href="https://developers.google.com/speed/docs/insights/MinifyResources">Minify assets</a></li>
+                        <li><a href="https://developers.google.com/speed/pagespeed/module/filter-js-combine/">Concatenate static assets</a></li>
+                        <li><a href="https://developers.google.com/speed/docs/insights/EnableCompression/">Use compression when serving content (Gzip)</a></li>
                     </ul>
                 </li>
             </ul>
@@ -348,6 +365,14 @@
                     </ul>
                 </li>
                 <li>
+                    <input type="checkbox" id="jsvalidation" tabindex="1" />
+                    <label for="jsvalidation">JavaScript Coding Style validation</label>
+                    <em id="details-jsvalidation">◄</em>
+                    <ul>
+                        <li><a href="https://github.com/dsheiko/jscodesniffer">JS_CodeSniffer</a></li>
+                    </ul>
+                </li>
+                <li>
                     <input type="checkbox" id="runcsslint" tabindex="1" />
                     <label for="runcsslint">Run CSS Lint</label>
                     <em id="details-runcsslint">◄</em>
@@ -451,6 +476,7 @@
                     <label for="secureconnection(ssl)">Secure connection (SSL)</label>
                     <em id="details-secureconnection(ssl)">◄</em>
                     <ul>
+                        <li><a href="https://letsencrypt.org/">Get Free SSL Certificate from Let’s Encrypt</a></li>
                         <li><a href="http://support.microsoft.com/kb/299875">Setup SSL on IIS 7</a></li>
                         <li><a href="http://www.digicert.com/ssl-certificate-installation-apache.htm">Setup SSL on Apache</a></li>
                         <li><a href="https://www.ssllabs.com/ssltest/">SSL Server Test</a></li>
@@ -541,6 +567,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script src="js/script.min.js" async="async"></script>
 </body>
 </html>
