@@ -1,3 +1,5 @@
 .vs
 *.pubxml
 *.publishproj
+Website/.htaccess
+/Website/.htaccess
