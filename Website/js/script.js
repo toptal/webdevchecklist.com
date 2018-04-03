@@ -1,252 +1,251 @@
-﻿(function () {
+﻿(function() {
 
-    var checkboxes = [],
-        checkboxesRandom = [],
-        details = [],
-        detailsRandom = [],
-        progress, bonus, fallback, prefix, menu;
+	var checkboxes = [],
+		checkboxesRandom = [],
+		details = [],
+		detailsRandom = [],
+		progress, bonus, fallback, prefix, menu;
 
-    function findCheckboxes() {
+	function findCheckboxes() {
 
-        var inputs = document.getElementsByTagName('input');
+		var inputs = document.getElementsByTagName('input');
 
-        for (var i = 0; i < inputs.length; i++) {
+		for (var i = 0; i < inputs.length; i++) {
 
-            if (inputs[i].type === 'checkbox') {
-                checkboxes.push(inputs[i]);
-            }
-        }
+			if (inputs[i].type === 'checkbox') {
+				checkboxes.push(inputs[i]);
+			}
+		}
 
-        details = document.getElementsByTagName('em');
+		details = document.getElementsByTagName('em');
 
-        checkboxesRandom = checkboxes.slice(0);
-        randomizeArray(checkboxesRandom);
+		checkboxesRandom = checkboxes.slice(0);
+		randomizeArray(checkboxesRandom);
 
-        detailsRandom = Array.prototype.slice.call(details);
-        randomizeArray(detailsRandom);
-    }
+		detailsRandom = Array.prototype.slice.call(details);
+		randomizeArray(detailsRandom);
+	}
 
-    function initialize() {
+	function initialize() {
 
-        bonus = document.getElementsByTagName("mark")[0];
-        progress = document.getElementsByTagName("progress")[0];
-        menu = document.getElementsByTagName("nav")[0];
-        fallback = (progress.firstElementChild || progress.firstChild);
-        prefix = location.pathname.substr(1);
+		bonus = document.getElementsByTagName("mark")[0];
+		progress = document.getElementsByTagName("progress")[0];
+		menu = document.getElementsByTagName("nav")[0];
+		fallback = (progress.firstElementChild || progress.firstChild);
+		prefix = location.pathname.substr(1);
 
-        if (menu) {
-            (menu.firstElementChild || menu.firstChild).onclick = menuClick;
-        }
+		if (menu) {
+			(menu.firstElementChild || menu.firstChild).onclick = menuClick;
+		}
 
-        var max = 0;
+		var max = 0;
 
-        for (var i = 0; i < checkboxes.length; i++) {
+		for (var i = 0; i < checkboxes.length; i++) {
 
-            var checkbox = checkboxes[i];
-            checkbox.onchange = calculateProgress;
+			var checkbox = checkboxes[i];
+			checkbox.onchange = calculateProgress;
 
-            if (window.localstorage) {
-                var value = localStorage.getItem(prefix + checkbox.id) === "true";
-                checkbox.checked = value;
-            }
+			if (window.localstorage) {
+				var value = localStorage.getItem(prefix + checkbox.id) === "true";
+				checkbox.checked = value;
+			}
 
-            if (checkbox.parentNode.className !== "optional")
-                max++;
-        }
+			if (checkbox.parentNode.className !== "optional")
+				max++;
+		}
 
-        for (var d = 0; d < details.length; d++) {
-            details[d].onclick = openDetails;
-        }
+		for (var d = 0; d < details.length; d++) {
+			details[d].onclick = openDetails;
+		}
 
-        for (var j = 0; j < details.length; j++) {
-            var detail = details[j];
-            if (window.localstorage && localStorage.getItem(prefix + detail.id))
-                openDetailsElement(detail);
-        }
+		for (var j = 0; j < details.length; j++) {
+			var detail = details[j];
+			if (window.localstorage && localStorage.getItem(prefix + detail.id))
+				openDetailsElement(detail);
+		}
 
-        progress.max = max;
-        if (prefix && (prefix.endsWith('demo/') || prefix.endsWith('demo'))) { startDemo(); }
-    }
+		progress.max = max;
+		if (prefix && (prefix.endsWith('demo/') || prefix.endsWith('demo'))) {
+			startDemo();
+		}
+	}
 
-    function openDetails(e) {
+	function openDetails(e) {
 
-        if (!e) e = window.event;
-        var detail = (e.target || e.srcElement);
-        openDetailsElement(detail);
+		if (!e) e = window.event;
+		var detail = (e.target || e.srcElement);
+		openDetailsElement(detail);
 
-        for (i = 0; i < details.length; i++) {
+		for (i = 0; i < details.length; i++) {
 
-            detail = details[i];
+			detail = details[i];
 
-            if (detail.className === 'open') {
-                localStorage && localStorage.setItem(prefix + detail.id, true);
-            }
-            else {
-                localStorage && localStorage.removeItem(prefix + detail.id);
-            }
-        }
-    }
+			if (detail.className === 'open') {
+				localStorage && localStorage.setItem(prefix + detail.id, true);
+			} else {
+				localStorage && localStorage.removeItem(prefix + detail.id);
+			}
+		}
+	}
 
-    function openDetailsElement(detail) {
+	function openDetailsElement(detail) {
 
-        var ul = (detail.nextElementSibling || detail.nextSibling);
+		var ul = (detail.nextElementSibling || detail.nextSibling);
 
-        for (var i = 0; i < details.length; i++) {
+		if (ul.className != 'open') {
+			$('#main ul li ul').addClass('close');
+			ul.className = 'open';
+		} else {
+			ul.className = 'close'
+		}
+	}
 
-            if (details[i] !== detail) {
-                var d = (details[i].nextElementSibling || details[i].nextSibling);
-                d.style.maxHeight = "0";
-            }
+	function calculateProgress() {
 
-            details[i].className = '';
-        }
+		var count = 0,
+			optional = 0;
 
-        if (ul.style.maxHeight !== '100px') {
-            ul.style.maxHeight = '100px';
-            detail.className = 'open';
-        }
-        else {
-            ul.style.maxHeight = '0';
-        }
-    }
+		for (var i = 0; i < checkboxes.length; i++) {
 
-    function calculateProgress() {
+			var checkbox = checkboxes[i];
 
-        var count = 0,
-            optional = 0;
+			if (checkbox.checked)
+				localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
+			else
+				localStorage && localStorage.removeItem(prefix + checkbox.id);
 
-        for (var i = 0; i < checkboxes.length; i++) {
+			if (checkbox.parentNode.className !== "optional") {
 
-            var checkbox = checkboxes[i];
+				if (checkbox.checked) {
+					count++;
+				}
+			} else {
+				if (checkbox.checked) {
+					optional++;
+				}
+			}
+		}
 
-            if (checkbox.checked)
-                localStorage && localStorage.setItem(prefix + checkbox.id, checkbox.checked);
-            else
-                localStorage && localStorage.removeItem(prefix + checkbox.id);
+		bonus.innerHTML = optional.toString();
+		setProgressValue(count);
+	}
 
-            if (checkbox.parentNode.className !== "optional") {
+	function setProgressValue(value) {
+		progress.value = value;
 
-                if (checkbox.checked) {
-                    count++;
-                }
-            }
-            else {
-                if (checkbox.checked) {
-                    optional++;
-                }
-            }
-        }
+		var max = parseInt(progress.max, 10);
+		fallback.style.width = (value * 100 / max) + "%";
+	}
 
-        bonus.innerHTML = optional.toString();
-        setProgressValue(count);
-    }
+	function reset() {
 
-    function setProgressValue(value) {
-        progress.value = value;
+		document.getElementById("reset").onclick = function() {
+			resetInner();
 
-        var max = parseInt(progress.max, 10);
-        fallback.style.width = (value * 100 / max) + "%";
-    }
+			return false;
+		};
+	}
 
-    function reset() {
+	function resetInner() {
+		for (var i = 0; i < checkboxes.length; i++) {
+			checkboxes[i].checked = false;
 
-        document.getElementById("reset").onclick = function () {
-            resetInner();
+			if (window.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
+		}
 
-            return false;
-        };
-    }
+		for (var j = 0; j < details.length; j++) {
+			if (window.localstorage) localStorage.removeItem(prefix + details[j].id);
+		}
 
-    function resetInner() {
-        for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].checked = false;
+		calculateProgress();
+	}
 
-            if (window.localstorage) localStorage.removeItem(prefix + checkboxes[i].id);
-        }
+	function menuClick(e) {
+		if (!e) e = window.event;
+		var element = (e.target || e.srcElement);
 
-        for (var j = 0; j < details.length; j++) {
-            if (window.localstorage) localStorage.removeItem(prefix + details[j].id);
-        }
+		if (menu.className !== "open") {
+			menu.className = "open";
+		} else {
+			menu.className = "";
+		}
+	}
 
-        calculateProgress();
-    }
+	window.onload = function() {
+		findCheckboxes();
+		initialize();
+		calculateProgress();
+		reset();
 
-    function menuClick(e) {
-        if (!e) e = window.event;
-        var element = (e.target || e.srcElement);
+		if (localStorage.length === 0)
+			details[0].click();
 
-        if (menu.className !== "open") {
-            menu.className = "open";
-        }
-        else {
-            menu.className = "";
-        }
-    }
+		$('#main ul li ul li a').click(function() {
+			console.log('pulse enlace: ' + $(this).attr('href'));
+			if (!$(this).attr('target')) {
+				$(this).attr('target', '_blank');
+			}
+		});
 
-    window.onload = function () {
-        findCheckboxes();
-        initialize();
-        calculateProgress();
-        reset();
+		$('#main ul li ul').addClass('close');
+	};
 
-        if (localStorage.length === 0)
-            details[0].click();
+	// demo related items below this
+	function randomizeArray(myArray) {
+		// Taken from: http://sedition.com/perl/javascript-fy.html
+		var i = myArray.length,
+			j, tempi, tempj;
+		if (i == 0) return false;
+		while (--i) {
+			j = Math.floor(Math.random() * (i + 1));
+			tempi = myArray[i];
+			tempj = myArray[j];
+			myArray[i] = tempj;
+			myArray[j] = tempi;
+		}
+	}
 
-        $('a').click(function() {
-                console.log('pulse enlace: '+$(this).attr('href'));
-                if (!$(this).attr('target')) {
-                    $(this).attr('target', '_blank');
-                }
-         
-        });
-    };
+	function startDemo() {
+		animateChecboxes(0, checkboxesRandom);
+		animateDetails(0, detailsRandom);
+	}
 
-    // demo related items below this
-    function randomizeArray(myArray) {
-        // Taken from: http://sedition.com/perl/javascript-fy.html
-        var i = myArray.length, j, tempi, tempj;
-        if (i == 0) return false;
-        while (--i) {
-            j = Math.floor(Math.random() * (i + 1));
-            tempi = myArray[i];
-            tempj = myArray[j];
-            myArray[i] = tempj;
-            myArray[j] = tempi;
-        }
-    }
+	function animateChecboxes(index, items) {
 
-    function startDemo() {
-        animateChecboxes(0, checkboxesRandom);
-        animateDetails(0, detailsRandom);
-    }
-    function animateChecboxes(index, items) {
+		if (index == 0) {
+			resetInner();
+		}
+		if (index > items.length + 5) {
+			// going over the length on purpose, so that it pauses at the end
+			index = 0;
+			resetInner();
+			items = checkboxesRandom;
+		}
 
-        if (index == 0) { resetInner(); }
-        if (index > items.length + 5) {
-            // going over the length on purpose, so that it pauses at the end
-            index = 0; resetInner(); items = checkboxesRandom;
-        }
+		if (items[index]) {
+			items[index].checked = true;
+			calculateProgress();
+		}
 
-        if (items[index]) {
-            items[index].checked = true;
-            calculateProgress();
-        }
+		setTimeout(function() {
+			animateChecboxes(++index, items);
+		}, 200);
+	}
 
-        setTimeout(function() {
-            animateChecboxes(++index, items);
-        }, 200);
-    }
-    function animateDetails(index, items) {
+	function animateDetails(index, items) {
 
-        if (index > detailsRandom.length - 1) { index = 0; resetInner(); }
+		if (index > detailsRandom.length - 1) {
+			index = 0;
+			resetInner();
+		}
 
-        openDetailsElement(items[index]);
-        setTimeout(function () {
-            animateDetails(++index, items);
-        }, 200 * 10);
-    }
+		openDetailsElement(items[index]);
+		setTimeout(function() {
+			animateDetails(++index, items);
+		}, 200 * 10);
+	}
 
-    String.prototype.endsWith = function (suffix) {
-        return this.indexOf(suffix, this.length - suffix.length) !== -1;
-    };
+	String.prototype.endsWith = function(suffix) {
+		return this.indexOf(suffix, this.length - suffix.length) !== -1;
+	};
 })();

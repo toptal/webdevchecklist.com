@@ -496,7 +496,7 @@ a {
     #main ul li ul {
         overflow: hidden;
         padding-left: 2em;
-        max-height: 0;
+        /*max-height: 0;*/
         -moz-transition: max-height .4s ease;
         -o-transition: max-height .4s ease;
         -webkit-transition: max-height .4s ease;
@@ -543,6 +543,13 @@ input[type="checkbox"] {
         text-decoration: line-through;
     }
 
+
+ul.open {
+    display: inline;
+}
+ul.close {
+    display: none;
+}
 /*#endregion */
 
 /*#region Footer */
