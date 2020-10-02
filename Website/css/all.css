@@ -71,7 +71,8 @@ html {
  */
 
 body {
-    margin: 0;
+    margin: 0px;
+   
 }
 
 /* ==========================================================================
@@ -138,8 +139,8 @@ dfn {
  */
 
 mark {
-    background: #ff0;
-    color: #000;
+    background: rgb(255, 255, 0);
+    color: rgb(0, 0, 0);
 }
 
 
@@ -346,7 +347,7 @@ nav {
     position: absolute;
     top: 1em;
     left: 1em;
-    background: #222;
+    background: rgb(34, 34, 34);
     padding: .5em;
     border-radius: 3px;
     cursor: pointer;
@@ -410,8 +411,8 @@ body {
     touch-action: manipulation;
     padding: 0;
     font: .9em/1.2 Arial, sans-serif;
-    color: #ccc;
-    background: #333;
+    color: rgb(204, 204, 204);
+    background: rgb(51, 51, 51);
 }
 
     body > header {
@@ -420,8 +421,8 @@ body {
 
         body > header h1 {
             font-size: 2em;
-            color: #9f3;
-            background: #222;
+            color: rgb(153, 255, 51);
+            background: rgb(34, 34, 34);
             padding: .4em;
             border-radius: .4em;
             text-align: center;
@@ -432,7 +433,7 @@ body {
         body > header a {
             margin-top: -1em;
             display: inline-block;
-            color: #ccc;
+            color: rgb(204, 204, 204);
         }
 
 ::-moz-selection {
@@ -448,7 +449,7 @@ a {
 }
 
     a:hover {
-        color: #ccc;
+        color: rgb(204, 204, 204);
     }
 
 /*#region Main */
@@ -470,7 +471,7 @@ a {
         #main section h2 {
             margin: 0;
             font-weight: normal;
-            color: #999;
+            color: rgb(153, 153, 153);
         }
 
     #main ul {
@@ -510,7 +511,7 @@ a {
 em {
     display: inline-block;
     padding: 0 4px;
-    color: #9f3;
+    color: rgb(153, 255, 51);
     text-decoration: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -539,7 +540,7 @@ input[type="checkbox"] {
 }
 
     input[type="checkbox"]:checked + label {
-        color: #9f3;
+        color: rgb(153, 255, 51);
         text-decoration: line-through;
     }
 
@@ -552,7 +553,7 @@ footer a {
     right: 1em;
     bottom: 1.5em;
     display: inline-block;
-    color: #9f3;
+    color: rgb(153, 255, 51);
     text-decoration: none;
 }
 
@@ -562,7 +563,7 @@ footer a {
     bottom: 0;
     z-index: 1;
     margin: 0;
-    color: #333;
+    color: rgb(51, 51, 51);
 }
 
     #bonus mark {
@@ -576,25 +577,25 @@ progress {
     width: 100%;
     height: 1.2em;
     border: none;
-    background: #eaeaea;
-    color: #9f3;
+    background: rgb(234, 234, 234);
+    color: rgb(153, 255, 51);
 }
 
     progress span {
         display: block;
-        background: #9f3;
+        background: rgb(153, 255, 51);
     }
 
     progress::-webkit-progress-bar {
-        background: #eaeaea;
+        background: rgb(234, 234, 234);
     }
 
     progress::-webkit-progress-value {
-        background: #9f3;
+        background: rgb(153, 255, 51);
     }
 
     progress::-moz-progress-bar {
-        background-color: #9f3;
+        background-color: rgb(153, 255, 51);
     }
 
 /*#endregion */
